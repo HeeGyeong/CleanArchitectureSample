@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/selectProductContainer"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/brandImg"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/brandTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="노베브"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/brandImg"/>
+
+        <TextView
+            android:id="@+id/brandHashTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#뷰티 #유튜버 #민감성"
+            android:textSize="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:paddingEnd="50dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/brandTitle"
+            app:layout_constraintStart_toEndOf="@id/brandImg" />
+
+        <ImageView
+            android:id="@+id/productImg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="17dp"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintTop_toBottomOf="@id/brandImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/soldOutDim"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="17dp"
+            android:alpha="0.15"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintTop_toBottomOf="@id/brandImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/soldOutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOLD OUT"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/productImg"
+            app:layout_constraintBottom_toBottomOf="@id/productImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/productText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="260dp"
+            android:text="노베브 언더 아이 마스터 스틱 섀도우 컨실러 낫띵/벗/에브리띵"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productImg"/>
+
+        <TextView
+            android:id="@+id/productTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4일 22:14:56"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/productText"/>
+
+        <TextView
+            android:id="@+id/productWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2021.08,01 OPEN"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/productText"/>
+
+        <TextView
+            android:id="@+id/productListPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17,000"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productText"/>
+
+        <TextView
+            android:id="@+id/discountRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%"
+            android:textColor="@color/black"
+            android:layout_marginTop="1dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productListPrice"/>
+
+        <TextView
+            android:id="@+id/productSellPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17,100"
+            android:layout_marginTop="1dp"
+            app:layout_constraintStart_toEndOf="@id/discountRate"
+            app:layout_constraintTop_toBottomOf="@id/productListPrice"/>
+
+        <LinearLayout
+            android:id="@+id/shareContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/productSellPrice">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/shareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공유하기"
+                android:textColor="@color/black"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/openContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@id/shareContainer"
+            app:layout_constraintTop_toTopOf="@id/productSellPrice">
+
+            <ImageView
+                android:id="@+id/openImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/openBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오픈알림"
+                android:textColor="@color/black"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="2dp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/selectShopDummyLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productSellPrice"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

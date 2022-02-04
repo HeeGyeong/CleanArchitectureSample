@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cleanarchitecturestudy">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".di.KoinApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CleanArchitectureStudy">
+        <!-- android12 (sdkVersion 31) 로 올라오면서,
+        외부 응용 프로그램에서 실행될 수 있는지 여부를 확인하는 exported 명시적 선언이 필요함. 기존에는 이 값이 자동 적용되었던 부분이다.
+        다른 애플리케이션에서 해당 액티비티를 시작할 수 있으면 true, 없으면 false 로 선언한다.
+        앱을 최초 실행하는 Main(LAUNCHER) 의 경우 false 로 설정하게 되면 앱 아이콘 클릭 시 앱이 실행되지 않는다. -->
+        <activity android:name=".view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".view.rank.RankActivity"
+            android:exported="false"/>
+        <activity android:name=".view.select.SelectActivity"
+            android:exported="false"/>
+        <activity android:name=".view.search.MovieSearchActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false"/>
+    </application>
+
+</manifest>

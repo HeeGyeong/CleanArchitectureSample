@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CleanArchitectureStudy</string>
+
+    <string name="search_input_query_msg">검색어를 입력해주세요</string>
+    <string name="network_error_msg">네트워크를 연결해주세요.</string>
+    <string name="load_movie_success_msg">영화를 불러왔습니다.</string>
+    <string name="no_movie_error_msg">해당 영화는 존재하지 않습니다.</string>
+    <string name="last_page_msg">마지막 페이지 입니다</string>
+    <string name="wait_toast">잠시만 기다려주세요.</string>
+    <string name="auto_login_msg">자동 로그인</string>
+    <string name="id_pw_not_correct_error_msg">아이디 또는 패스워드가 틀렸습니다</string>
+    <string name="id_empty_error_msg">아이디를 입력해주세요</string>
+    <string name="pw_empty_error_msg">비밀번호를 입력해주세요</string>
+    <string name="login_success_msg">로그인 성공</string>
+    <string name="movie_search_input_hint">영화를 입력해주세요</string>
+    <string name="movie_search_text">검색</string>
+    <string name="login_id_hint">아이디(id 치세요)</string>
+    <string name="login_pw_hint">패스워드(pass 치세요)</string>
+    <string name="login_login_text">로그인</string>
+    <string name="error_msg">에러</string>
+    <string name="local_db_msg">네트워크가 불안정하여 로컬DB 에서 불러옵니다</string>
+</resources>

@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+':Main Admin: as Admin
+'(Use the application) as (Use)
+'
+'User -> (Start)
+'User --> (Use)
+'
+'Admin ---> (Use)
+'
+'note right of Admin : This is an example.
+'
+'note right of (Use)
+'A note can also
+'be on several lines
+'end note
+'
+'note "This note is connected\nto several objects." as N2
+'(Start) .. N2
+'N2 .. (Use)
+
+
+Customer as User
+ApiServer as Api
+note "<<Include>>" as include
+
+User -- (Movie Search)
+User -- (Paging Movie Search)
+
+'<<include>>
+(Movie Search) ..> (Result Toast Msg)
+(Paging Movie Search) ..> (Result Toast Msg)
+
+'<<extend>>
+(Movie Search) <.. (Network Notification)
+(Paging Movie Search) <.. (Fail Toast Msg)
+
+(Movie Search) <|--- (Local Movie Search)
+(Movie Search) <|--- (Remote Movie Search)
+
+note right of Api : <<Actor>>
+(Movie Search) ---- Api
+(Paging Movie Search) ---- Api
+
+
+@enduml
