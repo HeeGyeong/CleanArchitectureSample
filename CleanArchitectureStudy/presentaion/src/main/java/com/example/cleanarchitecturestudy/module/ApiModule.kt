@@ -64,12 +64,6 @@ val apiModule: Module = module {
                 val newRequest = request().newBuilder()
                     .addHeader("X-Naver-Client-Id", "33chRuAiqlSn5hn8tIme")
                     .addHeader("X-Naver-Client-Secret", "fyfwt9PCUN")
-
-//                    .addHeader("osType", "a")
-//                    .addHeader("userCode", "")
-//                    .addHeader("AuthData", "M2E3Y2M3OTlhOTdmN2QwNjBmOTAxMmJkODg0OWY3MzdhYzVlZGFhNGY0YzdmMzdiMWQzOTFmNzUwZTdiMjNkNDkwZDRkYWU1NzQwOTlkMGM2M2VlMThkYzRhMWQwNTVhM2QxNTQ4OGI1NjVmNTczYmIwZDI2NGQ1OWRlMDhlZDlQQkdLeFZFNTROVlBRTUhRNlFQZkNQMFNtSkxVSkdmd2dNZW12eUN4dUJiTmlPbFprZEFD")
-//                    .addHeader("pcid", "1641804870319903810")
-//                    .addHeader("ssid", "wve7A9jeBS")
                     .build()
                 proceed(newRequest)
             }

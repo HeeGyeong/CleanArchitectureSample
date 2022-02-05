@@ -1,8 +1,6 @@
 package com.example.cleanarchitecturestudy.module
 
-import com.example.cleanarchitecturestudy.view.rank.RankViewModel
 import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel
-import com.example.cleanarchitecturestudy.view.select.SelectViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -14,7 +12,5 @@ import org.koin.dsl.module
  * viewModel 의 경우 koin 이 viewModel 을 viewModelFactory 에 등록하고 바인딩 한다.
  */
 val viewModelModule: Module = module {
-    viewModel { RankViewModel(get()) }
-    viewModel { SelectViewModel() }
     viewModel { MovieSearchViewModel(get(), get(), get(), get()) }
 }

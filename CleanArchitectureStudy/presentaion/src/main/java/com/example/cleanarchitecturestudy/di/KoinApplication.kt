@@ -35,7 +35,6 @@ class KoinApplication: Application() {
             modules(apiModule)
             modules(localDataModule)
             modules(networkModule)
-            modules(rankingDataModule)
             modules(remoteDataModule)
             modules(repositoryModule)
             modules(selectDataModule)

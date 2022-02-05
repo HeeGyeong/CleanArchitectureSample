@@ -53,11 +53,11 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.8.1"
     implementation 'com.google.code.gson:gson:2.8.6'
     // Room
-    implementation "androidx.room:room-runtime:2.2.6"
-    implementation "androidx.room:room-rxjava2:2.2.6"
-    testImplementation "androidx.room:room-testing:2.2.6"
-    kapt "androidx.room:room-compiler:2.2.6"
-    implementation 'androidx.room:room-ktx:2.2.6'
+    implementation "androidx.room:room-runtime:2.4.1"
+    implementation "androidx.room:room-rxjava2:2.4.1"
+    testImplementation "androidx.room:room-testing:2.4.1"
+    kapt "androidx.room:room-compiler:2.4.1"
+    implementation 'androidx.room:room-ktx:2.4.1'
 
     // 계층 간 의존성 추가 Data > Domain
     // multiModule

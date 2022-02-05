@@ -1,9 +1,7 @@
 package com.example.data.mapper
 
 import com.example.data.model.example.MovieEntity
-import com.example.data.model.rank.RankingEntity
 import com.example.domain.model.Movie
-import com.example.domain.model.Ranking
 
 /**
  * Data Entity to Data Model
@@ -24,20 +22,6 @@ fun mapperToMovie(movies: List<MovieEntity>): List<Movie> {
             it.subtitle,
             it.title,
             it.userRating
-        )
-    }
-}
-
-fun mapperToRanking(ranking: List<RankingEntity>): List<Ranking> {
-    return ranking.toList().map {
-        Ranking(
-            it.id,
-            it.index,
-            it.fluctuation,
-            it.imgUrl,
-            it.brandName,
-            it.goodsName,
-            it.goodsPrice
         )
     }
 }

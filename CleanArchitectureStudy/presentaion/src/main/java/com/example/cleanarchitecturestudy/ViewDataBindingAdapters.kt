@@ -9,18 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cleanarchitecturestudy.utils.EndlessRecyclerViewScrollListener
-import com.example.cleanarchitecturestudy.view.rank.RankingAdapter
 import com.example.cleanarchitecturestudy.view.search.MovieAdapter
 import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel
 import com.example.domain.model.Movie
-import com.example.domain.model.Ranking
-
-@BindingAdapter("setItems2")
-fun RecyclerView.setAdapterItems2(items: MutableList<Ranking>?) {
-    items?.let {
-        (adapter as RankingAdapter).submitList(it.toMutableList())
-    }
-}
 
 @BindingAdapter("setItems")
 fun RecyclerView.setAdapterItems(items: MutableList<Movie>?) {
