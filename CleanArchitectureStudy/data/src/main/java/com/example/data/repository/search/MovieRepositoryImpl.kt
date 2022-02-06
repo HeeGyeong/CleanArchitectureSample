@@ -20,7 +20,7 @@ class MovieRepositoryImpl(
     private val movieLocalDataSource: MovieLocalDataSource
 ) : MovieRepository {
 
-    //첫 영화검색
+    // 최초 영화 검색
     override fun getSearchMovies(query: String): Flowable<List<Movie>> {
         return movieLocalDataSource.getSearchMovies(query)
             .onErrorReturn { listOf() }
@@ -39,7 +39,7 @@ class MovieRepositoryImpl(
             }
     }
 
-    // 인터넷이 끊킨 경우 로컬디비에서 검색
+    // 네트워크 연결이 안되는 경우 로컬에서 검색
     override fun getLocalSearchMovies(query: String): Flowable<List<Movie>> {
         return movieLocalDataSource.getSearchMovies(query)
             .onErrorReturn { listOf() }
@@ -52,14 +52,15 @@ class MovieRepositoryImpl(
             }
     }
 
-    // 서버 DB 영화검색 요청
+    // 서버 DB 영화 검색 요청
     override fun getRemoteSearchMovies(
         query: String
     ): Single<List<Movie>> {
+        // return 된 Data 들은 Movie Type List
         return movieRemoteDataSource.getSearchMovies(query)
             .flatMap {
                 // insertMovie 는 MovieEntity 로 localDB에 insert.
-                // andThen 연산자를 통해 localDB에 insert 한 Data 들을 Mapper 클래스로 Movie type 으로 mapping 하고 해당 list 를 return
+                // andThen 연산자를 통해 localDB에 insert 한 Data 들을 Mapper 클래스를 사용하여 Movie type 으로 mapping 하고 해당 list 를 return
                 movieLocalDataSource.insertMovies(it.movies)
                     .andThen(Single.just(mapperToMovie(it.movies)))
             }

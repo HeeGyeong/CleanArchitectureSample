@@ -13,6 +13,9 @@ import com.example.cleanarchitecturestudy.view.search.MovieAdapter
 import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel
 import com.example.domain.model.Movie
 
+/**
+ * DataBinding
+ */
 @BindingAdapter("setItems")
 fun RecyclerView.setAdapterItems(items: MutableList<Movie>?) {
     items?.let {

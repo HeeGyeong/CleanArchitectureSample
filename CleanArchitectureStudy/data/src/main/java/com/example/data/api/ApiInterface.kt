@@ -1,6 +1,6 @@
 package com.example.data.api
 
-import com.example.data.model.example.MovieResponse
+import com.example.data.model.movie.MovieResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

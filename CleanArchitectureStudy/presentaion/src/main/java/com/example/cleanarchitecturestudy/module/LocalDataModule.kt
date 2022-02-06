@@ -16,11 +16,13 @@ import org.koin.dsl.module
 val localDataModule: Module = module {
     single<MovieLocalDataSource> { MovieLocalDataSourceImpl(get()) }
     single<MovieDao> { get<MovieDatabase>().movieDao() }
+
+    // singleTon 으로 Room 선언.
     single<MovieDatabase> {
         Room.databaseBuilder(
             get(),
             MovieDatabase::class.java,
-            "Movie.db"
+            "Movie.db" // Local DB name
         ).build()
     }
 }

@@ -1,6 +1,6 @@
 package com.example.data.repository.search.remote
 
-import com.example.data.model.example.MovieResponse
+import com.example.data.model.movie.MovieResponse
 import io.reactivex.Single
 
 /**

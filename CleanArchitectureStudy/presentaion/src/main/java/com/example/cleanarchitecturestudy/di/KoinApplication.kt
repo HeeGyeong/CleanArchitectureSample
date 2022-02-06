@@ -8,17 +8,14 @@ import org.koin.core.context.startKoin
 /**
  * Koin 을 사용하기 위한 Class
  * context 와 module 을 선언하여 주입시킨다.
+ *
+ * 해당 class 는 Manifest 에 선언하여 사용하기 때문에 별다른 호출부는 존재하지 않는다.
  */
 class KoinApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
         startKoin {
-            /*if (BuildConfig.DEBUG) {
-                androidLogger()
-            } else {
-                androidLogger(Level.ERROR)
-            }*/
             androidContext(this@KoinApplication)
 
             /*// vararg 로 넣어서 선언 가능.
@@ -37,7 +34,6 @@ class KoinApplication: Application() {
             modules(networkModule)
             modules(remoteDataModule)
             modules(repositoryModule)
-            modules(selectDataModule)
             modules(viewModelModule)
             modules(useCaseModule)
         }

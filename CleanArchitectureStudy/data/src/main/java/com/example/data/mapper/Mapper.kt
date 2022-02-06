@@ -1,6 +1,6 @@
 package com.example.data.mapper
 
-import com.example.data.model.example.MovieEntity
+import com.example.data.model.movie.MovieEntity
 import com.example.domain.model.Movie
 
 /**

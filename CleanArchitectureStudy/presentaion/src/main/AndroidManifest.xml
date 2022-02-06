@@ -25,10 +25,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.rank.RankActivity"
-            android:exported="false"/>
-        <activity android:name=".view.select.SelectActivity"
-            android:exported="false"/>
         <activity android:name=".view.search.MovieSearchActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>

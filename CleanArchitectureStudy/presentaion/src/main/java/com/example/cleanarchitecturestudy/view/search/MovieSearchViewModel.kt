@@ -11,6 +11,11 @@ import com.example.domain.usecase.movie.GetPagingMoviesUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
+/**
+ * MovieSearchActivity 에 사용되는 VM
+ *
+ * 해당 Activity 에서 사용되는 UseCase 를 모두 파라미터로 받는다.
+ */
 class MovieSearchViewModel(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val getPagingMoviesUseCase: GetPagingMoviesUseCase,
@@ -21,28 +26,30 @@ class MovieSearchViewModel(
     private var currentQuery: String = "" // 현재 검색어
     val query = MutableLiveData<String>() // 검색어(EditText two-way binding)
 
-    private val _movieList = MutableLiveData<MutableList<Movie>>() // 영화리스트
+    // 영화 리스트가 저장되는 변수. 해당 변수는 xml 에서 binding 되어 실제로 데이터를 뿌려주게 된다.
+    private val _movieList = MutableLiveData<MutableList<Movie>>()
     val movieList: LiveData<MutableList<Movie>> get() = _movieList
 
-    private val _toastMsg = MutableLiveData<MessageSet>() //검색결과 토스트 메시지
+    // 검색 결과에 따른 toast 메세지.
+    private val _toastMsg = MutableLiveData<MessageSet>()
     val toastMsg: LiveData<MessageSet> get() = _toastMsg
 
 
-    // 영화검색 (15개)
+    // 영화 검색
     fun requestMovie() {
         currentQuery = query.value.toString().trim()
         if (currentQuery.isEmpty()) {
             _toastMsg.value = MessageSet.EMPTY_QUERY
             return
         }
-        if (!checkNetworkState()) return //네트워크연결 유무
+        if (!checkNetworkState()) return // 네트워크 연결 유무
         compositeDisposable.add(
-            getMoviesUseCase.execute(currentQuery)
+            getMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
                 .doAfterTerminate { hideProgress() }
-                .subscribe({ movies ->
+                .subscribe({ movies -> // currentQuery 를 사용하여 검색한 결과 값이 movie 에 들어있다.
                     if (movies.isEmpty()) {
                         _toastMsg.value = MessageSet.NO_RESULT
                     } else {
@@ -55,11 +62,11 @@ class MovieSearchViewModel(
         )
     }
 
-    // 검색한 영화 더 불러오기(페이징, 무한스크롤)
+    // 검색한 영화 더 불러오기
     fun requestPagingMovie(offset: Int) {
-        if (!checkNetworkState()) return //네트워크연결 유무
+        if (!checkNetworkState()) return // 네트워크 연결 유무
         compositeDisposable.add(
-            getPagingMoviesUseCase.execute(currentQuery, offset)
+            getPagingMoviesUseCase(currentQuery, offset)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
@@ -89,7 +96,8 @@ class MovieSearchViewModel(
 
     private fun requestLocalMovies() {
         compositeDisposable.add(
-            getLocalMoviesUseCase.execute(currentQuery)
+            // getLocalMoviesUseCase.execute(currentQuery)
+            getLocalMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
@@ -116,6 +124,5 @@ class MovieSearchViewModel(
         NO_RESULT,
         LOCAL_SUCCESS
     }
-
 }
 
