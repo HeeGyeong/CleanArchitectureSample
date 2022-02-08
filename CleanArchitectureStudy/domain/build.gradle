@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library' // 모듈의경우 application 에서 library 로 변경해준다.
+    id ("com.android.library") // 모듈의경우 application 에서 library 로 변경해준다.
     id 'kotlin-android'
 }
 
@@ -8,27 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        //applicationId "com.example.domain" // library 이므로 application id는 제거.
         minSdkVersion 23
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
 }
 

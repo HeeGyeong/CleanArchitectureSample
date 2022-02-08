@@ -22,6 +22,12 @@ allprojects {
     }
 }
 
+subprojects {
+    afterEvaluate {
+        project.apply {"$rootDir/common.gradle"}
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
