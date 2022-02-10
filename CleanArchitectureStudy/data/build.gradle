@@ -5,15 +5,18 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdkVersion compileSdk_Version
+    buildToolsVersion buildTools_Version
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion minSdk_Version
     }
 }
 
 dependencies {
+
+    // multiModule
+    implementation project(':domain')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -39,8 +42,4 @@ dependencies {
     testImplementation "androidx.room:room-testing:2.4.1"
     kapt "androidx.room:room-compiler:2.4.1"
     implementation 'androidx.room:room-ktx:2.4.1'
-
-    // 계층 간 의존성 추가 Data > Domain
-    // multiModule
-    implementation project(':domain')
 }

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdkVersion compileSdk_Version
+    buildToolsVersion buildTools_Version
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion minSdk_Version
     }
     dataBinding {
         enabled = true
@@ -17,6 +17,11 @@ android {
 }
 
 dependencies {
+
+    // multiModule
+    implementation project(':domain')
+    implementation project(':data')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -25,11 +30,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
-    // 계층 간 의존성 추가 Presentation > Data > Domain
-    // multiModule
-    implementation project(':data')
-    implementation project(':domain')
 
     // koin
     implementation("org.koin:koin-android:2.2.2")
