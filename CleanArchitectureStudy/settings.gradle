@@ -2,3 +2,5 @@ rootProject.name = "CleanArchitectureStudy"
 include ':presentaion'
 include ':data'
 include ':domain'
+include ':moviesearch'
+include ':core'

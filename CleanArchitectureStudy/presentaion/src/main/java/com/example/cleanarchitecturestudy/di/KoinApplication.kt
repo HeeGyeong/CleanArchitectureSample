@@ -29,6 +29,7 @@ class KoinApplication: Application() {
             )*/
 
             // 개별로 선언 가능
+            modules(navigationModule)
             modules(apiModule)
             modules(localDataModule)
             modules(networkModule)
