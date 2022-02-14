@@ -1,6 +1,6 @@
 package com.example.cleanarchitecturestudy.module
 
-import com.example.core.base.util.NetworkManager
+import com.example.cleanarchitecturestudy.utils.NetworkManager
 import org.koin.core.module.Module
 import org.koin.dsl.module
 

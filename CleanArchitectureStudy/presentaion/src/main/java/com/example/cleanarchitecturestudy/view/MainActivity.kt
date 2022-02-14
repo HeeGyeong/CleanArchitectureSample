@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
-import com.example.moviesearch.search.MovieSearchActivity
-import org.koin.core.context.loadKoinModules
-import org.koin.core.module.Module
+import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
 
 /**
  * MainActivity.
