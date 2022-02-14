@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.startup:startup-runtime:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5bf0a73cfe252020f1effc33b99bb3b3/startup-runtime-1.0.0/res" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5bf0a73cfe252020f1effc33b99bb3b3/startup-runtime-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5bf0a73cfe252020f1effc33b99bb3b3/startup-runtime-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/androidx.startup/startup-runtime/1.0.0/1caeb57122c1e988047c3f5a98493a3a8c6d5f21/startup-runtime-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

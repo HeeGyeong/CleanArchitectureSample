@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.rubensousa:gravitysnaphelper:2.2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/res" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/com.github.rubensousa/gravitysnaphelper/2.2.1/bd6bb834b06c1b45b989e26f50d9bbe4037c5720/gravitysnaphelper-2.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/com.github.rubensousa/gravitysnaphelper/2.2.1/991cc577546d41cf0e14752aa04d63b07fba7328/gravitysnaphelper-2.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

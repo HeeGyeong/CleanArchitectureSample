@@ -1,0 +1,23 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:2:1-7:12
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:2:1-7:12
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:2:1-7:12
+	package
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml
+		INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml:5:22-64
+uses-sdk
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml
+		INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/AndroidManifest.xml

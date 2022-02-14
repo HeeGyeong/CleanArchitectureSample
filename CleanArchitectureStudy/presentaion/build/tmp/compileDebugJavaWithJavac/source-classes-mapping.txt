@@ -1,0 +1,28 @@
+com/example/cleanarchitecturestudy/BR.java
+ com.example.cleanarchitecturestudy.BR
+com/example/cleanarchitecturestudy/DataBinderMapperImpl.java
+ com.example.cleanarchitecturestudy.DataBinderMapperImpl
+ com.example.cleanarchitecturestudy.DataBinderMapperImpl$InnerBrLookup
+ com.example.cleanarchitecturestudy.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/cleanarchitecturestudy/databinding/ItemMovieBindingImpl.java
+ com.example.cleanarchitecturestudy.databinding.ItemMovieBindingImpl
+com/example/cleanarchitecturestudy/generated/callback/OnClickListener.java
+ com.example.cleanarchitecturestudy.generated.callback.OnClickListener
+ com.example.cleanarchitecturestudy.generated.callback.OnClickListener$Listener
+com/example/cleanarchitecturestudy/databinding/ItemMovieBinding.java
+ com.example.cleanarchitecturestudy.databinding.ItemMovieBinding
+com/example/cleanarchitecturestudy/BuildConfig.java
+ com.example.cleanarchitecturestudy.BuildConfig
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/example/cleanarchitecturestudy/databinding/ActivityMovieSearchBindingImpl.java
+ com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBindingImpl
+ com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBindingImpl$1
+com/example/cleanarchitecturestudy/databinding/ActivityMovieSearchBinding.java
+ com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/example/cleanarchitecturestudy/DataBindingTriggerClass.java
+ com.example.cleanarchitecturestudy.DataBindingTriggerClass
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
