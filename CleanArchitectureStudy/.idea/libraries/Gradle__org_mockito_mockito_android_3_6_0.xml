@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mockito:mockito-android:3.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-android/3.6.0/e062644de313f9115cda975231c4d2885a3cdc8a/mockito-android-3.6.0.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/org.mockito/mockito-android/3.6.0/e062644de313f9115cda975231c4d2885a3cdc8a/mockito-android-3.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-android/3.6.0/ae7da3d892f0e72c762393d126df6aba2acc76f1/mockito-android-3.6.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/org.mockito/mockito-android/3.6.0/ae7da3d892f0e72c762393d126df6aba2acc76f1/mockito-android-3.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-android/3.6.0/5493a48d8868cc45e1bc2d9fd68a8b7b3f27e258/mockito-android-3.6.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/org.mockito/mockito-android/3.6.0/5493a48d8868cc45e1bc2d9fd68a8b7b3f27e258/mockito-android-3.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,96 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.cleanarchitecturestudy.test" >
+4
+5    <uses-sdk
+5-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:5:5-74
+6        android:minSdkVersion="23"
+6-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:5:15-41
+7        android:targetSdkVersion="23" />
+7-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:11:5-15:84
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:11:22-76
+11        android:functionalTest="false"
+11-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:13:22-53
+13        android:label="Tests for com.example.cleanarchitecturestudy"
+13-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:15:22-82
+14        android:targetPackage="com.example.cleanarchitecturestudy" />
+14-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:12:22-80
+15
+16    <queries>
+16-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:24:5-28:15
+17        <package android:name="androidx.test.orchestrator" />
+17-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:25:9-62
+17-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:25:18-59
+18        <package android:name="androidx.test.services" />
+18-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:26:9-58
+18-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:26:18-55
+19        <package android:name="com.google.android.apps.common.testing.services" />
+19-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:27:9-83
+19-->[androidx.test:runner:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/739fdc60a95a75250a2987e7455371f6/runner-1.4.0/AndroidManifest.xml:27:18-80
+20    </queries>
+21
+22    <uses-permission android:name="android.permission.REORDER_TASKS" />
+22-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:24:5-72
+22-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:24:22-69
+23
+24    <application android:debuggable="true" >
+24-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:7:5-9:19
+24-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:7:18-43
+25        <uses-library android:name="android.test.runner" />
+25-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:8:9-60
+25-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2373943494448377438.xml:8:23-57
+26
+27        <activity
+27-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:27:9-34:20
+28            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+28-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:28:13-99
+29            android:exported="true"
+29-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:29:13-36
+30            android:theme="@android:style/Theme" >
+30-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:30:13-49
+31            <intent-filter>
+31-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:31:13-33:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:32:17-69
+32-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:32:25-66
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:35:9-42:20
+36            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+36-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:36:13-95
+37            android:exported="true"
+37-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:37:13-36
+38            android:theme="@android:style/Theme" >
+38-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:38:13-49
+39            <intent-filter>
+39-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:31:13-33:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:32:17-69
+40-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:32:25-66
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:43:9-50:20
+44            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+44-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:44:13-103
+45            android:exported="true"
+45-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:45:13-36
+46            android:theme="@android:style/Theme.Dialog" >
+46-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:46:13-56
+47            <intent-filter>
+47-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:31:13-33:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:32:17-69
+48-->[androidx.test:core:1.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/AndroidManifest.xml:32:25-66
+49            </intent-filter>
+50        </activity>
+51    </application>
+52
+53</manifest>

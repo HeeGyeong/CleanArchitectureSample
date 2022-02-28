@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: net.bytebuddy:byte-buddy-android:1.10.15">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-android/1.10.15/484cfc25379f28ad0fae7c535cda298c62c40c69/byte-buddy-android-1.10.15.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-android/1.10.15/484cfc25379f28ad0fae7c535cda298c62c40c69/byte-buddy-android-1.10.15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-android/1.10.15/bf04b864661d67a7463dee9d77758156fc645b00/byte-buddy-android-1.10.15-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-android/1.10.15/bf04b864661d67a7463dee9d77758156fc645b00/byte-buddy-android-1.10.15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-android/1.10.15/d85743171a52d8096a3a20a4079f01d23cf8cf11/byte-buddy-android-1.10.15-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-android/1.10.15/d85743171a52d8096a3a20a4079f01d23cf8cf11/byte-buddy-android-1.10.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

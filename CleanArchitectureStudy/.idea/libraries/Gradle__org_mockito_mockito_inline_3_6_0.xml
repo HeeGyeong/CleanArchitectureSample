@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mockito:mockito-inline:3.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-inline/3.6.0/1addf70b564c1f72687700d07ac9a69a9b71a6fb/mockito-inline-3.6.0.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/org.mockito/mockito-inline/3.6.0/1addf70b564c1f72687700d07ac9a69a9b71a6fb/mockito-inline-3.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-inline/3.6.0/ae7da3d892f0e72c762393d126df6aba2acc76f1/mockito-inline-3.6.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/org.mockito/mockito-inline/3.6.0/ae7da3d892f0e72c762393d126df6aba2acc76f1/mockito-inline-3.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-inline/3.6.0/560a6a7b3ddee51b908fc4a7e7084be498f74df9/mockito-inline-3.6.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/org.mockito/mockito-inline/3.6.0/560a6a7b3ddee51b908fc4a7e7084be498f74df9/mockito-inline-3.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
