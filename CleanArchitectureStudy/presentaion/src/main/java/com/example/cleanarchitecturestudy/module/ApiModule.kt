@@ -1,10 +1,14 @@
 package com.example.cleanarchitecturestudy.module
 
 import android.util.Log
+import com.example.cleanarchitecturestudy.BuildConfig
 import com.example.data.api.ApiClient
 import com.example.data.api.ApiInterface
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.Logger
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -29,7 +33,6 @@ val apiModule: Module = module {
 
     // Retrofit setting
     single<Retrofit> {
-        Log.d("useCase" , "call single<Retrofit>")
         Retrofit.Builder()
             .baseUrl(ApiClient.BASE_URL)
             .client(get())
@@ -37,29 +40,26 @@ val apiModule: Module = module {
             .addConverterFactory(get<GsonConverterFactory>())
             .build()
     }
-    
+
     single<GsonConverterFactory> { GsonConverterFactory.create() }
 
-    single<OkHttpClient> {
+    single {
         OkHttpClient.Builder()
             .run {
-                Log.d("useCase" , "call single<OkHttpClient>")
                 addInterceptor(get<Interceptor>()) // 하단에 선언한 Intercepter 를 주입
-                
+
                 // 통신 시 시간 관련 option 추가
                 connectTimeout(60, TimeUnit.SECONDS)
                 readTimeout(60, TimeUnit.SECONDS)
                 writeTimeout(60, TimeUnit.SECONDS)
-                
+                addInterceptor(get<HttpLoggingInterceptor>())
                 build()
             }
     }
 
-    single<Interceptor> {
+    single {
         Interceptor { chain ->
             with(chain) {
-                Log.d("useCase" , "call single<Interceptor>")
-
                 // Api 통신 시, Header 에 추가할 값들.
                 val newRequest = request().newBuilder()
                     .addHeader("X-Naver-Client-Id", "33chRuAiqlSn5hn8tIme")
@@ -68,5 +68,22 @@ val apiModule: Module = module {
                 proceed(newRequest)
             }
         }
+    }
+
+    single {
+        HttpLoggingInterceptor { message ->
+            // 기본 Log Custom
+//            Log.d("ApiLogger", "$message ")
+            // Logger Library 사용
+            Logger.d(message)
+        }
+            .let {
+                if (BuildConfig.DEBUG) {
+                    Logger.addLogAdapter(AndroidLogAdapter())
+                    it.setLevel(HttpLoggingInterceptor.Level.BODY)
+                } else {
+                    it.setLevel(HttpLoggingInterceptor.Level.NONE)
+                }
+            }
     }
 }
