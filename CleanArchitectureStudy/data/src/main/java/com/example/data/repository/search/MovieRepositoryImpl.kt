@@ -1,5 +1,6 @@
 package com.example.data.repository.search
 
+import android.util.Log
 import com.example.data.mapper.mapperToMovie
 import com.example.data.repository.search.local.MovieLocalDataSource
 import com.example.data.repository.search.remote.MovieRemoteDataSource
@@ -7,6 +8,9 @@ import com.example.domain.model.Movie
 import com.example.domain.repository.MovieRepository
 import io.reactivex.Flowable
 import io.reactivex.Single
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flow
 
 /**
  * Domain Layer 의 Repository Interface 구현부.
@@ -37,6 +41,14 @@ class MovieRepositoryImpl(
                     Single.concat(local, remote) // 순서대로 불러옴
                 }
             }
+    }
+
+    override fun getSearchMoviesFlow(query: String): Flow<List<Movie>> {
+        return flow {
+            movieRemoteDataSource.getSearchMoviesFlow(query).collect {
+                emit(mapperToMovie(it.movies))
+            }
+        }
     }
 
     // 네트워크 연결이 안되는 경우 로컬에서 검색

@@ -14,7 +14,7 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.guideline, 5);
+        sViewsWithIds.put(R.id.guideline, 6);
     }
     // views
     @NonNull
@@ -22,6 +22,8 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback1;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -64,17 +66,19 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
     };
 
     public ActivityMovieSearchBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private ActivityMovieSearchBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 3
             , (android.widget.Button) bindings[2]
+            , (android.widget.Button) bindings[3]
             , (android.widget.EditText) bindings[1]
-            , (androidx.constraintlayout.widget.Guideline) bindings[5]
-            , (android.widget.ProgressBar) bindings[4]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
+            , (androidx.constraintlayout.widget.Guideline) bindings[6]
+            , (android.widget.ProgressBar) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             );
         this.btnSearch.setTag(null);
+        this.btnSearchFlow.setTag(null);
         this.etInput.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
@@ -83,6 +87,7 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
         setRootTag(root);
         // listeners
         mCallback1 = new com.example.cleanarchitecturestudy.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new com.example.cleanarchitecturestudy.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -249,6 +254,7 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
             // api target 1
 
             this.btnSearch.setOnClickListener(mCallback1);
+            this.btnSearchFlow.setOnClickListener(mCallback2);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etInputandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x1cL) != 0) {
@@ -275,19 +281,41 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // vm != null
-        boolean vmJavaLangObjectNull = false;
-        // vm
-        com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel vm = mVm;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // vm != null
+                boolean vmJavaLangObjectNull = false;
+                // vm
+                com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel vm = mVm;
 
 
 
-        vmJavaLangObjectNull = (vm) != (null);
-        if (vmJavaLangObjectNull) {
+                vmJavaLangObjectNull = (vm) != (null);
+                if (vmJavaLangObjectNull) {
 
 
-            vm.requestMovie();
+                    vm.requestMovie();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // vm != null
+                boolean vmJavaLangObjectNull = false;
+                // vm
+                com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel vm = mVm;
+
+
+
+                vmJavaLangObjectNull = (vm) != (null);
+                if (vmJavaLangObjectNull) {
+
+
+                    vm.requestMovieFlow();
+                }
+                break;
+            }
         }
     }
     // dirty flag

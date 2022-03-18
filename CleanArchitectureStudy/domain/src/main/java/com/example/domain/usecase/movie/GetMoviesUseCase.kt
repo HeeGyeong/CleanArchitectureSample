@@ -3,6 +3,7 @@ package com.example.domain.usecase.movie
 import com.example.domain.model.Movie
 import com.example.domain.repository.MovieRepository
 import io.reactivex.Flowable
+import kotlinx.coroutines.flow.Flow
 
 /**
  * Movie Data 를 가져오기 위한 함수.
@@ -15,4 +16,7 @@ class GetMoviesUseCase(private val repository: MovieRepository) {
         query: String
     ): Flowable<List<Movie>> = repository.getSearchMovies(query)
 
+    fun getFlowData(
+        query: String
+    ): Flow<List<Movie>> = repository.getSearchMoviesFlow(query)
 }

@@ -44,9 +44,22 @@
             android:tag="binding_2"                   
             android:text="@string/movie_search_text"
             app:layout_constraintBottom_toTopOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/btn_search_flow"
             app:layout_constraintHorizontal_weight="2"
             app:layout_constraintStart_toEndOf="@+id/et_input"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_search_flow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="binding_3"                       
+            android:text="Flow"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/btn_search"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -61,7 +74,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/guideline"
             app:layout_constraintVertical_bias="0.0"
-            android:tag="binding_3"   
+            android:tag="binding_4"   
                                             />
 
         <ProgressBar
@@ -69,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:tag="binding_4"                                          
+            android:tag="binding_5"                                          
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

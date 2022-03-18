@@ -1,7 +1,9 @@
 package com.example.cleanarchitecturestudy.view.search
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.cleanarchitecturestudy.base.BaseViewModel
 import com.example.cleanarchitecturestudy.utils.NetworkManager
 import com.example.domain.model.Movie
@@ -10,6 +12,11 @@ import com.example.domain.usecase.movie.GetMoviesUseCase
 import com.example.domain.usecase.movie.GetPagingMoviesUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.onCompletion
+import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.launch
 
 /**
  * MovieSearchActivity 에 사용되는 VM
@@ -60,6 +67,31 @@ class MovieSearchViewModel(
                     _toastMsg.value = MessageSet.ERROR
                 })
         )
+    }
+
+    fun requestMovieFlow() {
+        currentQuery = query.value.toString().trim()
+        if (currentQuery.isEmpty()) {
+            _toastMsg.value = MessageSet.EMPTY_QUERY
+            return
+        }
+        if (!checkNetworkState()) return
+
+        // Kotlin Flow는 Coroutine에서 동작.
+        viewModelScope.launch {
+            getMoviesUseCase.getFlowData(currentQuery)
+                .onStart { showProgress() }
+                .onCompletion { hideProgress() }
+                .catch { _toastMsg.value = MessageSet.ERROR }
+                .collect { movies ->
+                    if (movies.isEmpty()) {
+                        _toastMsg.value = MessageSet.NO_RESULT
+                    } else {
+                        _movieList.value = movies as ArrayList<Movie>
+                        _toastMsg.value = MessageSet.SUCCESS
+                    }
+                }
+        }
     }
 
     // 검색한 영화 더 불러오기

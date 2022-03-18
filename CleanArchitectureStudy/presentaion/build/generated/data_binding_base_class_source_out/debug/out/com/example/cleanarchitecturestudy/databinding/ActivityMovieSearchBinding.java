@@ -24,6 +24,9 @@ public abstract class ActivityMovieSearchBinding extends ViewDataBinding {
   public final Button btnSearch;
 
   @NonNull
+  public final Button btnSearchFlow;
+
+  @NonNull
   public final EditText etInput;
 
   @NonNull
@@ -39,10 +42,11 @@ public abstract class ActivityMovieSearchBinding extends ViewDataBinding {
   protected MovieSearchViewModel mVm;
 
   protected ActivityMovieSearchBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnSearch, EditText etInput, Guideline guideline, ProgressBar pbLoading,
-      RecyclerView rvMovies) {
+      Button btnSearch, Button btnSearchFlow, EditText etInput, Guideline guideline,
+      ProgressBar pbLoading, RecyclerView rvMovies) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnSearch = btnSearch;
+    this.btnSearchFlow = btnSearchFlow;
     this.etInput = etInput;
     this.guideline = guideline;
     this.pbLoading = pbLoading;
