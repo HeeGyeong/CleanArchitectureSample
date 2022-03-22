@@ -31,7 +31,7 @@ class MovieSearchActivity : BaseActivity<ActivityMovieSearchBinding>(R.layout.ac
 
     private fun initViewModelCallback() {
         with(viewModel) {
-            // toastMsg 가 변경 시, 변경된 text 로 toast 를 띄워준다.
+            // toastMsg 가 변경 시, 변경된 text 로 toast 를 띄워 준다.
             toastMsg.observe(this@MovieSearchActivity, Observer {
                 when (toastMsg.value) {
                     MovieSearchViewModel.MessageSet.LAST_PAGE -> showToast(getString(R.string.last_page_msg))
