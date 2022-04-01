@@ -3,102 +3,165 @@
 3    package="com.example.cleanarchitecturestudy" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="23"
+6        android:minSdkVersion="24"
 6-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="28" />
 7-->[androidx.fragment:fragment-ktx:1.2.5] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/64d5c92ea42eff69e57de551503739c1/fragment-ktx-1.2.5/AndroidManifest.xml:22:9-38
 8
 9    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-9-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:5:5-79
-9-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:5:22-76
+9-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:6:5-79
+9-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:6:22-76
 10    <uses-permission android:name="android.permission.INTERNET" />
-10-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:6:5-67
-10-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:6:22-64
-11
-12    <application
-12-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:8:5-31:19
-13        android:name="com.example.cleanarchitecturestudy.di.KoinApplication"
-13-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:9:9-43
-14        android:allowBackup="true"
-14-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c29f8e7625cb69a927ec46ae6af67e00/core-1.7.0/AndroidManifest.xml:24:18-86
-16        android:debuggable="true"
-17        android:extractNativeLibs="false"
-18        android:icon="@mipmap/ic_launcher"
-18-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:11:9-43
-19        android:label="@string/app_name"
-19-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:12:9-41
-20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:13:9-54
-21        android:supportsRtl="true"
-21-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:14:9-35
-22        android:testOnly="true"
-23        android:theme="@style/Theme.CleanArchitectureStudy" >
-23-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:15:9-60
-24
-25        <!--
-26        android12 (sdkVersion 31) 로 올라오면서,
-27        외부 응용 프로그램에서 실행될 수 있는지 여부를 확인하는 exported 명시적 선언이 필요함. 기존에는 이 값이 자동 적용되었던 부분이다.
-28        다른 애플리케이션에서 해당 액티비티를 시작할 수 있으면 true, 없으면 false 로 선언한다.
-29        앱을 최초 실행하는 Main(LAUNCHER) 의 경우 false 로 설정하게 되면 앱 아이콘 클릭 시 앱이 실행되지 않는다.
-30        -->
-31        <activity
-31-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:20:9-26:20
-32            android:name="com.example.cleanarchitecturestudy.view.MainActivity"
-32-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:20:19-52
-33            android:exported="true" >
-33-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:21:13-36
-34            <intent-filter>
-34-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:22:13-25:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:23:17-69
-35-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:23:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:24:17-77
-37-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:24:27-74
-38            </intent-filter>
-39        </activity>
-40        <activity
-40-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:28:9-30:39
-41            android:name="com.example.cleanarchitecturestudy.view.search.MovieSearchActivity"
-41-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:28:19-66
-42            android:exported="false"
-42-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:13-37
-43            android:windowSoftInputMode="adjustNothing" />
-43-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:29:13-56
-44
-45        <service
-45-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
-46            android:name="androidx.room.MultiInstanceInvalidationService"
-46-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:26:13-74
-47            android:directBootAware="true"
-47-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:27:13-43
-48            android:exported="false" />
-48-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:28:13-37
-49
-50        <provider
-50-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-51            android:name="androidx.startup.InitializationProvider"
-51-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-52            android:authorities="com.example.cleanarchitecturestudy.androidx-startup"
-52-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-53            android:exported="false" >
-53-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-54            <meta-data
-54-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-55                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-55-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-56                android:value="androidx.startup" />
-56-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-57            <meta-data
-57-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/65f3ac9825b5be9bba667b9b84712474/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-58-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/65f3ac9825b5be9bba667b9b84712474/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-59                android:value="androidx.startup" />
-59-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/65f3ac9825b5be9bba667b9b84712474/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-60        </provider>
-61    </application>
-62
-63</manifest>
+10-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:7:5-67
+10-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:7:22-64
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:8:5-65
+11-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:8:22-62
+12
+13    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+14    <uses-feature
+14-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:25:5-27:36
+15        android:name="android.hardware.camera"
+15-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:26:9-47
+16        android:required="false" />
+16-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:27:9-33
+17    <uses-feature
+17-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:28:5-30:36
+18        android:name="android.hardware.camera.front"
+18-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:29:9-53
+19        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+19-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:30:9-33
+20    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+21    <uses-feature
+21-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:33:5-35:36
+22        android:name="android.hardware.camera.autofocus"
+22-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:34:9-57
+23        android:required="false" />
+23-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:35:9-33
+24    <uses-feature
+24-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:36:5-38:36
+25        android:name="android.hardware.camera.flash"
+25-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:37:9-53
+26        android:required="false" />
+26-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:38:9-33
+27    <uses-feature
+27-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:39:5-41:36
+28        android:name="android.hardware.screen.landscape"
+28-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:40:9-57
+29        android:required="false" />
+29-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:41:9-33
+30    <uses-feature
+30-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:42:5-44:36
+31        android:name="android.hardware.wifi"
+31-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:43:9-45
+32        android:required="false" />
+32-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:44:9-33
+33
+34    <application
+34-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:5-36:19
+35        android:name="com.example.cleanarchitecturestudy.di.KoinApplication"
+35-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:11:9-43
+36        android:allowBackup="true"
+36-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:12:9-35
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c29f8e7625cb69a927ec46ae6af67e00/core-1.7.0/AndroidManifest.xml:24:18-86
+38        android:debuggable="true"
+39        android:extractNativeLibs="false"
+40        android:icon="@mipmap/ic_launcher"
+40-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:13:9-43
+41        android:label="@string/app_name"
+41-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:14:9-41
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:15:9-54
+43        android:supportsRtl="true"
+43-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:16:9-35
+44        android:testOnly="true"
+45        android:theme="@style/Theme.CleanArchitectureStudy" >
+45-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:17:9-60
+46
+47        <!--
+48        android12 (sdkVersion 31) 로 올라오면서,
+49        외부 응용 프로그램에서 실행될 수 있는지 여부를 확인하는 exported 명시적 선언이 필요함. 기존에는 이 값이 자동 적용되었던 부분이다.
+50        다른 애플리케이션에서 해당 액티비티를 시작할 수 있으면 true, 없으면 false 로 선언한다.
+51        앱을 최초 실행하는 Main(LAUNCHER) 의 경우 false 로 설정하게 되면 앱 아이콘 클릭 시 앱이 실행되지 않는다.
+52        -->
+53        <activity
+53-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:22:9-28:20
+54            android:name="com.example.cleanarchitecturestudy.view.MainActivity"
+54-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:22:19-52
+55            android:exported="true" >
+55-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:23:13-36
+56            <intent-filter>
+56-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:24:13-27:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:25:17-69
+57-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:25:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:26:17-77
+59-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:26:27-74
+60            </intent-filter>
+61        </activity>
+62        <activity
+62-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:9-32:39
+63            android:name="com.example.cleanarchitecturestudy.view.search.MovieSearchActivity"
+63-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:19-66
+64            android:exported="false"
+64-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:32:13-37
+65            android:windowSoftInputMode="adjustNothing" />
+65-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:31:13-56
+66        <activity
+66-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:9-35:53
+67            android:name="com.example.cleanarchitecturestudy.view.qr.QrCodeActivity"
+67-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:19-57
+68            android:screenOrientation="fullSensor" />
+68-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:35:13-51
+69
+70        <service
+70-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
+71            android:name="androidx.room.MultiInstanceInvalidationService"
+71-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:26:13-74
+72            android:directBootAware="true"
+72-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:27:13-43
+73            android:exported="false" />
+73-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b78ab4f9f06534768e04d2b0d863ca1c/room-runtime-2.4.1/AndroidManifest.xml:28:13-37
+74
+75        <activity
+75-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:47:9-53:63
+76            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+76-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:48:13-74
+77            android:clearTaskOnLaunch="true"
+77-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:49:13-45
+78            android:screenOrientation="sensorLandscape"
+78-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:50:13-56
+79            android:stateNotNeeded="true"
+79-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:51:13-42
+80            android:theme="@style/zxing_CaptureTheme"
+80-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:52:13-54
+81            android:windowSoftInputMode="stateAlwaysHidden" />
+81-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1466fe65b66e23ce81d9a0d163b85323/zxing-android-embedded-4.1.0/AndroidManifest.xml:53:13-60
+82
+83        <provider
+83-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+84            android:name="androidx.startup.InitializationProvider"
+84-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+85            android:authorities="com.example.cleanarchitecturestudy.androidx-startup"
+85-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+86            android:exported="false" >
+86-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+87            <meta-data
+87-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+88                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+88-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+89                android:value="androidx.startup" />
+89-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c68cf2b14c7e3d3baaf43c29e96faa75/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+90            <meta-data
+90-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/65f3ac9825b5be9bba667b9b84712474/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+91                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+91-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/65f3ac9825b5be9bba667b9b84712474/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+92                android:value="androidx.startup" />
+92-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/65f3ac9825b5be9bba667b9b84712474/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+93        </provider>
+94    </application>
+95
+96</manifest>

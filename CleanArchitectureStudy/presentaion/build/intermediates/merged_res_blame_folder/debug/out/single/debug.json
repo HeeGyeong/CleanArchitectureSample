@@ -4,8 +4,8 @@
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
@@ -46,6 +46,10 @@
     {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_activity_qr.xml.flat",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_qr.xml"
     },
     {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",

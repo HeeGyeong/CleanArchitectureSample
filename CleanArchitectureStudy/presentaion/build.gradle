@@ -60,6 +60,9 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.rubensousa:gravitysnaphelper:2.2.1'
     implementation 'com.orhanobut:logger:2.2.0'
+    // zxing
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
 
     // Espresso
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'

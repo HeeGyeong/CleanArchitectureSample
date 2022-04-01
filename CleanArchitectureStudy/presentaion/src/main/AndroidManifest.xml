@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cleanarchitecturestudy">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".di.KoinApplication"
@@ -28,6 +30,9 @@
         <activity android:name=".view.search.MovieSearchActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>
+
+        <activity android:name=".view.qr.QrCodeActivity"
+            android:screenOrientation="fullSensor"/>
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBindingImpl;
+import com.example.cleanarchitecturestudy.databinding.ActivityQrBindingImpl;
 import com.example.cleanarchitecturestudy.databinding.ItemMovieBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
@@ -21,12 +22,15 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYMOVIESEARCH = 1;
 
-  private static final int LAYOUT_ITEMMOVIE = 2;
+  private static final int LAYOUT_ACTIVITYQR = 2;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
+  private static final int LAYOUT_ITEMMOVIE = 3;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.activity_movie_search, LAYOUT_ACTIVITYMOVIESEARCH);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.activity_qr, LAYOUT_ACTIVITYQR);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.item_movie, LAYOUT_ITEMMOVIE);
   }
 
@@ -44,6 +48,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityMovieSearchBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_movie_search is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYQR: {
+          if ("layout/activity_qr_0".equals(tag)) {
+            return new ActivityQrBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_qr is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMMOVIE: {
           if ("layout/item_movie_0".equals(tag)) {
@@ -106,10 +116,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
 
     static {
       sKeys.put("layout/activity_movie_search_0", com.example.cleanarchitecturestudy.R.layout.activity_movie_search);
+      sKeys.put("layout/activity_qr_0", com.example.cleanarchitecturestudy.R.layout.activity_qr);
       sKeys.put("layout/item_movie_0", com.example.cleanarchitecturestudy.R.layout.item_movie);
     }
   }

@@ -1,4 +1,4 @@
-#Tue Mar 22 20:51:11 KST 2022
+#Fri Apr 01 23:30:24 KST 2022
 path.4=15/classes.dex
 path.3=14/classes.dex
 path.2=13/classes.dex
@@ -19,6 +19,7 @@ base.8=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presen
 base.7=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeLibDexDebug/5/classes.dex
 base.6=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeLibDexDebug/4/classes.dex
 base.5=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeLibDexDebug/3/classes.dex
+renamed.22=classes23.dex
 renamed.21=classes22.dex
 renamed.20=classes21.dex
 renamed.18=classes19.dex
@@ -41,6 +42,7 @@ base.14=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/prese
 base.19=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
 base.18=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
 base.20=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+base.22=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
 base.21=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 renamed.3=classes4.dex
 path.12=0/classes.dex
@@ -65,3 +67,4 @@ path.20=9/classes.dex
 base.11=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeLibDexDebug/9/classes.dex
 base.10=/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/dex/debug/mergeLibDexDebug/8/classes.dex
 path.21=classes2.dex
+path.22=15/classes.dex

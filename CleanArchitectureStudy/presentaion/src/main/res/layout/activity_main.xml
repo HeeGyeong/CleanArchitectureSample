@@ -17,4 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
+    <Button
+        android:id="@+id/qr_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="qr"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:onClick="btnClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/thirdBtn"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

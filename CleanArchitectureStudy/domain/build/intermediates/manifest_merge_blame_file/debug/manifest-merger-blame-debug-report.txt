@@ -2,7 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.example.domain" >
 4
-5    <uses-sdk android:minSdkVersion="23" />
+5    <uses-sdk android:minSdkVersion="24" />
 5-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/src/main/AndroidManifest.xml
 6
 7    <uses-permission android:name="android.permission.INTERNET" />

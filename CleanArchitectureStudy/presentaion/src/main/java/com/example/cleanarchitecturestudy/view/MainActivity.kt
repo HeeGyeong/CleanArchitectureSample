@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
+import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
 
 /**
@@ -23,6 +24,9 @@ class MainActivity: AppCompatActivity() {
         when(view.id) {
             R.id.thirdBtn -> {
                 startActivity(Intent(this, MovieSearchActivity::class.java))
+            }
+            R.id.qr_btn -> {
+                startActivity(Intent(this, QrCodeActivity::class.java))
             }
         }
     }
