@@ -15,7 +15,8 @@ public class ActivityQrBindingImpl extends ActivityQrBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.btn_qr_code, 1);
-        sViewsWithIds.put(R.id.qr_text, 2);
+        sViewsWithIds.put(R.id.btn_qr_code_new, 2);
+        sViewsWithIds.put(R.id.qr_text, 3);
     }
     // views
     @NonNull
@@ -26,12 +27,13 @@ public class ActivityQrBindingImpl extends ActivityQrBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityQrBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private ActivityQrBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.Button) bindings[1]
-            , (android.widget.TextView) bindings[2]
+            , (android.widget.Button) bindings[2]
+            , (android.widget.TextView) bindings[3]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

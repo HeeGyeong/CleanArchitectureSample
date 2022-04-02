@@ -1,12 +1,18 @@
 package com.example.cleanarchitecturestudy.view.qr
 
 import android.content.Intent
-import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.ActivityResultLauncher
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityQrBinding
 import com.google.zxing.integration.android.IntentIntegrator
+import com.journeyapps.barcodescanner.ScanContract
+import com.journeyapps.barcodescanner.ScanIntentResult
+import com.journeyapps.barcodescanner.ScanOptions
+
 
 class QrCodeActivity: BaseActivity<ActivityQrBinding>(R.layout.activity_qr) {
 
@@ -15,14 +21,17 @@ class QrCodeActivity: BaseActivity<ActivityQrBinding>(R.layout.activity_qr) {
             R.id.btn_qr_code -> {
                 initQrCode()
             }
+            R.id.btn_qr_code_new -> {
+                launcherQrCode()
+            }
         }
     }
 
     private fun initQrCode() {
         val integrator = IntentIntegrator(this)
-        integrator.setPrompt("바코드 및 QR코드 등록을 위해\n상자안에 위치시켜 주세요\n\n")
-        integrator.setOrientationLocked(false) // 세로,가로 모드를 고정 시켜주는 역할
-        integrator.setBeepEnabled(true) // QR코드 스캔시 소리 나게 하려면 true 아니면 false로 지
+        integrator.setPrompt("Barcode or QR Code")
+        integrator.setOrientationLocked(false)
+        integrator.setBeepEnabled(true)
         integrator.initiateScan()
     }
 
@@ -35,4 +44,28 @@ class QrCodeActivity: BaseActivity<ActivityQrBinding>(R.layout.activity_qr) {
             super.onActivityResult(requestCode, resultCode, data)
         }
     }
+
+    private fun launcherQrCode() {
+        val options = ScanOptions()
+        options.setDesiredBarcodeFormats(ScanOptions.QR_CODE)
+        options.setPrompt("Scan a barcode")
+        options.setBeepEnabled(false)
+        options.setBarcodeImageEnabled(true)
+        barcodeLauncher.launch(options)
+    }
+
+    private val barcodeLauncher: ActivityResultLauncher<ScanOptions> =
+        registerForActivityResult<ScanOptions, ScanIntentResult>(
+            ScanContract(),
+            ActivityResultCallback { result: ScanIntentResult ->
+                if (result.contents == null) {
+                    Toast.makeText(this@QrCodeActivity, "Cancelled", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(
+                        this@QrCodeActivity,
+                        "Scanned: " + result.contents,
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            })
 }

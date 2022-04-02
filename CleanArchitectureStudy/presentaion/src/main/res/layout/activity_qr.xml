@@ -13,11 +13,22 @@
 
         <Button
             android:id="@+id/btn_qr_code"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:onClick="btnClick"
-            android:text="@string/movie_search_text"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="QR Code"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_qr_code_new"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:onClick="btnClick"
+            android:layout_marginStart="20dp"
+            android:text="new QR Code "
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_qr_code"/>
 
         <TextView
             android:id="@+id/qr_text"

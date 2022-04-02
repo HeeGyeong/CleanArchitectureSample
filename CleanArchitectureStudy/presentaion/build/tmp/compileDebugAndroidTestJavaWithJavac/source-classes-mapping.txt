@@ -1,2 +1,0 @@
-com/example/cleanarchitecturestudy/test/BuildConfig.java
- com.example.cleanarchitecturestudy.test.BuildConfig

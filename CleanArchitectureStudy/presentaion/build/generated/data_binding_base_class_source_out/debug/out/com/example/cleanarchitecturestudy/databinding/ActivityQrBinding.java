@@ -19,12 +19,16 @@ public abstract class ActivityQrBinding extends ViewDataBinding {
   public final Button btnQrCode;
 
   @NonNull
+  public final Button btnQrCodeNew;
+
+  @NonNull
   public final TextView qrText;
 
   protected ActivityQrBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnQrCode, TextView qrText) {
+      Button btnQrCode, Button btnQrCodeNew, TextView qrText) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnQrCode = btnQrCode;
+    this.btnQrCodeNew = btnQrCodeNew;
     this.qrText = qrText;
   }
 
