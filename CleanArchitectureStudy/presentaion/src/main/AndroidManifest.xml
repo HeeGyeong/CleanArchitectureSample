@@ -33,6 +33,8 @@
 
         <activity android:name=".view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor"/>
+
+        <activity android:name=".view.web.WebViewActivity"/>
     </application>
 
 </manifest>

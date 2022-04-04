@@ -70,5 +70,9 @@
     {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_activity_movie_search.xml.flat",
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_movie_search.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_activity_web.xml.flat",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_web.xml"
     }
 ]

@@ -1,6 +1,7 @@
 package com.example.cleanarchitecturestudy.module
 
 import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel
+import com.example.cleanarchitecturestudy.view.web.WebViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -13,4 +14,5 @@ import org.koin.dsl.module
  */
 val viewModelModule: Module = module {
     viewModel { MovieSearchViewModel(get(), get(), get(), get()) }
+    viewModel { WebViewModel() }
 }

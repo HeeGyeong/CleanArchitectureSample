@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-38:12
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-40:12
 MERGED from [androidx.databinding:databinding-adapters:4.2.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bec347c1f1edb8f23df0657f158bfa0c/databinding-adapters-4.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:4.2.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d22da739c7ee1f5501e2cde3e21fec10/databinding-runtime-4.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [:data] /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -71,7 +71,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/youheegyeong/AppUn
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6b8ba596ea3a5610a0a6f4321d32f9ac/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/dd369a177b84f646b7c056e3f9d98125/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ccb3197cf2f5ff3914a5f49b0dc95f15/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:4:5-49
 		INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml
@@ -99,7 +99,7 @@ MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/A
 	android:name
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:8:22-62
 application
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:5-36:19
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:5-38:19
 MERGED from [org.koin:koin-androidx-viewmodel:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/93ff92757c4d6344d4094b14c2276248/koin-androidx-viewmodel-2.2.2/AndroidManifest.xml:7:5-20
 MERGED from [org.koin:koin-androidx-viewmodel:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/93ff92757c4d6344d4094b14c2276248/koin-androidx-viewmodel-2.2.2/AndroidManifest.xml:7:5-20
 MERGED from [org.koin:koin-androidx-scope:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/38d791fa678f7283bf85925200c8d54b/koin-androidx-scope-2.2.2/AndroidManifest.xml:7:5-20
@@ -176,6 +176,10 @@ ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/pr
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:35:13-51
 	android:name
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:19-57
+activity#com.example.cleanarchitecturestudy.view.web.WebViewActivity
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:37:9-61
+	android:name
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:37:19-59
 uses-sdk
 INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml

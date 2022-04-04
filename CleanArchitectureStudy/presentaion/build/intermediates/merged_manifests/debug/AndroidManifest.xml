@@ -66,6 +66,7 @@
         <activity
             android:name="com.example.cleanarchitecturestudy.view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor" />
+        <activity android:name="com.example.cleanarchitecturestudy.view.web.WebViewActivity" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

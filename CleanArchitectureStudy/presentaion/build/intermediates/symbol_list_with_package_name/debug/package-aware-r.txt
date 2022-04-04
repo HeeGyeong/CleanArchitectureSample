@@ -2352,6 +2352,9 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id web
+id web_btn
+id web_progress
 id west
 id withText
 id withinBounds
@@ -2444,6 +2447,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_movie_search
 layout activity_qr
+layout activity_web
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
