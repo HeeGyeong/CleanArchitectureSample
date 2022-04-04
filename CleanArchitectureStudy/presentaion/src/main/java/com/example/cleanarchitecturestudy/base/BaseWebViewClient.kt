@@ -6,6 +6,12 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
+/**
+ * WebViewClient를 Custom하기 위해 클래스로 만들어서 사용.
+ * BaseViewModel을 인자로 받아서 show, hide Progress 함수를 사용한다.
+ *
+ * 필요시 Base가 아닌 WebViewModel을 인자로 받아 사용해도 될 것으로 보인다.
+ */
 class BaseWebViewClient(vm: BaseViewModel) : WebViewClient() {
     private var viewModel: BaseViewModel? = null
 

@@ -23,6 +23,9 @@ class WebViewActivity : BaseActivity<ActivityWebBinding>(R.layout.activity_web) 
     }
 
 
+    /**
+     * webView 초기화 및 webView 실행.
+     */
     @SuppressLint("SetJavaScriptEnabled")
     private fun initWebView() {
         webView = binding.web
@@ -39,9 +42,13 @@ class WebViewActivity : BaseActivity<ActivityWebBinding>(R.layout.activity_web) 
             builtInZoomControls = false // 화면 확대 축소 허용 여부
             cacheMode = WebSettings.LOAD_NO_CACHE // 브라우저 캐시 허용 여부
         }
-        webView!!.loadUrl("https://heegs.tistory.com") // 웹뷰에 표시할 웹사이트 주소, 웹뷰 시작
+        webView!!.loadUrl("https://heegs.tistory.com")
     }
 
+    /**
+     * 뒤로가기 버튼 커스텀.
+     * webView에서 제공하는 goBack을 사용하지 않으면, 뒤로가기 시 webView가 종료된다.
+     */
     override fun onBackPressed() {
         if (webView != null && webView!!.canGoBack()) {
             webView!!.goBack()
