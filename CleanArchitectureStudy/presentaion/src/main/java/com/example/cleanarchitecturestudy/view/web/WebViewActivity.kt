@@ -1,13 +1,9 @@
 package com.example.cleanarchitecturestudy.view.web
 
-import android.annotation.SuppressLint
-import android.graphics.Bitmap
 import android.os.Bundle
-import android.util.Log
-import android.webkit.*
+import android.webkit.WebView
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
-import com.example.cleanarchitecturestudy.base.BaseWebViewClient
 import com.example.cleanarchitecturestudy.databinding.ActivityWebBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -19,6 +15,7 @@ class WebViewActivity : BaseActivity<ActivityWebBinding>(R.layout.activity_web) 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.vm = viewModel
+        webView = binding.web
         initWebView()
     }
 
