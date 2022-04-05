@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+<p>
+    Sample WebView test
+    send JavaScript button : insertData1
+    send JavaScript2 button : insertData2 and change WebVew 2
+</p>
+<input type="button" value="send JavaScript" onClick="showText('insertData1')"/>
+<script type="text/javascript">
+    function showText(data) {
+        JavaScriptInterface.showText(data);
+    }
+</script>
+<input type="button" value="send JavaScript2" onClick="otherUrl('https://heegs.tistory.com')"/>
+<script type="text/javascript">
+    function otherUrl(data) {
+        JavaScriptInterface.otherUrl(data);
+    }
+</script>
+</body>
+</html>
