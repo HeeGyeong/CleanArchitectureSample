@@ -29,7 +29,6 @@ class MainActivity: AppCompatActivity() {
             R.id.qr_btn -> {
                 startActivity(Intent(this, QrCodeActivity::class.java))
             }
-
             R.id.web_btn -> {
                 startActivity(Intent(this, WebViewActivity::class.java))
             }

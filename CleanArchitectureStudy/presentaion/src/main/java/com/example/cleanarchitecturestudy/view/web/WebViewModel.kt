@@ -9,6 +9,8 @@ import android.webkit.WebView
 import androidx.lifecycle.viewModelScope
 import com.example.cleanarchitecturestudy.base.BaseViewModel
 import com.example.cleanarchitecturestudy.base.BaseWebViewClient
+import com.example.data.dummy.DummyRepository
+import com.example.data.dummy.DummyScriptInterface
 import com.example.data.web.JavaScriptInterface
 import com.example.data.web.JavaScriptRepository
 import kotlinx.coroutines.launch
@@ -16,11 +18,12 @@ import kotlinx.coroutines.launch
 /**
  * WebViewModel
  */
-class WebViewModel : BaseViewModel(), JavaScriptRepository {
+class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
 
     @SuppressLint("StaticFieldLeak")
     private var webView: WebView? = null
     private var javaScriptInterface: JavaScriptInterface? = null
+    private var dummyInterface: DummyScriptInterface? = null
 
     @SuppressLint("SetJavaScriptEnabled")
     fun initWebView(web: WebView) {
@@ -60,6 +63,36 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository {
     override fun otherUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript otherText\n$arg")
         viewModelScope.launch {
+            webView!!.loadUrl(arg)
+        }
+    }
+
+    override fun goUrl(arg: String) {
+        Log.d("javaScript", "insert JavaScript goUrl\n$arg")
+        viewModelScope.launch {
+            webView!!.run {
+                removeJavascriptInterface("JavaScriptInterface")
+                dummyInterface = DummyScriptInterface()
+                dummyInterface!!.repository = this@WebViewModel
+                addJavascriptInterface(dummyInterface!!, "DummyScriptInterface")
+            }
+            webView!!.loadUrl(arg)
+        }
+    }
+
+    override fun dummyText(arg: String) {
+        Log.d("javaScript", "insert JavaScript showText\n$arg")
+    }
+
+    override fun dummyUrl(arg: String) {
+        Log.d("javaScript", "insert JavaScript otherText\n$arg")
+        viewModelScope.launch {
+            webView!!.run {
+                removeJavascriptInterface("DummyScriptInterface")
+                javaScriptInterface = JavaScriptInterface()
+                javaScriptInterface!!.repository = this@WebViewModel
+                addJavascriptInterface(javaScriptInterface!!, "JavaScriptInterface")
+            }
             webView!!.loadUrl(arg)
         }
     }

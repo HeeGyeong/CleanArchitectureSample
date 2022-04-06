@@ -17,4 +17,10 @@ class JavaScriptInterface {
         Log.d("interfaceTest", "otherUrl text ? $arg")
         repository?.otherUrl(arg)
     }
+
+    @JavascriptInterface
+    fun goUrl(arg: String) {
+        Log.d("interfaceTest", "goUrl text ? $arg")
+        repository?.goUrl(arg)
+    }
 }
