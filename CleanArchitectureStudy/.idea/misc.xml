@@ -7,7 +7,9 @@
         <entry key="presentaion/src/main/res/layout/activity_main.xml" value="0.1945288753799392" />
         <entry key="presentaion/src/main/res/layout/activity_movie_search.xml" value="0.1" />
         <entry key="presentaion/src/main/res/layout/activity_qr.xml" value="0.33" />
-        <entry key="presentaion/src/main/res/layout/activity_web.xml" value="0.3875" />
+        <entry key="presentaion/src/main/res/layout/activity_web.xml" value="0.1" />
+        <entry key="presentaion/src/main/res/layout/app_bar_back.xml" value="0.3875" />
+        <entry key="presentaion/src/main/res/layout/app_bar_main.xml" value="0.3875" />
       </map>
     </option>
   </component>

@@ -44,6 +44,10 @@
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/item_movie.xml"
     },
     {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_app_bar_main.xml.flat",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/app_bar_main.xml"
+    },
+    {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_activity_qr.xml.flat",
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_qr.xml"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_activity_movie_search.xml.flat",
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_movie_search.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_app_bar_back.xml.flat",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/app_bar_back.xml"
     },
     {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/res/merged/debug/layout_activity_web.xml.flat",

@@ -1945,6 +1945,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appbar
 id arc
 id asConfigured
 id async
@@ -1952,6 +1953,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
+id back_title
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2324,6 +2327,9 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id tool_bar
+id tool_bar_back
+id tool_bar_title
 id top
 id topPanel
 id touch_outside
@@ -2448,6 +2454,8 @@ layout activity_main
 layout activity_movie_search
 layout activity_qr
 layout activity_web
+layout app_bar_back
+layout app_bar_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

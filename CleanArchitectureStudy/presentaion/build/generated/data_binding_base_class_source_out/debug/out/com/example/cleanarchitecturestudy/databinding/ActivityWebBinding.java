@@ -18,6 +18,9 @@ import java.lang.Object;
 
 public abstract class ActivityWebBinding extends ViewDataBinding {
   @NonNull
+  public final View appbar;
+
+  @NonNull
   public final WebView web;
 
   @NonNull
@@ -27,8 +30,9 @@ public abstract class ActivityWebBinding extends ViewDataBinding {
   protected WebViewModel mVm;
 
   protected ActivityWebBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      WebView web, ProgressBar webProgress) {
+      View appbar, WebView web, ProgressBar webProgress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.appbar = appbar;
     this.web = web;
     this.webProgress = webProgress;
   }

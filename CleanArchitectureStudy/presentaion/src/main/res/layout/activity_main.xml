@@ -6,15 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
     <Button
         android:id="@+id/thirdBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:text="SEARCH"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:onClick="btnClick"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
     <Button
@@ -24,9 +31,10 @@
         android:backgroundTint="@color/black"
         android:text="qr"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:onClick="btnClick"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintLeft_toRightOf="@id/thirdBtn"/>
 
     <Button
@@ -36,9 +44,10 @@
         android:backgroundTint="@color/black"
         android:text="web"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:onClick="btnClick"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintLeft_toRightOf="@id/qr_btn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,11 +3,11 @@ package com.example.cleanarchitecturestudy.view.web
 import android.annotation.SuppressLint
 import android.util.Log
 import android.view.View
-import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import androidx.lifecycle.viewModelScope
 import com.example.cleanarchitecturestudy.base.BaseViewModel
+import com.example.cleanarchitecturestudy.base.BaseWebChromeClient
 import com.example.cleanarchitecturestudy.base.BaseWebViewClient
 import com.example.data.dummy.DummyRepository
 import com.example.data.dummy.DummyScriptInterface
@@ -22,21 +22,24 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
 
     @SuppressLint("StaticFieldLeak")
     private var webView: WebView? = null
+
+    // JavaScript Interface List
     private var javaScriptInterface: JavaScriptInterface? = null
     private var dummyInterface: DummyScriptInterface? = null
+
+    // webView BackStack
+    var nowInterface: String? = null
+    val interfaceList = ArrayList<String>()
 
     @SuppressLint("SetJavaScriptEnabled")
     fun initWebView(web: WebView) {
         webView = web
         webView?.run { // WebView 설정
             webViewClient = BaseWebViewClient(this@WebViewModel)
-            webChromeClient = WebChromeClient() // Chrome 사용 가능 하도록 설정
-            javaScriptInterface = JavaScriptInterface()
-            javaScriptInterface!!.repository = this@WebViewModel
-            addJavascriptInterface(
-                javaScriptInterface!!,
-                "JavaScriptInterface"
-            ) // 해당 webView에서 호출 가능한 JSInterface 설정
+            webChromeClient = BaseWebChromeClient(this@WebViewModel) // Chrome 사용 가능 하도록 설정
+            nowInterface = "JavaScriptInterface"
+            interfaceList.add(nowInterface!!)
+            initJavaScriptInterface(nowInterface!!)
             setLayerType(View.LAYER_TYPE_HARDWARE, null)
 
             settings.run { // 세부 세팅 등록
@@ -52,6 +55,33 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
         }
     }
 
+    fun initJavaScriptInterface(jsInterface: String) {
+        if (nowInterface != null) {
+            webView!!.removeJavascriptInterface(nowInterface!!)
+        }
+
+        // JavaScriptInterface가 추가될 때 마다 조건 추가 필요.
+        when (jsInterface) {
+            "JavaScriptInterface" -> {
+                webView!!.run {
+                    javaScriptInterface = JavaScriptInterface()
+                    javaScriptInterface!!.repository = this@WebViewModel
+                    addJavascriptInterface(javaScriptInterface!!, nowInterface!!)
+                }
+            }
+            "DummyScriptInterface" -> {
+                webView!!.run {
+                    dummyInterface = DummyScriptInterface()
+                    dummyInterface!!.repository = this@WebViewModel
+                    addJavascriptInterface(dummyInterface!!, nowInterface!!)
+                }
+            }
+            else -> {
+                Log.d("javaScript", "initJavaScriptInterface not found")
+            }
+        }
+    }
+
     fun openSampleWebView() {
         webView!!.loadUrl("file:///android_asset/sample_web.html")
     }
@@ -63,6 +93,7 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
     override fun otherUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript otherText\n$arg")
         viewModelScope.launch {
+            interfaceList.add(nowInterface!!)
             webView!!.loadUrl(arg)
         }
     }
@@ -70,12 +101,9 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
     override fun goUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript goUrl\n$arg")
         viewModelScope.launch {
-            webView!!.run {
-                removeJavascriptInterface("JavaScriptInterface")
-                dummyInterface = DummyScriptInterface()
-                dummyInterface!!.repository = this@WebViewModel
-                addJavascriptInterface(dummyInterface!!, "DummyScriptInterface")
-            }
+            interfaceList.add(nowInterface!!)
+            nowInterface = "DummyScriptInterface"
+            initJavaScriptInterface(nowInterface!!)
             webView!!.loadUrl(arg)
         }
     }
@@ -87,12 +115,9 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
     override fun dummyUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript otherText\n$arg")
         viewModelScope.launch {
-            webView!!.run {
-                removeJavascriptInterface("DummyScriptInterface")
-                javaScriptInterface = JavaScriptInterface()
-                javaScriptInterface!!.repository = this@WebViewModel
-                addJavascriptInterface(javaScriptInterface!!, "JavaScriptInterface")
-            }
+            interfaceList.add(nowInterface!!)
+            nowInterface = "JavaScriptInterface"
+            initJavaScriptInterface(nowInterface!!)
             webView!!.loadUrl(arg)
         }
     }
