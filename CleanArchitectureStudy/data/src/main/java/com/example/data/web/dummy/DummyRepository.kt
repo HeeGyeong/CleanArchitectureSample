@@ -1,4 +1,4 @@
-package com.example.data.dummy
+package com.example.data.web.dummy
 
 interface DummyRepository {
     fun dummyText(arg: String)

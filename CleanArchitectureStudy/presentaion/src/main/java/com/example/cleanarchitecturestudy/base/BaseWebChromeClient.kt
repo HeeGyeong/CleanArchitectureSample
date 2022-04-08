@@ -5,14 +5,15 @@ import android.util.Log
 import android.webkit.JsResult
 import android.webkit.WebChromeClient
 import android.webkit.WebView
+import com.example.cleanarchitecturestudy.view.web.WebViewModel
 
 /**
  * WebView의 event를 받는 부분을 Custom할 때 사용.
  *
  * JsAlert과 같이 webView에서 Dialog를 띄우는 등의 이벤트를 받기 위해서는 해당 부분을 커스텀하여 사용한다.
  */
-class BaseWebChromeClient(vm: BaseViewModel) : WebChromeClient() {
-    private var viewModel: BaseViewModel? = null
+class BaseWebChromeClient(vm: WebViewModel) : WebChromeClient() {
+    private var viewModel: WebViewModel? = null
 
     init {
         viewModel = vm

@@ -2,9 +2,11 @@ package com.example.cleanarchitecturestudy.base
 
 import android.graphics.Bitmap
 import android.util.Log
+import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import com.example.cleanarchitecturestudy.view.web.WebViewModel
 
 /**
  * WebViewClient를 Custom하기 위해 클래스로 만들어서 사용.
@@ -12,8 +14,8 @@ import android.webkit.WebViewClient
  *
  * 필요시 Base가 아닌 WebViewModel을 인자로 받아 사용해도 될 것으로 보인다.
  */
-class BaseWebViewClient(vm: BaseViewModel) : WebViewClient() {
-    private var viewModel: BaseViewModel? = null
+class BaseWebViewClient(vm: WebViewModel) : WebViewClient() {
+    private var viewModel: WebViewModel? = null
 
     init {
         viewModel = vm
@@ -37,6 +39,22 @@ class BaseWebViewClient(vm: BaseViewModel) : WebViewClient() {
         request: WebResourceRequest?
     ): Boolean {
         Log.d("webViewLog" , "shouldOverrideUrlLoading data Check\n$view\n$request")
+        viewModel!!.addInterfaceList()
         return super.shouldOverrideUrlLoading(view, request)
+    }
+
+    override fun onReceivedError(
+        view: WebView?,
+        request: WebResourceRequest?,
+        error: WebResourceError?
+    ) {
+        // custom exceptionThrow. Check ERROR_*
+        when (error?.errorCode) {
+            ERROR_BAD_URL -> { }
+            ERROR_CONNECT -> { }
+            ERROR_UNKNOWN -> { }
+            else -> { }
+        }
+        super.onReceivedError(view, request, error)
     }
 }

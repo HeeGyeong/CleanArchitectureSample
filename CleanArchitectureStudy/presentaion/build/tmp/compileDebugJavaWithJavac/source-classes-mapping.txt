@@ -19,8 +19,8 @@ com/example/cleanarchitecturestudy/databinding/ActivityMovieSearchBindingImpl.ja
  com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBindingImpl$1
 com/example/cleanarchitecturestudy/databinding/ActivityMovieSearchBinding.java
  com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
-com/example/cleanarchitecturestudy/databinding/ActivityWebBinding.java
- com.example.cleanarchitecturestudy.databinding.ActivityWebBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
 com/example/cleanarchitecturestudy/DataBindingTriggerClass.java
@@ -30,7 +30,7 @@ com/example/cleanarchitecturestudy/databinding/ItemMovieBindingImpl.java
 com/example/cleanarchitecturestudy/generated/callback/OnClickListener.java
  com.example.cleanarchitecturestudy.generated.callback.OnClickListener
  com.example.cleanarchitecturestudy.generated.callback.OnClickListener$Listener
+com/example/cleanarchitecturestudy/databinding/ActivityWebBinding.java
+ com.example.cleanarchitecturestudy.databinding.ActivityWebBinding
 com/example/cleanarchitecturestudy/databinding/ActivityWebBindingImpl.java
  com.example.cleanarchitecturestudy.databinding.ActivityWebBindingImpl
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent

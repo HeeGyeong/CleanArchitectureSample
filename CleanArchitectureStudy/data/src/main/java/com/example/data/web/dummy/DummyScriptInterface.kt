@@ -1,4 +1,4 @@
-package com.example.data.dummy
+package com.example.data.web.dummy
 
 import android.util.Log
 import android.webkit.JavascriptInterface

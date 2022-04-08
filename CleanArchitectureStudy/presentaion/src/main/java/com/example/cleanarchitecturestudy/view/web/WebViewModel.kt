@@ -9,8 +9,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.cleanarchitecturestudy.base.BaseViewModel
 import com.example.cleanarchitecturestudy.base.BaseWebChromeClient
 import com.example.cleanarchitecturestudy.base.BaseWebViewClient
-import com.example.data.dummy.DummyRepository
-import com.example.data.dummy.DummyScriptInterface
+import com.example.data.web.dummy.DummyRepository
+import com.example.data.web.dummy.DummyScriptInterface
 import com.example.data.web.JavaScriptInterface
 import com.example.data.web.JavaScriptRepository
 import kotlinx.coroutines.launch
@@ -38,7 +38,7 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
             webViewClient = BaseWebViewClient(this@WebViewModel)
             webChromeClient = BaseWebChromeClient(this@WebViewModel) // Chrome 사용 가능 하도록 설정
             nowInterface = "JavaScriptInterface"
-            interfaceList.add(nowInterface!!)
+            addInterfaceList()
             initJavaScriptInterface(nowInterface!!)
             setLayerType(View.LAYER_TYPE_HARDWARE, null)
 
@@ -51,6 +51,7 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
                 setSupportZoom(false) // 줌 허용 여부
                 builtInZoomControls = false // 화면 확대 축소 허용 여부
                 cacheMode = WebSettings.LOAD_NO_CACHE // 브라우저 캐시 허용 여부
+                domStorageEnabled = true // Dom Storage API 사용 여부
             }
         }
     }
@@ -82,6 +83,10 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
         }
     }
 
+    fun addInterfaceList() {
+        interfaceList.add(nowInterface!!)
+    }
+
     fun openSampleWebView() {
         webView!!.loadUrl("file:///android_asset/sample_web.html")
     }
@@ -93,7 +98,7 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
     override fun otherUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript otherText\n$arg")
         viewModelScope.launch {
-            interfaceList.add(nowInterface!!)
+            addInterfaceList()
             webView!!.loadUrl(arg)
         }
     }
@@ -101,7 +106,7 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
     override fun goUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript goUrl\n$arg")
         viewModelScope.launch {
-            interfaceList.add(nowInterface!!)
+            addInterfaceList()
             nowInterface = "DummyScriptInterface"
             initJavaScriptInterface(nowInterface!!)
             webView!!.loadUrl(arg)
@@ -115,7 +120,7 @@ class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
     override fun dummyUrl(arg: String) {
         Log.d("javaScript", "insert JavaScript otherText\n$arg")
         viewModelScope.launch {
-            interfaceList.add(nowInterface!!)
+            addInterfaceList()
             nowInterface = "JavaScriptInterface"
             initJavaScriptInterface(nowInterface!!)
             webView!!.loadUrl(arg)
