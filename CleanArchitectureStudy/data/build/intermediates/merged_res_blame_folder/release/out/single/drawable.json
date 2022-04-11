@@ -1,0 +1,346 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/design_password_eye.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_btn_check_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_dropdown_arrow.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_dropdown_arrow.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/tooltip_frame_dark.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_menu_arrow_down_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_menu_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_menu_selectall_mtrl_alpha.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_mtrl_chip_checked_black.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_clear_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_clear_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/test_custom_background.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/test_custom_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_mtrl_chip_checked_circle.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_ic_arrow_drop_down.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_ic_arrow_drop_down.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_edit_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_edit_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_menu_cut_mtrl_alpha.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/avd_show_password.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_popupmenu_background.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_popupmenu_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_launcher_background.xml",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/design_ic_visibility_off.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_btn_radio_material_anim.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/navigation_empty_icon.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_radio_off_mtrl.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_checkbox_unchecked_mtrl.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_radio_on_mtrl.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_btn_check_material_anim.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_btn_check_material_anim.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_mtrl_chip_close_circle.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/design_ic_visibility.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_keyboard_arrow_left_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/avd_hide_password.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_keyboard_arrow_right_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_menu_arrow_up_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_menu_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_ic_error.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_ic_error.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_keyboard_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/ic_keyboard_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/design_fab_background.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/tooltip_frame_light.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_mtrl_checked_circle.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/ic_mtrl_checked_circle.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_menu_share_mtrl_alpha.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/ic_clock_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/ic_clock_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_ic_arrow_drop_up.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_ic_arrow_drop_up.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_star_half_black_48dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_star_half_black_48dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/test_level_drawable.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/test_level_drawable.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_ic_cancel.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_ic_cancel.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_dialog_background.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_dialog_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_vector_test.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/5be2ace3daa05212e841863c7e4b221d/transformed/appcompat-resources-1.4.0/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/material_ic_calendar_black_24dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/material_ic_calendar_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/mtrl_tabs_default_indicator.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_star_black_48dp.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_star_black_48dp.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_checkbox_checked_mtrl.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/design_snackbar_background.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+    }
+]

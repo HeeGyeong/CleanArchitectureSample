@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/design_fab_show_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/design_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/linear_indeterminate_line1_tail_interpolator.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/linear_indeterminate_line1_tail_interpolator.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_fab_hide_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/fragment_fade_exit.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/9a11bf728b4759560f291712d3d6fa9f/transformed/fragment-1.3.6/res/animator/fragment_fade_exit.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/fragment_close_enter.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/9a11bf728b4759560f291712d3d6fa9f/transformed/fragment-1.3.6/res/animator/fragment_close_enter.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/linear_indeterminate_line2_head_interpolator.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/linear_indeterminate_line2_head_interpolator.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_extended_fab_show_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_extended_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_extended_fab_change_size_collapse_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_extended_fab_change_size_collapse_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_card_state_list_anim.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_card_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/fragment_fade_enter.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/9a11bf728b4759560f291712d3d6fa9f/transformed/fragment-1.3.6/res/animator/fragment_fade_enter.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/design_fab_hide_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/design_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_btn_state_list_anim.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_btn_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/fragment_open_exit.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/9a11bf728b4759560f291712d3d6fa9f/transformed/fragment-1.3.6/res/animator/fragment_open_exit.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_btn_unelevated_state_list_anim.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_extended_fab_state_list_animator.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_extended_fab_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_fab_transformation_sheet_collapse_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/linear_indeterminate_line2_tail_interpolator.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/linear_indeterminate_line2_tail_interpolator.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/fragment_open_enter.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/9a11bf728b4759560f291712d3d6fa9f/transformed/fragment-1.3.6/res/animator/fragment_open_enter.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_extended_fab_change_size_expand_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_extended_fab_change_size_expand_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/linear_indeterminate_line1_head_interpolator.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/linear_indeterminate_line1_head_interpolator.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_fab_show_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/fragment_close_exit.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/9a11bf728b4759560f291712d3d6fa9f/transformed/fragment-1.3.6/res/animator/fragment_close_exit.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_chip_state_list_anim.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_fab_transformation_sheet_expand_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_fab_transformation_sheet_expand_spec.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/res/merged/release/animator/mtrl_extended_fab_hide_motion_spec.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/animator/mtrl_extended_fab_hide_motion_spec.xml"
+    }
+]

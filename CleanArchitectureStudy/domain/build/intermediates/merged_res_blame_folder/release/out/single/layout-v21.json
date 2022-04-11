@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

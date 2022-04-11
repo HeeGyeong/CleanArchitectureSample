@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/color-night-v8/material_timepicker_clockface.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/color-night-v8/material_timepicker_clockface.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/color-night-v8/material_timepicker_modebutton_tint.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/color-night-v8/material_timepicker_modebutton_tint.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/color-night-v8/material_timepicker_button_stroke.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/color-night-v8/material_timepicker_button_stroke.xml"
+    }
+]

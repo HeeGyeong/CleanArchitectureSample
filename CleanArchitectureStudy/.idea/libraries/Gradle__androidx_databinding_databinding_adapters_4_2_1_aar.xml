@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.databinding:databinding-adapters:4.2.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bec347c1f1edb8f23df0657f158bfa0c/databinding-adapters-4.2.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bec347c1f1edb8f23df0657f158bfa0c/databinding-adapters-4.2.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bec347c1f1edb8f23df0657f158bfa0c/databinding-adapters-4.2.1/res" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d5a94fddd41a7a03ff31ecf106d1163a/databinding-adapters-4.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d5a94fddd41a7a03ff31ecf106d1163a/databinding-adapters-4.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d5a94fddd41a7a03ff31ecf106d1163a/databinding-adapters-4.2.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

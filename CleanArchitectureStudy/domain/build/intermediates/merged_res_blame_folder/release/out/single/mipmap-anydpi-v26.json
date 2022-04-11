@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/mipmap-anydpi-v26/ic_launcher.xml",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

@@ -1,0 +1,28 @@
+apply plugin: 'kotlin'
+apply plugin: 'com.android.lint'
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    // kotlin
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // lint
+    compileOnly "com.android.tools.lint:lint-api:30.1.3"
+    compileOnly "com.android.tools.lint:lint-checks:30.1.3"
+
+    // test
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "com.android.tools.lint:lint-tests:30.1.3"
+}
+
+tasks.withType(Jar) {
+    manifest {
+        attributes("Lint-Registry-v2": "com.example.lint.LintIssueRegistry")
+    }
+}

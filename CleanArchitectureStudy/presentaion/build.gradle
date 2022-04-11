@@ -24,6 +24,8 @@ android {
 }
 
 dependencies {
+    // lint Module
+    lintChecks project(':lint')
 
     // multiModule
     implementation project(':domain')

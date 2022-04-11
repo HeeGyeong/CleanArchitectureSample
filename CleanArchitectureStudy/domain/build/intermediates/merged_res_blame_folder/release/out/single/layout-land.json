@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-land/material_clock_period_toggle_land.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/layout-land/material_clock_period_toggle_land.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/layout-land/mtrl_picker_header_dialog.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-land/material_timepicker.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/layout-land/material_timepicker.xml"
+    }
+]

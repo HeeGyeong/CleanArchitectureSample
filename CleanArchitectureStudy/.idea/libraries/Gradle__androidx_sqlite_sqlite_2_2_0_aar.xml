@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.sqlite:sqlite:2.2.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6dc325841f46e470859b6ad4ed1b931e/sqlite-2.2.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6dc325841f46e470859b6ad4ed1b931e/sqlite-2.2.0/res" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6dc325841f46e470859b6ad4ed1b931e/sqlite-2.2.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6dc325841f46e470859b6ad4ed1b931e/sqlite-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6dc325841f46e470859b6ad4ed1b931e/sqlite-2.2.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6dc325841f46e470859b6ad4ed1b931e/sqlite-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/188dcad01c223171278d0d84b36952b6/sqlite-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/188dcad01c223171278d0d84b36952b6/sqlite-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/188dcad01c223171278d0d84b36952b6/sqlite-2.2.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

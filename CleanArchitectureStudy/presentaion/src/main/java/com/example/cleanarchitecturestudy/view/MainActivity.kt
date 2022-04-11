@@ -2,12 +2,14 @@ package com.example.cleanarchitecturestudy.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity
+import com.orhanobut.logger.Logger
 
 /**
  * MainActivity.
@@ -20,6 +22,9 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
+
+        Log.d("lint", "Lint Log Test")
+        Logger.d("Lint Log Test")
     }
 
     fun btnClick(view: View) {

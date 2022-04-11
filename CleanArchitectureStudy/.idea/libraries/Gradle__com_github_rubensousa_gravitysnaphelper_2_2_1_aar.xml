@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.rubensousa:gravitysnaphelper:2.2.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/jars/classes.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d511b033b5507a8b2ff9c53b6291939b/gravitysnaphelper-2.2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/50a1bd378e5f9c4044ddf0c16ae21371/gravitysnaphelper-2.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/50a1bd378e5f9c4044ddf0c16ae21371/gravitysnaphelper-2.2.1/res" />
+      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/50a1bd378e5f9c4044ddf0c16ae21371/gravitysnaphelper-2.2.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/modules-2/files-2.1/com.github.rubensousa/gravitysnaphelper/2.2.1/bd6bb834b06c1b45b989e26f50d9bbe4037c5720/gravitysnaphelper-2.2.1-javadoc.jar!/" />

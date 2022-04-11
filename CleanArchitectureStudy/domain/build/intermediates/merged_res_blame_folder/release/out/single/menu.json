@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/menu/example_menu.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/menu/example_menu.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/menu/example_menu2.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/57d151c4d5e5723d043e6bead3c3eae0/transformed/core-1.7.0/res/menu/example_menu2.xml"
+    }
+]

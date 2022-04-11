@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    }
+]

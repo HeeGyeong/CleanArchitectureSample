@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-v26/abc_screen_toolbar.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/c653751c522aadc91122a793705f4dbd/transformed/appcompat-1.4.0/res/layout-v26/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/domain/build/intermediates/res/merged/release/layout-v26/mtrl_calendar_month.xml",
+        "source": "/Users/youheegyeong/.gradle/caches/transforms-3/82b2776535701b37fed83b1ef93c6b94/transformed/material-1.4.0/res/layout-v26/mtrl_calendar_month.xml"
+    }
+]
