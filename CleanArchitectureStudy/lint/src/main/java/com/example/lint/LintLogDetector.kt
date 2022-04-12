@@ -11,7 +11,9 @@ import com.android.tools.lint.detector.api.SourceCodeScanner
 import com.intellij.psi.PsiMethod
 import org.jetbrains.uast.UCallExpression
 
-
+/**
+ * android.util.Log의 메서드를 사용하는 경우 Error 발생
+ */
 class LintLogDetector : Detector(), SourceCodeScanner {
 
     companion object {
@@ -37,11 +39,12 @@ class LintLogDetector : Detector(), SourceCodeScanner {
     }
 
     override fun getApplicableMethodNames(): List<String> =
-        listOf("v", "d", "i", "w", "e")
+        listOf("v", "d", "i", "w", "e", "wtf")
 
     override fun visitMethodCall(context: JavaContext, node: UCallExpression, method: PsiMethod) {
         super.visitMethodCall(context, node, method)
         val evaluator = context.evaluator
+        // 감지된 Method들이 util.Log의 Method일 경우에만 report 수행.
         if (evaluator.isMemberInClass(method, "android.util.Log")) {
             reportUsage(context, node)
         }

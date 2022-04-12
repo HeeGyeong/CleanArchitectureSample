@@ -54,6 +54,7 @@
         android:id="@+id/sample_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/androidx_startup"
         android:background="@color/purple_700"
         app:layout_constraintTop_toBottomOf="@id/web_btn"/>
 
@@ -62,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
+        android:text="sample"
         android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintTop_toBottomOf="@id/sample_text1"/>
 

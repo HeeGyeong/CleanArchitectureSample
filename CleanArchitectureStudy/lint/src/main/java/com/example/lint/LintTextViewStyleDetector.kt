@@ -10,13 +10,15 @@ import com.android.tools.lint.detector.api.XmlContext
 import org.w3c.dom.Element
 import java.util.*
 
-
+/**
+ * TextView에 textAppearance속성이 존재하지 않으면, 해당 아이템 전체에 Warning 발생.
+ */
 class LintTextViewStyleDetector : ResourceXmlDetector() {
 
     companion object {
         private const val SCHEMA = "http://schemas.android.com/apk/res/android"
-        private const val CHECK_RULE = "textAppearance"
         private const val TEXTVIEW = "TextView"
+        private const val CHECK_ATTRIBUTE = "textAppearance"
 
         private const val ID = "Lint-MissingTextAppearance"
         private const val DESCRIPTION = "textAppearance attribute is missing"
@@ -49,7 +51,7 @@ class LintTextViewStyleDetector : ResourceXmlDetector() {
 
     override fun visitElement(context: XmlContext, element: Element) {
         // 해당 스키마에서 찾고자 하는 룰이 없으면 실행된다.
-        if (!element.hasAttributeNS(SCHEMA, CHECK_RULE)) {
+        if (!element.hasAttributeNS(SCHEMA, CHECK_ATTRIBUTE)) {
             context.report(
                 issue = ISSUE,
                 location = context.getLocation(element),

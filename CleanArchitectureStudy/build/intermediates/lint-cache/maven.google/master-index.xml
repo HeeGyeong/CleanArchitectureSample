@@ -122,6 +122,7 @@
   <com.android.car.ui/>
   <com.android.databinding/>
   <com.android.dynamic-feature/>
+  <com.android.fused-library/>
   <com.android.installreferrer/>
   <com.android.java.tools.build/>
   <com.android.library/>

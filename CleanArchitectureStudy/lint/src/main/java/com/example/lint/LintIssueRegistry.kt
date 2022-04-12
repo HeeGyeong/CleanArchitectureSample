@@ -10,7 +10,10 @@ class LintIssueRegistry : IssueRegistry() {
 
     // 검사를 수행 할 이슈 등록
     override val issues =
-        listOf(LintLogDetector.ISSUE,
+        listOf(
+            LintLogDetector.ISSUE,
             LintContentViewDetector.ISSUE,
-            LintTextViewStyleDetector.ISSUE)
+            LintTextViewStyleDetector.ISSUE,
+            LintXMLHardCodingDetector.ISSUE
+        )
 }
