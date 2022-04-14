@@ -11,7 +11,9 @@ import org.w3c.dom.Element
 import java.util.*
 
 /**
- * TextView에 textAppearance속성이 존재하지 않으면, 해당 아이템 전체에 Warning 발생.
+ * TextView에 대한 Lint 적용
+ *
+ * textAppearance속성이 존재하지 않으면, 해당 아이템 전체에 Warning 발생.
  */
 class LintTextViewStyleDetector : ResourceXmlDetector() {
 

@@ -16,19 +16,16 @@ import com.orhanobut.logger.Logger
  *
  * 해당 프로젝트에서는 사실 필요성이 없지만, 테스트를 위해 이것 저것 추가해보기 위해 만들어 두었음.
  */
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
-
-        Log.d("lint", "Lint Log Test")
-        Logger.d("Lint Log Test")
     }
 
     fun btnClick(view: View) {
-        when(view.id) {
+        when (view.id) {
             R.id.thirdBtn -> {
                 startActivity(Intent(this, MovieSearchActivity::class.java))
             }

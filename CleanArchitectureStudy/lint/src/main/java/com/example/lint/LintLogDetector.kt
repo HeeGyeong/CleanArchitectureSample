@@ -12,6 +12,8 @@ import com.intellij.psi.PsiMethod
 import org.jetbrains.uast.UCallExpression
 
 /**
+ * Log에 대한 Lint
+ *
  * android.util.Log의 메서드를 사용하는 경우 Error 발생
  */
 class LintLogDetector : Detector(), SourceCodeScanner {

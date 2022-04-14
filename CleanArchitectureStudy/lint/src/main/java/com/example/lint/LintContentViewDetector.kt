@@ -11,6 +11,11 @@ import com.android.tools.lint.detector.api.SourceCodeScanner
 import com.intellij.psi.PsiMethod
 import org.jetbrains.uast.UCallExpression
 
+/**
+ * setContentView 사용에 대한 Lint
+ *
+ * Databinding에서 사용되는 setContentView가 아니면 Warning.
+ */
 class LintContentViewDetector : Detector(), SourceCodeScanner {
 
     companion object {

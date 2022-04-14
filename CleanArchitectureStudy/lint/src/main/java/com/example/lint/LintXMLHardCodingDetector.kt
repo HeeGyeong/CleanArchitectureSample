@@ -1,6 +1,7 @@
 package com.example.lint
 
 import com.android.tools.lint.detector.api.Category
+import com.android.tools.lint.detector.api.Detector
 import com.android.tools.lint.detector.api.Implementation
 import com.android.tools.lint.detector.api.Issue
 import com.android.tools.lint.detector.api.ResourceXmlDetector
