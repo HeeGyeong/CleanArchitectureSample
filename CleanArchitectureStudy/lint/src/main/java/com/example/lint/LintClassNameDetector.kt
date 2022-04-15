@@ -66,7 +66,8 @@ class LintClassNameDetector : Detector(), Detector.UastScanner {
                         ISSUE,
                         node,
                         context.getLocation(node.javaPsi),
-                        "Detect class name in underBar.. change > $name"
+                        "Detect class name in underBar.. change > $name",
+                        fix(context, node)
                     )
                 }
 
@@ -106,4 +107,16 @@ class LintClassNameDetector : Detector(), Detector.UastScanner {
             }
         }
     }
+
+    fun fix(context: JavaContext, node: UClass): LintFix = LintFix.create()
+        .replace()
+//        .name("Add SuppressLint")
+        .text("")
+//        .pattern("Sample_Class(.*)")
+        .with("@SuppressLint(\"Lint-ClassNameDetector\")\n")
+        .beginning()
+        .shortenNames()
+        .reformat(true)
+        .range(context.getLocation(node as UElement))
+        .build()
 }

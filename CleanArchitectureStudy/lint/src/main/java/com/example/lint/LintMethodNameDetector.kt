@@ -57,7 +57,7 @@ class LintMethodNameDetector : Detector(), Detector.UastScanner {
             override fun visitMethod(node: UMethod) {
                 val methodName = node.name
                 // 찾고자 하는 Method Name
-                if (methodName.matches(Regex(".*_.*"))) {
+                if (methodName.matches(Regex(".*_.*")) && node.returnType != null) {
                     val name = underBarChecker(methodName)
                     context.report(
                         ISSUE,
