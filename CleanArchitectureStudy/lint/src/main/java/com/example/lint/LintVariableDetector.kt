@@ -11,6 +11,7 @@ import com.android.tools.lint.detector.api.Scope
 import com.android.tools.lint.detector.api.Severity
 import org.jetbrains.uast.UElement
 import org.jetbrains.uast.UVariable
+import java.util.regex.Pattern
 
 /**
  * 변수 이름에 대한 Lint를 적용한다.
@@ -60,9 +61,10 @@ class LintVariableDetector : Detector(), Detector.UastScanner {
 
             override fun visitVariable(node: UVariable) {
                 val name = node.name ?: return
+                val length = name.length
 
                 if (name.matches(Regex(".*_.*")) && name.indexOf('_') != 0) {
-                    val upperCase = name.replaceRange(0, name.length, name.uppercase())
+                    val upperCase = name.replaceRange(0, length, name.uppercase())
                     if (name != upperCase) {
                         context.report(
                             ISSUE,
@@ -78,8 +80,12 @@ class LintVariableDetector : Detector(), Detector.UastScanner {
                     }
                 }
 
-                if (name.matches(Regex(".*dto"))) {
-                    val upperCase = charUpperCase(name, name.length - 3)
+
+                if (dtoPattern.matcher(name).find()
+                    && name.substring(length - 3, length) != "Dto"
+                    && name.substring(length - 3, length).equals("dto", true)
+                )  {
+                    val upperCase = changeDto(name, length)
                     context.report(
                         ISSUE,
                         node as UElement,
@@ -93,8 +99,11 @@ class LintVariableDetector : Detector(), Detector.UastScanner {
                     )
                 }
 
-                if (name.matches(Regex(".*entity"))) {
-                    val upperCase = charUpperCase(name, name.length - 6)
+                if (entityPattern.matcher(name).find()
+                    && name.substring(length - 6, length) != "Entity"
+                    && name.substring(length - 6, length).equals("entity", true)
+                ) {
+                    val upperCase = changeEntity(name, length)
                     context.report(
                         ISSUE,
                         node as UElement,
@@ -105,6 +114,16 @@ class LintVariableDetector : Detector(), Detector.UastScanner {
                             .text(name)
                             .with(upperCase)
                             .build()
+                    )
+                }
+
+                if (name.matches(Regex("entity.*")) || name.matches(Regex("dto.*"))) {
+                    context.report(
+                        ISSUE,
+                        node as UElement,
+                        context.getLocation(node.javaPsi),
+                        "Is this the name you want? A should be written as Suffix",
+                        null
                     )
                 }
             }

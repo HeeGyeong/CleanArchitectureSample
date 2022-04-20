@@ -9,6 +9,7 @@ import com.android.tools.lint.detector.api.JavaContext
 import com.android.tools.lint.detector.api.LintFix
 import com.android.tools.lint.detector.api.Scope
 import com.android.tools.lint.detector.api.Severity
+import org.jetbrains.kotlin.psi.psiUtil.parents
 import org.jetbrains.uast.UElement
 import org.jetbrains.uast.UMethod
 
@@ -56,6 +57,17 @@ class LintMethodNameDetector : Detector(), Detector.UastScanner {
         return object : UElementHandler() {
             override fun visitMethod(node: UMethod) {
                 val methodName = node.name
+
+                if (lengthChecker(node, methodName)) {
+                    context.report(
+                        ISSUE,
+                        node,
+                        context.getLocation(node),
+                        "Method Line is over 100 Characters.\n" +
+                                "If you fix this Lint Error, Press Ctrl + Alt + L"
+                    )
+                }
+
                 // 찾고자 하는 Method Name
                 if (methodName.matches(Regex(".*_.*")) && node.returnType != null) {
                     val name = underBarChecker(methodName)
@@ -73,5 +85,19 @@ class LintMethodNameDetector : Detector(), Detector.UastScanner {
                 }
             }
         }
+    }
+
+    private fun lengthChecker(node: UMethod, methodName: String): Boolean {
+        val lineChecker = node.parent.toString().split("\n")
+        var firstLine: String? = null
+
+        for (index in lineChecker.indices) {
+            if (lineChecker[index].contains(methodName)) {
+                firstLine = lineChecker[index]
+                break
+            }
+        }
+
+        return firstLine != null && firstLine.length > 99
     }
 }

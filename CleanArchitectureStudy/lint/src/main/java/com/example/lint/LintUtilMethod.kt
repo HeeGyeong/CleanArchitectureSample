@@ -4,6 +4,8 @@ import java.util.regex.Pattern
 
 
 const val lowerCase = "(.*[a-z].*)"
+val dtoPattern = Pattern.compile("(.*dto)", Pattern.CASE_INSENSITIVE)!!
+val entityPattern = Pattern.compile("(.*entity)", Pattern.CASE_INSENSITIVE)!!
 
 /**
  * Name에 underBar(_)가 들어가는 경우 제거.
@@ -38,3 +40,5 @@ fun underBarChecker(name: String): String {
  * @return 대문자로 변환 된 후의 string
  */
 fun charUpperCase(text: String, index: Int) = text.replaceRange(index, index + 1, "${text[index].uppercaseChar()}")
+fun changeDto(text: String, length: Int) = text.replaceRange(length - 3, length, "Dto")
+fun changeEntity(text: String, length: Int) = text.replaceRange(length - 6, length, "Entity")
