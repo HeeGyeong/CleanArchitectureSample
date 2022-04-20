@@ -13,7 +13,7 @@ class CustomLintDetectorTest : LintDetectorTest() {
     @Test
     fun testSampleKotlinFile() {
         lint()
-            .sdkHome(File("C:\\Users\\forbiz\\AppData\\Local\\Android\\Sdk"))
+            .sdkHome(File("Your SDK Path"))
             .files(
                 kotlin(
                     """

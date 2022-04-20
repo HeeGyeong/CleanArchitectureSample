@@ -33,7 +33,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3ceeb47a-5376-4291-84d5-eaeeed17b878" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lint/src/test/java/com/example/lint/ExampleUnitTest.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <recent name="com.example.data.web.dummy" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.presentaion">
+  <component name="RunManager" selected="Gradle.CustomLintDetectorTest.testSampleKotlinFile">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -402,8 +401,30 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomLintDetectorTest.testSampleKotlinFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.example.lint.CustomLintDetectorTest.testSampleKotlinFile&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lint:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CustomLintDetectorTest.testSampleKotlinFile" />
         <item itemvalue="Android Instrumented Tests.test_espresso()" />
         <item itemvalue="Android Instrumented Tests.testEspresso()" />
         <item itemvalue="Android Instrumented Tests.mock_test()" />
