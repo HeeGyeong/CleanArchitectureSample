@@ -7,7 +7,7 @@ Clean Architecture를 스터디 하면서 Clean Architecture의 기본적인 구
 기본적인 WebView에 대한 구조도 붙여두었으며, assets에 html파일을 선언하여 테스트했습니다.
 
 ## Gradle
-Gradle에서의 공통된 코드르 최소화하고, 관리으 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
+Gradle에서의 공통된 코드르 최소화하고, 관리의 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
 
 Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다.
 
