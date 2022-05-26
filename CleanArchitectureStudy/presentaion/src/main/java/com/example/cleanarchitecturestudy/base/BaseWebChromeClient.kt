@@ -2,6 +2,7 @@ package com.example.cleanarchitecturestudy.base
 
 import android.os.Message
 import android.util.Log
+import android.webkit.GeolocationPermissions
 import android.webkit.JsResult
 import android.webkit.WebChromeClient
 import android.webkit.WebView
@@ -17,6 +18,15 @@ class BaseWebChromeClient(vm: WebViewModel) : WebChromeClient() {
 
     init {
         viewModel = vm
+    }
+
+    // WebView에서 Location을 사용해야할 때 필요한 권한.
+    override fun onGeolocationPermissionsShowPrompt(
+        origin: String?,
+        callback: GeolocationPermissions.Callback?
+    ) {
+        super.onGeolocationPermissionsShowPrompt(origin, callback)
+        callback?.invoke(origin, true, false)
     }
 
     override fun onCreateWindow(
