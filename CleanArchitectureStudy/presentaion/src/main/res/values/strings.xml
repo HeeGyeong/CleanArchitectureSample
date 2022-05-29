@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">CleanArchitectureStudy</string>
+    <string name="finish_app">한번 더 누르시면 앱이 종료됩니다.</string>
 
     <string name="search_input_query_msg">검색어를 입력해주세요</string>
     <string name="network_error_msg">네트워크를 연결해주세요.</string>
