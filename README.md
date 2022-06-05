@@ -29,4 +29,4 @@ Lint Unit Test도 간단하게 작성을 해두었으며, 추후에 확인하여
 ## Blog
 Clean Architecture에 대한 설명은 다음 블로그에 작성해 두었습니다.
 
-[Tistory Blog](https://heegs.tistory.com/61?category=915533, "Clean Architecture Example")
+[Tistory Blog](https://heegs.tistory.com/61?category=915533 "Clean Architecture Example")
