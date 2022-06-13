@@ -16,6 +16,9 @@ Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, depen
 
 각 Detector Class에 어느 부분을 감지하는지에 대한 주석을 추가해두었습니다.
 
+## DI
+Koin으로 작업 되어있으며, 현재 Hilt로 Migration 작업 중에 있습니다. (06.13)
+
 ## Test Code
 ### Instrumented Test
 Presentation Layer에서 Espresso를 사용하 기본적은 Test Code를 작성해두었습니다.
