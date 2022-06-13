@@ -13,6 +13,6 @@ import org.koin.dsl.module
  * viewModel 의 경우 koin 이 viewModel 을 viewModelFactory 에 등록하고 바인딩 한다.
  */
 val viewModelModule: Module = module {
-    viewModel { MovieSearchViewModel(get(), get(), get(), get()) }
+//    viewModel { MovieSearchViewModel(get(), get(), get(), get()) }
     viewModel { WebViewModel() }
 }

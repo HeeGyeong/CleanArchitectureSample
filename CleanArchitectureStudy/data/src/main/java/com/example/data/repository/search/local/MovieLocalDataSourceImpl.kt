@@ -4,6 +4,7 @@ import com.example.data.db.movie.MovieDao
 import com.example.data.model.movie.MovieEntity
 import io.reactivex.Completable
 import io.reactivex.Single
+import javax.inject.Inject
 
 /**
  * DataSource 에서 선언한 Interface 의 구현부.
@@ -12,7 +13,8 @@ import io.reactivex.Single
  *
  * @param movieDao Local movie Data 가 저장 되어있는 DB
  */
-class MovieLocalDataSourceImpl(private val movieDao: MovieDao) : MovieLocalDataSource {
+class MovieLocalDataSourceImpl @Inject constructor(private val movieDao: MovieDao) :
+    MovieLocalDataSource {
     override fun insertMovies(movies: List<MovieEntity>): Completable =
         movieDao.insertMovies(movies)
 

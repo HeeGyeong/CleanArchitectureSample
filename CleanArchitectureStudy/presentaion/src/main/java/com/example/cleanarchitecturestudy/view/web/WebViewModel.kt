@@ -9,16 +9,20 @@ import androidx.lifecycle.viewModelScope
 import com.example.cleanarchitecturestudy.base.BaseViewModel
 import com.example.cleanarchitecturestudy.base.BaseWebChromeClient
 import com.example.cleanarchitecturestudy.base.BaseWebViewClient
-import com.example.data.web.dummy.DummyRepository
-import com.example.data.web.dummy.DummyScriptInterface
 import com.example.data.web.JavaScriptInterface
 import com.example.data.web.JavaScriptRepository
+import com.example.data.web.dummy.DummyRepository
+import com.example.data.web.dummy.DummyScriptInterface
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * WebViewModel
  */
-class WebViewModel : BaseViewModel(), JavaScriptRepository, DummyRepository {
+@SuppressLint("Lint-LogDetector")
+@HiltViewModel
+class WebViewModel @Inject constructor() : BaseViewModel(), JavaScriptRepository, DummyRepository {
 
     @SuppressLint("StaticFieldLeak")
     private var webView: WebView? = null

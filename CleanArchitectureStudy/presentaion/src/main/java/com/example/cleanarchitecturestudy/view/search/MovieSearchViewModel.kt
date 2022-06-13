@@ -10,6 +10,7 @@ import com.example.domain.model.Movie
 import com.example.domain.usecase.movie.GetLocalMoviesUseCase
 import com.example.domain.usecase.movie.GetMoviesUseCase
 import com.example.domain.usecase.movie.GetPagingMoviesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.flow.catch
@@ -17,17 +18,19 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * MovieSearchActivity 에 사용되는 VM
  *
  * 해당 Activity 에서 사용되는 UseCase 를 모두 파라미터로 받는다.
  */
-class MovieSearchViewModel(
-    private val getMoviesUseCase: GetMoviesUseCase,
+@HiltViewModel
+class MovieSearchViewModel @Inject constructor(
+//    private val getMoviesUseCase: GetMoviesUseCase,
     private val getPagingMoviesUseCase: GetPagingMoviesUseCase,
-    private val getLocalMoviesUseCase: GetLocalMoviesUseCase,
-    private val networkManager: NetworkManager
+//    private val getLocalMoviesUseCase: GetLocalMoviesUseCase,
+//    private val networkManager: NetworkManager
 ) : BaseViewModel() {
 
     private var currentQuery: String = "" // 현재 검색어
@@ -49,7 +52,7 @@ class MovieSearchViewModel(
             _toastMsg.value = MessageSet.EMPTY_QUERY
             return
         }
-        if (!checkNetworkState()) return // 네트워크 연결 유무
+        /*if (!checkNetworkState()) return // 네트워크 연결 유무
         compositeDisposable.add(
             getMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
@@ -66,7 +69,7 @@ class MovieSearchViewModel(
                 }, {
                     _toastMsg.value = MessageSet.ERROR
                 })
-        )
+        )*/
     }
 
     fun requestMovieFlow() {
@@ -78,7 +81,7 @@ class MovieSearchViewModel(
         if (!checkNetworkState()) return
 
         // Kotlin Flow는 Coroutine에서 동작.
-        viewModelScope.launch {
+        /*viewModelScope.launch {
             getMoviesUseCase.getFlowData(currentQuery)
                 .onStart { showProgress() }
                 .onCompletion { hideProgress() }
@@ -91,13 +94,13 @@ class MovieSearchViewModel(
                         _toastMsg.value = MessageSet.SUCCESS
                     }
                 }
-        }
+        }*/
     }
 
     // 검색한 영화 더 불러오기
     fun requestPagingMovie(offset: Int) {
         if (!checkNetworkState()) return // 네트워크 연결 유무
-        compositeDisposable.add(
+        /*compositeDisposable.add(
             getPagingMoviesUseCase(currentQuery, offset)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -114,20 +117,20 @@ class MovieSearchViewModel(
                         else -> _toastMsg.value = MessageSet.ERROR
                     }
                 })
-        )
+        )*/
     }
 
     private fun checkNetworkState(): Boolean {
-        return if (networkManager.checkNetworkState()) {
+        return true /*if (networkManager.checkNetworkState()) {
             true
         } else {
             requestLocalMovies()
             false
-        }
+        }*/
     }
 
     private fun requestLocalMovies() {
-        compositeDisposable.add(
+        /*compositeDisposable.add(
             // getLocalMoviesUseCase.execute(currentQuery)
             getLocalMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
@@ -144,7 +147,7 @@ class MovieSearchViewModel(
                 }, {
                     _toastMsg.value = MessageSet.NETWORK_NOT_CONNECTED
                 })
-        )
+        )*/
     }
 
     enum class MessageSet {

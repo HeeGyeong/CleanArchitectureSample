@@ -1,0 +1,1 @@
+ıjıjŞlÄnÍnËnÜkÅkÓlòmüoÿoëoômùnÊnÁn÷mûmÀnámÄlÒmÓnÂmülÚmÑn

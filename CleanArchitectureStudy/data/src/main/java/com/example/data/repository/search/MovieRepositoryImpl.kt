@@ -1,6 +1,5 @@
 package com.example.data.repository.search
 
-import android.util.Log
 import com.example.data.mapper.mapperToMovie
 import com.example.data.repository.search.local.MovieLocalDataSource
 import com.example.data.repository.search.remote.MovieRemoteDataSource
@@ -11,6 +10,7 @@ import io.reactivex.Single
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
 /**
  * Domain Layer 의 Repository Interface 구현부.
@@ -19,9 +19,9 @@ import kotlinx.coroutines.flow.flow
  * @param movieLocalDataSource Local 에 저장 되어있는 Data
  * @param movieRemoteDataSource api 에서 가져오는 Data
  */
-class MovieRepositoryImpl(
+class MovieRepositoryImpl @Inject constructor(
     private val movieRemoteDataSource: MovieRemoteDataSource,
-    private val movieLocalDataSource: MovieLocalDataSource
+    private val movieLocalDataSource: MovieLocalDataSource,
 ) : MovieRepository {
 
     // 최초 영화 검색
@@ -66,7 +66,7 @@ class MovieRepositoryImpl(
 
     // 서버 DB 영화 검색 요청
     override fun getRemoteSearchMovies(
-        query: String
+        query: String,
     ): Single<List<Movie>> {
         // return 된 Data 들은 Movie Type List
         return movieRemoteDataSource.getSearchMovies(query)
@@ -81,7 +81,7 @@ class MovieRepositoryImpl(
     //영화 검색 후 스크롤 내리면 영화 더 불러오기
     override fun getPagingMovies(
         query: String,
-        offset: Int
+        offset: Int,
     ): Single<List<Movie>> {
         return movieRemoteDataSource.getSearchMovies(query, offset).flatMap {
             if (it.movies.isEmpty()) {

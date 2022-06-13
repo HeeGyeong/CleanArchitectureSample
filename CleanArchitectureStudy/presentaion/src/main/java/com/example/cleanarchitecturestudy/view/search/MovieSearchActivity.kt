@@ -1,17 +1,27 @@
 package com.example.cleanarchitecturestudy.view.search
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.lifecycle.Observer
+import androidx.activity.viewModels
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
+import com.example.cleanarchitecturestudy.utils.NetworkManager
+import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import javax.inject.Inject
 
-class MovieSearchActivity : BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
+@AndroidEntryPoint
+class MovieSearchActivity :
+    BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
     private lateinit var movieAdapter: MovieAdapter
-    private val viewModel: MovieSearchViewModel by viewModel()
+
+    //    private val viewModel: MovieSearchViewModel by viewModel()
+    // java.lang.RuntimeException: Cannot create an instance of class
+    private val viewModel: MovieSearchViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

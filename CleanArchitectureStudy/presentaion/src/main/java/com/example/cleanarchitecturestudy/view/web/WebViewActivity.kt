@@ -3,16 +3,20 @@ package com.example.cleanarchitecturestudy.view.web
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
-import androidx.core.view.get
+import androidx.activity.viewModels
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityWebBinding
+import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
+@AndroidEntryPoint
 class WebViewActivity : BaseActivity<ActivityWebBinding>(R.layout.activity_web) {
     private var webView: WebView? = null
-    private val viewModel: WebViewModel by viewModel()
+
+    //    private val viewModel: WebViewModel by viewModel()
+    private val viewModel: WebViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

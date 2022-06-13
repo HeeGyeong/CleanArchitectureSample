@@ -1,0 +1,8 @@
+com/example/domain/BuildConfig.java
+ com.example.domain.BuildConfig
+com/example/domain/usecase/movie/GetLocalMoviesUseCase_Factory.java
+ com.example.domain.usecase.movie.GetLocalMoviesUseCase_Factory
+com/example/domain/usecase/movie/GetPagingMoviesUseCase_Factory.java
+ com.example.domain.usecase.movie.GetPagingMoviesUseCase_Factory
+com/example/domain/usecase/movie/GetMoviesUseCase_Factory.java
+ com.example.domain.usecase.movie.GetMoviesUseCase_Factory
