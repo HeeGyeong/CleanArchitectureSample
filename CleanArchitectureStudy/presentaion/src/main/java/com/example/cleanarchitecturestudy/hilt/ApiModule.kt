@@ -1,15 +1,14 @@
 package com.example.cleanarchitecturestudy.hilt
 
-import android.annotation.SuppressLint
 import com.example.cleanarchitecturestudy.BuildConfig
 import com.example.data.api.ApiClient
 import com.example.data.api.ApiInterface
+import com.google.gson.GsonBuilder
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -21,61 +20,69 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object ApiModule {
 
-    /*@Singleton
+    @Singleton
     @Provides
     fun provideApiInterface(retrofit: Retrofit): ApiInterface {
         return retrofit.create(ApiInterface::class.java)
-    }*/
+    }
 
     @Singleton
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient): ApiInterface {
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(ApiClient.BASE_URL)
             .client(okHttpClient)
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) // Rx도 사용하기 때문에 추가 필요.
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .build()
-            .create(ApiInterface::class.java)
     }
 
-    @SuppressLint("Lint-LogDetector")
     @Singleton
     @Provides
-    // return 값 없다고 오류 떠서 추가.
-    fun provideOkHttpClient() : OkHttpClient {
-        return OkHttpClient.Builder()
-            .run {
-                // Interceptor
-                addInterceptor(Interceptor { chain ->
-                    with(chain) {
-                        val newRequest = request().newBuilder()
-                            .addHeader("X-Naver-Client-Id", "33chRuAiqlSn5hn8tIme")
-                            .addHeader("X-Naver-Client-Secret", "fyfwt9PCUN")
-                            .build()
-                        proceed(newRequest)
-                    }
-                })
+    fun provideOkHttpClient(
+        headerInterceptor: Interceptor,
+        LoggerInterceptor: HttpLoggingInterceptor,
+    ): OkHttpClient {
 
-                connectTimeout(60, TimeUnit.SECONDS)
-                readTimeout(60, TimeUnit.SECONDS)
-                writeTimeout(60, TimeUnit.SECONDS)
+        val okHttpClientBuilder = OkHttpClient().newBuilder()
+        okHttpClientBuilder.connectTimeout(60, TimeUnit.SECONDS)
+        okHttpClientBuilder.readTimeout(60, TimeUnit.SECONDS)
+        okHttpClientBuilder.writeTimeout(60, TimeUnit.SECONDS)
+        okHttpClientBuilder.addInterceptor(headerInterceptor)
+        okHttpClientBuilder.addInterceptor(LoggerInterceptor)
 
-                // Logging Interceptor
-                addInterceptor(HttpLoggingInterceptor { message ->
-                    Logger.d(message)
-                }.let {
-                    if (BuildConfig.DEBUG) {
-                        Logger.addLogAdapter(AndroidLogAdapter())
-                        it.setLevel(HttpLoggingInterceptor.Level.BODY)
-                    } else {
-                        it.setLevel(HttpLoggingInterceptor.Level.NONE)
-                    }
-                })
-                build()
+        return okHttpClientBuilder.build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideHeaderInterceptor(): Interceptor {
+        return Interceptor { chain ->
+            with(chain) {
+                val newRequest = request().newBuilder()
+                    .addHeader("X-Naver-Client-Id", "33chRuAiqlSn5hn8tIme")
+                    .addHeader("X-Naver-Client-Secret", "fyfwt9PCUN")
+                    .build()
+                proceed(newRequest)
             }
+        }
+    }
+
+    @Provides
+    @Singleton
+    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor { message ->
+            Logger.d(message)
+        }.let {
+            if (BuildConfig.DEBUG) {
+                Logger.addLogAdapter(AndroidLogAdapter())
+                it.setLevel(HttpLoggingInterceptor.Level.BODY)
+            } else {
+                it.setLevel(HttpLoggingInterceptor.Level.NONE)
+            }
+        }
     }
 }

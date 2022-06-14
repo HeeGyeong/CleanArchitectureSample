@@ -2,9 +2,11 @@
 package com.example.domain.usecase.movie;
 
 import com.example.domain.repository.MovieRepository;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"

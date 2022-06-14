@@ -2,10 +2,11 @@ package com.example.cleanarchitecturestudy.di;
 
 import androidx.hilt.lifecycle.ViewModelFactoryModules;
 import com.example.cleanarchitecturestudy.hilt.ApiModule;
-import com.example.cleanarchitecturestudy.hilt.InterfaceModule;
-import com.example.cleanarchitecturestudy.hilt.LocalDataModule;
+import com.example.cleanarchitecturestudy.hilt.DataModule;
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity_GeneratedInjector;
+import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel_HiltModules;
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity_GeneratedInjector;
+import com.example.cleanarchitecturestudy.view.web.WebViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -24,10 +25,10 @@ import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
-import dagger.hilt.android.internal.lifecycle.HiltWrapper_DefaultViewModelFactories_ActivityEntryPoint;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
+import dagger.hilt.android.internal.lifecycle.HiltViewModelFactory;
 import dagger.hilt.android.internal.lifecycle.HiltWrapper_DefaultViewModelFactories_ActivityModule;
-import dagger.hilt.android.internal.lifecycle.HiltWrapper_DefaultViewModelFactories_FragmentEntryPoint;
-import dagger.hilt.android.internal.lifecycle.HiltWrapper_HiltViewModelFactory_ViewModelFactoriesEntryPoint;
+import dagger.hilt.android.internal.lifecycle.HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint;
 import dagger.hilt.android.internal.lifecycle.HiltWrapper_HiltViewModelFactory_ViewModelModule;
 import dagger.hilt.android.internal.managers.ActivityComponentManager;
 import dagger.hilt.android.internal.managers.FragmentComponentManager;
@@ -54,12 +55,12 @@ public final class DIApplication_HiltComponents {
   }
 
   @Module(
-      subcomponents = ActivityC.class
+      subcomponents = ServiceC.class
   )
   @DisableInstallInCheck
-  abstract interface ActivityCBuilderModule {
+  abstract interface ServiceCBuilderModule {
     @Binds
-    ActivityComponentBuilder bind(ActivityC.Builder builder);
+    ServiceComponentBuilder bind(ServiceC.Builder builder);
   }
 
   @Module(
@@ -72,30 +73,12 @@ public final class DIApplication_HiltComponents {
   }
 
   @Module(
-      subcomponents = FragmentC.class
+      subcomponents = ActivityC.class
   )
   @DisableInstallInCheck
-  abstract interface FragmentCBuilderModule {
+  abstract interface ActivityCBuilderModule {
     @Binds
-    FragmentComponentBuilder bind(FragmentC.Builder builder);
-  }
-
-  @Module(
-      subcomponents = ServiceC.class
-  )
-  @DisableInstallInCheck
-  abstract interface ServiceCBuilderModule {
-    @Binds
-    ServiceComponentBuilder bind(ServiceC.Builder builder);
-  }
-
-  @Module(
-      subcomponents = ViewC.class
-  )
-  @DisableInstallInCheck
-  abstract interface ViewCBuilderModule {
-    @Binds
-    ViewComponentBuilder bind(ViewC.Builder builder);
+    ActivityComponentBuilder bind(ActivityC.Builder builder);
   }
 
   @Module(
@@ -108,6 +91,24 @@ public final class DIApplication_HiltComponents {
   }
 
   @Module(
+      subcomponents = ViewC.class
+  )
+  @DisableInstallInCheck
+  abstract interface ViewCBuilderModule {
+    @Binds
+    ViewComponentBuilder bind(ViewC.Builder builder);
+  }
+
+  @Module(
+      subcomponents = FragmentC.class
+  )
+  @DisableInstallInCheck
+  abstract interface FragmentCBuilderModule {
+    @Binds
+    FragmentComponentBuilder bind(FragmentC.Builder builder);
+  }
+
+  @Module(
       subcomponents = ViewWithFragmentC.class
   )
   @DisableInstallInCheck
@@ -116,28 +117,29 @@ public final class DIApplication_HiltComponents {
     ViewWithFragmentComponentBuilder bind(ViewWithFragmentC.Builder builder);
   }
 
-  @Subcomponent(
+  @Component(
       modules = {
           ApiModule.class,
-          FragmentCBuilderModule.class,
-          ViewCBuilderModule.class,
-          HiltWrapper_ActivityModule.class,
-          HiltWrapper_DefaultViewModelFactories_ActivityModule.class,
-          InterfaceModule.class,
-          LocalDataModule.class,
-          ViewModelFactoryModules.ActivityModule.class
+          ApplicationContextModule.class,
+          ActivityRetainedCBuilderModule.class,
+          ServiceCBuilderModule.class,
+          DataModule.class
       }
   )
-  @ActivityScoped
-  public abstract static class ActivityC implements MovieSearchActivity_GeneratedInjector,
-      WebViewActivity_GeneratedInjector,
-      ActivityComponent,
-      HiltWrapper_DefaultViewModelFactories_ActivityEntryPoint,
-      FragmentComponentManager.FragmentComponentBuilderEntryPoint,
-      ViewComponentManager.ViewComponentBuilderEntryPoint,
+  @Singleton
+  public abstract static class SingletonC implements DIApplication_GeneratedInjector,
+      HiltWrapper_ActivityRetainedComponentManager_ActivityRetainedComponentBuilderEntryPoint,
+      ServiceComponentManager.ServiceComponentBuilderEntryPoint,
+      SingletonComponent,
+      GeneratedComponent {
+  }
+
+  @Subcomponent
+  @ServiceScoped
+  public abstract static class ServiceC implements ServiceComponent,
       GeneratedComponent {
     @Subcomponent.Builder
-    abstract interface Builder extends ActivityComponentBuilder {
+    abstract interface Builder extends ServiceComponentBuilder {
     }
   }
 
@@ -145,7 +147,9 @@ public final class DIApplication_HiltComponents {
       modules = {
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
-          HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class
+          HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
+          MovieSearchViewModel_HiltModules.KeyModule.class,
+          WebViewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -158,43 +162,42 @@ public final class DIApplication_HiltComponents {
     }
   }
 
-  @Component(
+  @Subcomponent(
       modules = {
-          ApplicationContextModule.class,
-          ActivityRetainedCBuilderModule.class,
-          ServiceCBuilderModule.class
+          FragmentCBuilderModule.class,
+          ViewCBuilderModule.class,
+          HiltWrapper_ActivityModule.class,
+          HiltWrapper_DefaultViewModelFactories_ActivityModule.class,
+          ViewModelFactoryModules.ActivityModule.class
       }
   )
-  @Singleton
-  public abstract static class SingletonC implements DIApplication_GeneratedInjector,
-      HiltWrapper_ActivityRetainedComponentManager_ActivityRetainedComponentBuilderEntryPoint,
-      ServiceComponentManager.ServiceComponentBuilderEntryPoint,
-      SingletonComponent,
+  @ActivityScoped
+  public abstract static class ActivityC implements MovieSearchActivity_GeneratedInjector,
+      WebViewActivity_GeneratedInjector,
+      ActivityComponent,
+      DefaultViewModelFactories.ActivityEntryPoint,
+      HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,
+      FragmentComponentManager.FragmentComponentBuilderEntryPoint,
+      ViewComponentManager.ViewComponentBuilderEntryPoint,
       GeneratedComponent {
+    @Subcomponent.Builder
+    abstract interface Builder extends ActivityComponentBuilder {
+    }
   }
 
   @Subcomponent(
       modules = {
-          ViewWithFragmentCBuilderModule.class,
-          ViewModelFactoryModules.FragmentModule.class
+          HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
+          MovieSearchViewModel_HiltModules.BindsModule.class,
+          WebViewModel_HiltModules.BindsModule.class
       }
   )
-  @FragmentScoped
-  public abstract static class FragmentC implements FragmentComponent,
-      HiltWrapper_DefaultViewModelFactories_FragmentEntryPoint,
-      ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,
+  @ViewModelScoped
+  public abstract static class ViewModelC implements ViewModelComponent,
+      HiltViewModelFactory.ViewModelFactoriesEntryPoint,
       GeneratedComponent {
     @Subcomponent.Builder
-    abstract interface Builder extends FragmentComponentBuilder {
-    }
-  }
-
-  @Subcomponent
-  @ServiceScoped
-  public abstract static class ServiceC implements ServiceComponent,
-      GeneratedComponent {
-    @Subcomponent.Builder
-    abstract interface Builder extends ServiceComponentBuilder {
+    abstract interface Builder extends ViewModelComponentBuilder {
     }
   }
 
@@ -208,14 +211,18 @@ public final class DIApplication_HiltComponents {
   }
 
   @Subcomponent(
-      modules = HiltWrapper_HiltViewModelFactory_ViewModelModule.class
+      modules = {
+          ViewWithFragmentCBuilderModule.class,
+          ViewModelFactoryModules.FragmentModule.class
+      }
   )
-  @ViewModelScoped
-  public abstract static class ViewModelC implements ViewModelComponent,
-      HiltWrapper_HiltViewModelFactory_ViewModelFactoriesEntryPoint,
+  @FragmentScoped
+  public abstract static class FragmentC implements FragmentComponent,
+      DefaultViewModelFactories.FragmentEntryPoint,
+      ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,
       GeneratedComponent {
     @Subcomponent.Builder
-    abstract interface Builder extends ViewModelComponentBuilder {
+    abstract interface Builder extends FragmentComponentBuilder {
     }
   }
 

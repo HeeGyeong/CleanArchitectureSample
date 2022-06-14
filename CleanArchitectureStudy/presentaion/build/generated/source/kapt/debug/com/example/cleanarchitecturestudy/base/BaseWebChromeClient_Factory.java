@@ -2,9 +2,11 @@
 package com.example.cleanarchitecturestudy.base;
 
 import com.example.cleanarchitecturestudy.view.web.WebViewModel;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"

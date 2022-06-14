@@ -2,14 +2,12 @@ package com.example.cleanarchitecturestudy.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity
-import com.orhanobut.logger.Logger
 
 /**
  * MainActivity.

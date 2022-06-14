@@ -7,7 +7,9 @@ buildscript {
     // 2.28-alpha 버전에서 발생하는 오류. > 2.28.3-alpha 로 수정하면 된다.
     // @DefineComponent dagger.hilt.components.SingletonComponent is missing a parent declaration.
     // https://github.com/googlecodelabs/android-hilt/issues/10
-    ext.hilt_version = '2.28.3-alpha'
+//    ext.hilt_version = '2.28.3-alpha'
+    // 위의 버전에서 viewBinding 부분에서 계속해서 에러 발생. 따라서 hilt 버전을 올림.
+    ext.hilt_version = '2.35'
 
     repositories {
         google()

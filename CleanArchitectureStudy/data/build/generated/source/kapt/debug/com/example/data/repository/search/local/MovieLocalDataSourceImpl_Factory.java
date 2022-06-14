@@ -2,9 +2,11 @@
 package com.example.data.repository.search.local;
 
 import com.example.data.db.movie.MovieDao;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"

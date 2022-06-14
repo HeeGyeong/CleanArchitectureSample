@@ -2,9 +2,11 @@
 package com.example.cleanarchitecturestudy.utils;
 
 import android.content.Context;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"

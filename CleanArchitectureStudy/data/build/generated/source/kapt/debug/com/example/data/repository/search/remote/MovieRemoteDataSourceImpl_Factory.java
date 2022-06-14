@@ -2,9 +2,11 @@
 package com.example.data.repository.search.remote;
 
 import com.example.data.api.ApiInterface;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"

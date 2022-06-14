@@ -3,9 +3,11 @@ package com.example.data.repository.search;
 
 import com.example.data.repository.search.local.MovieLocalDataSource;
 import com.example.data.repository.search.remote.MovieRemoteDataSource;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"

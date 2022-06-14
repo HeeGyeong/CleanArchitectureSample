@@ -1,8 +1,7 @@
 package com.example.cleanarchitecturestudy.view.web;
 
-import android.os.Bundle;
-import androidx.annotation.CallSuper;
-import androidx.annotation.Nullable;
+import android.content.Context;
+import androidx.activity.contextaware.OnContextAvailableListener;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.cleanarchitecturestudy.base.BaseActivity;
@@ -21,15 +20,20 @@ public abstract class Hilt_WebViewActivity<B extends ViewDataBinding> extends Ba
 
   private final Object componentManagerLock = new Object();
 
+  private boolean injected = false;
+
   Hilt_WebViewActivity(int layoutId) {
     super(layoutId);
+    _initHiltInternal();
   }
 
-  @CallSuper
-  @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    inject();
-    super.onCreate(savedInstanceState);
+  private void _initHiltInternal() {
+    addOnContextAvailableListener(new OnContextAvailableListener() {
+      @Override
+      public void onContextAvailable(Context context) {
+        inject();
+      }
+    });
   }
 
   @Override
@@ -54,15 +58,14 @@ public abstract class Hilt_WebViewActivity<B extends ViewDataBinding> extends Ba
   }
 
   protected void inject() {
-    ((WebViewActivity_GeneratedInjector) this.generatedComponent()).injectWebViewActivity(UnsafeCasts.<WebViewActivity>unsafeCast(this));
+    if (!injected) {
+      injected = true;
+      ((WebViewActivity_GeneratedInjector) this.generatedComponent()).injectWebViewActivity(UnsafeCasts.<WebViewActivity>unsafeCast(this));
+    }
   }
 
   @Override
   public ViewModelProvider.Factory getDefaultViewModelProviderFactory() {
-    ViewModelProvider.Factory factory = DefaultViewModelFactories.getActivityFactory(this);
-    if (factory != null) {
-      return factory;
-    }
-    return super.getDefaultViewModelProviderFactory();
+    return DefaultViewModelFactories.getActivityFactory(this, super.getDefaultViewModelProviderFactory());
   }
 }

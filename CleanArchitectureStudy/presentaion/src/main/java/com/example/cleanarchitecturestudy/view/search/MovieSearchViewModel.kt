@@ -1,6 +1,5 @@
 package com.example.cleanarchitecturestudy.view.search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -27,10 +26,10 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class MovieSearchViewModel @Inject constructor(
-//    private val getMoviesUseCase: GetMoviesUseCase,
+    private val getMoviesUseCase: GetMoviesUseCase,
     private val getPagingMoviesUseCase: GetPagingMoviesUseCase,
-//    private val getLocalMoviesUseCase: GetLocalMoviesUseCase,
-//    private val networkManager: NetworkManager
+    private val getLocalMoviesUseCase: GetLocalMoviesUseCase,
+    private val networkManager: NetworkManager,
 ) : BaseViewModel() {
 
     private var currentQuery: String = "" // 현재 검색어
@@ -52,7 +51,7 @@ class MovieSearchViewModel @Inject constructor(
             _toastMsg.value = MessageSet.EMPTY_QUERY
             return
         }
-        /*if (!checkNetworkState()) return // 네트워크 연결 유무
+        if (!checkNetworkState()) return // 네트워크 연결 유무
         compositeDisposable.add(
             getMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
@@ -69,7 +68,7 @@ class MovieSearchViewModel @Inject constructor(
                 }, {
                     _toastMsg.value = MessageSet.ERROR
                 })
-        )*/
+        )
     }
 
     fun requestMovieFlow() {
@@ -81,7 +80,7 @@ class MovieSearchViewModel @Inject constructor(
         if (!checkNetworkState()) return
 
         // Kotlin Flow는 Coroutine에서 동작.
-        /*viewModelScope.launch {
+        viewModelScope.launch {
             getMoviesUseCase.getFlowData(currentQuery)
                 .onStart { showProgress() }
                 .onCompletion { hideProgress() }
@@ -94,13 +93,13 @@ class MovieSearchViewModel @Inject constructor(
                         _toastMsg.value = MessageSet.SUCCESS
                     }
                 }
-        }*/
+        }
     }
 
     // 검색한 영화 더 불러오기
     fun requestPagingMovie(offset: Int) {
         if (!checkNetworkState()) return // 네트워크 연결 유무
-        /*compositeDisposable.add(
+        compositeDisposable.add(
             getPagingMoviesUseCase(currentQuery, offset)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -117,20 +116,20 @@ class MovieSearchViewModel @Inject constructor(
                         else -> _toastMsg.value = MessageSet.ERROR
                     }
                 })
-        )*/
+        )
     }
 
     private fun checkNetworkState(): Boolean {
-        return true /*if (networkManager.checkNetworkState()) {
+        return if (networkManager.checkNetworkState()) {
             true
         } else {
             requestLocalMovies()
             false
-        }*/
+        }
     }
 
     private fun requestLocalMovies() {
-        /*compositeDisposable.add(
+        compositeDisposable.add(
             // getLocalMoviesUseCase.execute(currentQuery)
             getLocalMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
@@ -147,7 +146,7 @@ class MovieSearchViewModel @Inject constructor(
                 }, {
                     _toastMsg.value = MessageSet.NETWORK_NOT_CONNECTED
                 })
-        )*/
+        )
     }
 
     enum class MessageSet {

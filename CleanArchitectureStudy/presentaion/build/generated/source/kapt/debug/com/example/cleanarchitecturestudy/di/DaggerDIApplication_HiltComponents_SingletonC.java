@@ -5,40 +5,91 @@ import android.app.Activity;
 import android.app.Service;
 import android.view.View;
 import androidx.fragment.app.Fragment;
-import androidx.hilt.lifecycle.ViewModelAssistedFactory;
-import androidx.hilt.lifecycle.ViewModelFactoryModules_ActivityModule_ProvideFactoryFactory;
-import androidx.hilt.lifecycle.ViewModelFactoryModules_FragmentModule_ProvideFactoryFactory;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
+import com.example.cleanarchitecturestudy.hilt.ApiModule;
+import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideApiInterfaceFactory;
+import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideHeaderInterceptorFactory;
+import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideLoggingInterceptorFactory;
+import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideOkHttpClientFactory;
+import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideRetrofitFactory;
+import com.example.cleanarchitecturestudy.hilt.DataModule;
+import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideLocalDataSourceFactory;
+import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideMovieDaoFactory;
+import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideMovieRepositoryFactory;
+import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideRemoteDataSourceFactory;
+import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideRoomFactory;
+import com.example.cleanarchitecturestudy.utils.NetworkManager;
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity;
+import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel;
+import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity;
+import com.example.cleanarchitecturestudy.view.web.WebViewModel;
+import com.example.cleanarchitecturestudy.view.web.WebViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.data.api.ApiInterface;
+import com.example.data.db.movie.MovieDao;
+import com.example.data.db.movie.MovieDatabase;
+import com.example.data.repository.search.local.MovieLocalDataSource;
+import com.example.data.repository.search.remote.MovieRemoteDataSource;
+import com.example.domain.repository.MovieRepository;
+import com.example.domain.usecase.movie.GetLocalMoviesUseCase;
+import com.example.domain.usecase.movie.GetMoviesUseCase;
+import com.example.domain.usecase.movie.GetPagingMoviesUseCase;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
 import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
 import dagger.hilt.android.internal.builders.FragmentComponentBuilder;
 import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory;
 import dagger.hilt.android.internal.managers.ActivityRetainedComponentManager_Lifecycle_Factory;
 import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideApplicationFactory;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
+import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
-import java.util.Collections;
+import dagger.internal.SetBuilder;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
 
+@DaggerGenerated
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class DaggerDIApplication_HiltComponents_SingletonC extends DIApplication_HiltComponents.SingletonC {
   private final ApplicationContextModule applicationContextModule;
+
+  private volatile Object interceptor = new MemoizedSentinel();
+
+  private volatile Object httpLoggingInterceptor = new MemoizedSentinel();
+
+  private volatile Object okHttpClient = new MemoizedSentinel();
+
+  private volatile Object retrofit = new MemoizedSentinel();
+
+  private volatile Object apiInterface = new MemoizedSentinel();
+
+  private volatile Object movieRemoteDataSource = new MemoizedSentinel();
+
+  private volatile Object movieDatabase = new MemoizedSentinel();
+
+  private volatile Object movieDao = new MemoizedSentinel();
+
+  private volatile Object movieLocalDataSource = new MemoizedSentinel();
+
+  private volatile Object movieRepository = new MemoizedSentinel();
 
   private DaggerDIApplication_HiltComponents_SingletonC(
       ApplicationContextModule applicationContextModuleParam) {
@@ -47,6 +98,146 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
 
   public static Builder builder() {
     return new Builder();
+  }
+
+  private Interceptor interceptor() {
+    Object local = interceptor;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = interceptor;
+        if (local instanceof MemoizedSentinel) {
+          local = ApiModule_ProvideHeaderInterceptorFactory.provideHeaderInterceptor();
+          interceptor = DoubleCheck.reentrantCheck(interceptor, local);
+        }
+      }
+    }
+    return (Interceptor) local;
+  }
+
+  private HttpLoggingInterceptor httpLoggingInterceptor() {
+    Object local = httpLoggingInterceptor;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = httpLoggingInterceptor;
+        if (local instanceof MemoizedSentinel) {
+          local = ApiModule_ProvideLoggingInterceptorFactory.provideLoggingInterceptor();
+          httpLoggingInterceptor = DoubleCheck.reentrantCheck(httpLoggingInterceptor, local);
+        }
+      }
+    }
+    return (HttpLoggingInterceptor) local;
+  }
+
+  private OkHttpClient okHttpClient() {
+    Object local = okHttpClient;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = okHttpClient;
+        if (local instanceof MemoizedSentinel) {
+          local = ApiModule_ProvideOkHttpClientFactory.provideOkHttpClient(interceptor(), httpLoggingInterceptor());
+          okHttpClient = DoubleCheck.reentrantCheck(okHttpClient, local);
+        }
+      }
+    }
+    return (OkHttpClient) local;
+  }
+
+  private Retrofit retrofit() {
+    Object local = retrofit;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = retrofit;
+        if (local instanceof MemoizedSentinel) {
+          local = ApiModule_ProvideRetrofitFactory.provideRetrofit(okHttpClient());
+          retrofit = DoubleCheck.reentrantCheck(retrofit, local);
+        }
+      }
+    }
+    return (Retrofit) local;
+  }
+
+  private ApiInterface apiInterface() {
+    Object local = apiInterface;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = apiInterface;
+        if (local instanceof MemoizedSentinel) {
+          local = ApiModule_ProvideApiInterfaceFactory.provideApiInterface(retrofit());
+          apiInterface = DoubleCheck.reentrantCheck(apiInterface, local);
+        }
+      }
+    }
+    return (ApiInterface) local;
+  }
+
+  private MovieRemoteDataSource movieRemoteDataSource() {
+    Object local = movieRemoteDataSource;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = movieRemoteDataSource;
+        if (local instanceof MemoizedSentinel) {
+          local = DataModule_ProvideRemoteDataSourceFactory.provideRemoteDataSource(apiInterface());
+          movieRemoteDataSource = DoubleCheck.reentrantCheck(movieRemoteDataSource, local);
+        }
+      }
+    }
+    return (MovieRemoteDataSource) local;
+  }
+
+  private MovieDatabase movieDatabase() {
+    Object local = movieDatabase;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = movieDatabase;
+        if (local instanceof MemoizedSentinel) {
+          local = DataModule_ProvideRoomFactory.provideRoom(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          movieDatabase = DoubleCheck.reentrantCheck(movieDatabase, local);
+        }
+      }
+    }
+    return (MovieDatabase) local;
+  }
+
+  private MovieDao movieDao() {
+    Object local = movieDao;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = movieDao;
+        if (local instanceof MemoizedSentinel) {
+          local = DataModule_ProvideMovieDaoFactory.provideMovieDao(movieDatabase());
+          movieDao = DoubleCheck.reentrantCheck(movieDao, local);
+        }
+      }
+    }
+    return (MovieDao) local;
+  }
+
+  private MovieLocalDataSource movieLocalDataSource() {
+    Object local = movieLocalDataSource;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = movieLocalDataSource;
+        if (local instanceof MemoizedSentinel) {
+          local = DataModule_ProvideLocalDataSourceFactory.provideLocalDataSource(movieDao());
+          movieLocalDataSource = DoubleCheck.reentrantCheck(movieLocalDataSource, local);
+        }
+      }
+    }
+    return (MovieLocalDataSource) local;
+  }
+
+  private MovieRepository movieRepository() {
+    Object local = movieRepository;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = movieRepository;
+        if (local instanceof MemoizedSentinel) {
+          local = DataModule_ProvideMovieRepositoryFactory.provideMovieRepository(movieRemoteDataSource(), movieLocalDataSource());
+          movieRepository = DoubleCheck.reentrantCheck(movieRepository, local);
+        }
+      }
+    }
+    return (MovieRepository) local;
   }
 
   @Override
@@ -69,8 +260,26 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
     private Builder() {
     }
 
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder apiModule(ApiModule apiModule) {
+      Preconditions.checkNotNull(apiModule);
+      return this;
+    }
+
     public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
       this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder dataModule(DataModule dataModule) {
+      Preconditions.checkNotNull(dataModule);
       return this;
     }
 
@@ -94,7 +303,7 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
 
     }
 
-    private Object getLifecycle() {
+    private Object lifecycle() {
       Object local = lifecycle;
       if (local instanceof MemoizedSentinel) {
         synchronized (local) {
@@ -115,7 +324,7 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
 
     @Override
     public ActivityRetainedLifecycle getActivityRetainedLifecycle() {
-      return (ActivityRetainedLifecycle) getLifecycle();
+      return (ActivityRetainedLifecycle) lifecycle();
     }
 
     private final class ActivityCBuilder implements DIApplication_HiltComponents.ActivityC.Builder {
@@ -135,19 +344,8 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
     }
 
     private final class ActivityCImpl extends DIApplication_HiltComponents.ActivityC {
-      private final Activity activity;
+      private ActivityCImpl(Activity activity) {
 
-      private ActivityCImpl(Activity activityParam) {
-        this.activity = activityParam;
-      }
-
-      private ViewModelProvider.Factory getProvideFactory() {
-        return ViewModelFactoryModules_ActivityModule_ProvideFactoryFactory.provideFactory(activity, ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerDIApplication_HiltComponents_SingletonC.this.applicationContextModule), Collections.<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>>emptyMap());
-      }
-
-      private Set<ViewModelProvider.Factory> getDefaultActivityViewModelFactorySetOfViewModelProviderFactory(
-          ) {
-        return Collections.<ViewModelProvider.Factory>singleton(getProvideFactory());
       }
 
       @Override
@@ -160,7 +358,17 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
 
       @Override
       public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
-        return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerDIApplication_HiltComponents_SingletonC.this.applicationContextModule), Collections.<String>emptySet(), new ViewModelCBuilder(), getDefaultActivityViewModelFactorySetOfViewModelProviderFactory(), Collections.<ViewModelProvider.Factory>emptySet());
+        return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerDIApplication_HiltComponents_SingletonC.this.applicationContextModule), getViewModelKeys(), new ViewModelCBuilder());
+      }
+
+      @Override
+      public Set<String> getViewModelKeys() {
+        return SetBuilder.<String>newSetBuilder(2).add(MovieSearchViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(WebViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      }
+
+      @Override
+      public ViewModelComponentBuilder getViewModelComponentBuilder() {
+        return new ViewModelCBuilder();
       }
 
       @Override
@@ -185,29 +393,18 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
         @Override
         public DIApplication_HiltComponents.FragmentC build() {
           Preconditions.checkBuilderRequirement(fragment, Fragment.class);
-          return new FragmentCImpl(fragment);
+          return new FragmentCI(fragment);
         }
       }
 
-      private final class FragmentCImpl extends DIApplication_HiltComponents.FragmentC {
-        private final Fragment fragment;
+      private final class FragmentCI extends DIApplication_HiltComponents.FragmentC {
+        private FragmentCI(Fragment fragment) {
 
-        private FragmentCImpl(Fragment fragmentParam) {
-          this.fragment = fragmentParam;
-        }
-
-        private ViewModelProvider.Factory getProvideFactory() {
-          return ViewModelFactoryModules_FragmentModule_ProvideFactoryFactory.provideFactory(fragment, ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerDIApplication_HiltComponents_SingletonC.this.applicationContextModule), Collections.<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>>emptyMap());
-        }
-
-        private Set<ViewModelProvider.Factory> getDefaultFragmentViewModelFactorySetOfViewModelProviderFactory(
-            ) {
-          return Collections.<ViewModelProvider.Factory>singleton(getProvideFactory());
         }
 
         @Override
         public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
-          return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerDIApplication_HiltComponents_SingletonC.this.applicationContextModule), Collections.<String>emptySet(), new ViewModelCBuilder(), ActivityCImpl.this.getDefaultActivityViewModelFactorySetOfViewModelProviderFactory(), getDefaultFragmentViewModelFactorySetOfViewModelProviderFactory());
+          return ActivityCImpl.this.getHiltInternalFactoryFactory();
         }
 
         @Override
@@ -227,12 +424,12 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
           @Override
           public DIApplication_HiltComponents.ViewWithFragmentC build() {
             Preconditions.checkBuilderRequirement(view, View.class);
-            return new ViewWithFragmentCImpl(view);
+            return new ViewWithFragmentCI(view);
           }
         }
 
-        private final class ViewWithFragmentCImpl extends DIApplication_HiltComponents.ViewWithFragmentC {
-          private ViewWithFragmentCImpl(View view) {
+        private final class ViewWithFragmentCI extends DIApplication_HiltComponents.ViewWithFragmentC {
+          private ViewWithFragmentCI(View view) {
 
           }
         }
@@ -250,12 +447,12 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
         @Override
         public DIApplication_HiltComponents.ViewC build() {
           Preconditions.checkBuilderRequirement(view, View.class);
-          return new ViewCImpl(view);
+          return new ViewCI(view);
         }
       }
 
-      private final class ViewCImpl extends DIApplication_HiltComponents.ViewC {
-        private ViewCImpl(View view) {
+      private final class ViewCI extends DIApplication_HiltComponents.ViewC {
+        private ViewCI(View view) {
 
         }
       }
@@ -278,13 +475,77 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
     }
 
     private final class ViewModelCImpl extends DIApplication_HiltComponents.ViewModelC {
+      private volatile Provider<MovieSearchViewModel> movieSearchViewModelProvider;
+
+      private volatile Provider<WebViewModel> webViewModelProvider;
+
       private ViewModelCImpl(SavedStateHandle savedStateHandle) {
 
       }
 
+      private GetMoviesUseCase getMoviesUseCase() {
+        return new GetMoviesUseCase(DaggerDIApplication_HiltComponents_SingletonC.this.movieRepository());
+      }
+
+      private GetPagingMoviesUseCase getPagingMoviesUseCase() {
+        return new GetPagingMoviesUseCase(DaggerDIApplication_HiltComponents_SingletonC.this.movieRepository());
+      }
+
+      private GetLocalMoviesUseCase getLocalMoviesUseCase() {
+        return new GetLocalMoviesUseCase(DaggerDIApplication_HiltComponents_SingletonC.this.movieRepository());
+      }
+
+      private NetworkManager networkManager() {
+        return new NetworkManager(ApplicationContextModule_ProvideContextFactory.provideContext(DaggerDIApplication_HiltComponents_SingletonC.this.applicationContextModule));
+      }
+
+      private MovieSearchViewModel movieSearchViewModel() {
+        return new MovieSearchViewModel(getMoviesUseCase(), getPagingMoviesUseCase(), getLocalMoviesUseCase(), networkManager());
+      }
+
+      private Provider<MovieSearchViewModel> movieSearchViewModelProvider() {
+        Object local = movieSearchViewModelProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(0);
+          movieSearchViewModelProvider = (Provider<MovieSearchViewModel>) local;
+        }
+        return (Provider<MovieSearchViewModel>) local;
+      }
+
+      private Provider<WebViewModel> webViewModelProvider() {
+        Object local = webViewModelProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(1);
+          webViewModelProvider = (Provider<WebViewModel>) local;
+        }
+        return (Provider<WebViewModel>) local;
+      }
+
       @Override
       public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-        return Collections.<String, Provider<ViewModel>>emptyMap();
+        return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel", (Provider) movieSearchViewModelProvider()).put("com.example.cleanarchitecturestudy.view.web.WebViewModel", (Provider) webViewModelProvider()).build();
+      }
+
+      private final class SwitchingProvider<T> implements Provider<T> {
+        private final int id;
+
+        SwitchingProvider(int id) {
+          this.id = id;
+        }
+
+        @SuppressWarnings("unchecked")
+        @Override
+        public T get() {
+          switch (id) {
+            case 0: // com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel 
+            return (T) ViewModelCImpl.this.movieSearchViewModel();
+
+            case 1: // com.example.cleanarchitecturestudy.view.web.WebViewModel 
+            return (T) new WebViewModel();
+
+            default: throw new AssertionError(id);
+          }
+        }
       }
     }
   }
