@@ -26,13 +26,7 @@ int anim design_bottom_sheet_slide_in 0x0
 int anim design_bottom_sheet_slide_out 0x0
 int anim design_snackbar_in 0x0
 int anim design_snackbar_out 0x0
-int anim fragment_close_enter 0x0
-int anim fragment_close_exit 0x0
-int anim fragment_fade_enter 0x0
-int anim fragment_fade_exit 0x0
 int anim fragment_fast_out_extra_slow_in 0x0
-int anim fragment_open_enter 0x0
-int anim fragment_open_exit 0x0
 int anim mtrl_bottom_sheet_slide_in 0x0
 int anim mtrl_bottom_sheet_slide_out 0x0
 int anim mtrl_card_lowers_interpolator 0x0

@@ -1,6 +1,5 @@
 package com.example.cleanarchitecturestudy.di;
 
-import androidx.hilt.lifecycle.ViewModelFactoryModules;
 import com.example.cleanarchitecturestudy.hilt.ApiModule;
 import com.example.cleanarchitecturestudy.hilt.DataModule;
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity_GeneratedInjector;
@@ -167,8 +166,7 @@ public final class DIApplication_HiltComponents {
           FragmentCBuilderModule.class,
           ViewCBuilderModule.class,
           HiltWrapper_ActivityModule.class,
-          HiltWrapper_DefaultViewModelFactories_ActivityModule.class,
-          ViewModelFactoryModules.ActivityModule.class
+          HiltWrapper_DefaultViewModelFactories_ActivityModule.class
       }
   )
   @ActivityScoped
@@ -211,10 +209,7 @@ public final class DIApplication_HiltComponents {
   }
 
   @Subcomponent(
-      modules = {
-          ViewWithFragmentCBuilderModule.class,
-          ViewModelFactoryModules.FragmentModule.class
-      }
+      modules = ViewWithFragmentCBuilderModule.class
   )
   @FragmentScoped
   public abstract static class FragmentC implements FragmentComponent,

@@ -30,9 +30,6 @@ dependencies {
     // hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
-    kapt 'androidx.hilt:hilt-compiler:1.0.0'
-    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.2.0")
     //rxjava
     implementation "io.reactivex.rxjava2:rxjava:2.2.17"
     implementation "io.reactivex.rxjava2:rxandroid:2.1.1"

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.lifecycle.Observer
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
@@ -16,8 +17,10 @@ class MovieSearchActivity :
     private lateinit var movieAdapter: MovieAdapter
 
     // Koin
+    // import org.koin.androidx.viewmodel.ext.android.viewModel
 //    private val viewModel: MovieSearchViewModel by viewModel()
     // Hilt
+    // import androidx.activity.viewModels
     private val viewModel: MovieSearchViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
