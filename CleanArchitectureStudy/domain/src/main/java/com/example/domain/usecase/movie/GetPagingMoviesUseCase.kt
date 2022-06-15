@@ -3,6 +3,7 @@ package com.example.domain.usecase.movie
 import com.example.domain.model.Movie
 import com.example.domain.repository.MovieRepository
 import io.reactivex.Single
+import javax.inject.Inject
 
 /**
  * 다음 페이지에 있는 Movie Data 를 가져오기 위한 함수
@@ -10,9 +11,9 @@ import io.reactivex.Single
  *
  * @param repository Movie data 를 컨트롤 하는 Repository
  */
-class GetPagingMoviesUseCase(private val repository: MovieRepository) {
+class GetPagingMoviesUseCase @Inject constructor(private val repository: MovieRepository) {
     operator fun invoke(
         query: String,
-        offset: Int
+        offset: Int,
     ): Single<List<Movie>> = repository.getPagingMovies(query, offset)
 }

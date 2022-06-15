@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+<p>
+    Sample Dummy Test
+</p>
+<input type="button" value="send Dummy1" onClick="dummyText('insertData1')"/>
+<script type="text/javascript">
+    function dummyText(data) {
+        DummyScriptInterface.dummyText(data);
+    }
+</script>
+<input type="button" value="go sample_web" onClick="dummyUrl('file:///android_asset/sample_web.html')"/>
+<script type="text/javascript">
+    function dummyUrl(data) {
+        DummyScriptInterface.dummyUrl(data);
+    }
+</script>
+</body>
+</html>

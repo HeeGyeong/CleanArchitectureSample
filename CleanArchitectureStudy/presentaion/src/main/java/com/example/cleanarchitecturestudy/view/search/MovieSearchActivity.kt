@@ -3,15 +3,25 @@ package com.example.cleanarchitecturestudy.view.search
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import androidx.activity.viewModels
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.lifecycle.Observer
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class MovieSearchActivity : BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
+@AndroidEntryPoint
+class MovieSearchActivity :
+    BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
     private lateinit var movieAdapter: MovieAdapter
-    private val viewModel: MovieSearchViewModel by viewModel()
+
+    // Koin
+    // import org.koin.androidx.viewmodel.ext.android.viewModel
+//    private val viewModel: MovieSearchViewModel by viewModel()
+    // Hilt
+    // import androidx.activity.viewModels
+    private val viewModel: MovieSearchViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

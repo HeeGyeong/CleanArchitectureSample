@@ -2,6 +2,7 @@ plugins {
     id ("com.android.application")
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -40,6 +41,9 @@ dependencies {
     // koin
     implementation("org.koin:koin-android:2.2.2")
     implementation 'org.koin:koin-androidx-viewmodel:2.2.2'
+    // hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     // Room
     implementation "androidx.room:room-runtime:2.4.1"
     //rxjava

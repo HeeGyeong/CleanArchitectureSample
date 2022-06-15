@@ -1,5 +1,6 @@
 package com.example.cleanarchitecturestudy.base
 
+import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.util.Log
 import android.webkit.WebResourceError
@@ -7,6 +8,7 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.example.cleanarchitecturestudy.view.web.WebViewModel
+import javax.inject.Inject
 
 /**
  * WebViewClient를 Custom하기 위해 클래스로 만들어서 사용.
@@ -14,7 +16,8 @@ import com.example.cleanarchitecturestudy.view.web.WebViewModel
  *
  * 필요시 Base가 아닌 WebViewModel을 인자로 받아 사용해도 될 것으로 보인다.
  */
-class BaseWebViewClient(vm: WebViewModel) : WebViewClient() {
+@SuppressLint("Lint-LogDetector")
+class BaseWebViewClient @Inject constructor(vm: WebViewModel) : WebViewClient() {
     private var viewModel: WebViewModel? = null
 
     init {

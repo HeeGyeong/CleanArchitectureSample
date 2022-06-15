@@ -3,6 +3,7 @@ package com.example.domain.usecase.movie
 import com.example.domain.model.Movie
 import com.example.domain.repository.MovieRepository
 import io.reactivex.Flowable
+import javax.inject.Inject
 
 /**
  * Local DB 에 있는 Movie Data 를 가져오기 위한 함수
@@ -11,9 +12,9 @@ import io.reactivex.Flowable
  *
  * @param repository Movie data 를 컨트롤 하는 Repository
  */
-class GetLocalMoviesUseCase(private val repository: MovieRepository) {
+class GetLocalMoviesUseCase @Inject constructor(private val repository: MovieRepository) {
     fun execute(
-        query: String
+        query: String,
     ): Flowable<List<Movie>> = repository.getSearchMovies(query)
 
     /**
@@ -22,6 +23,6 @@ class GetLocalMoviesUseCase(private val repository: MovieRepository) {
      * invoke 를 사용하여 호출 하는 것도 좋은 방법이라 생각한다.
      */
     operator fun invoke(
-        query: String
-    ) : Flowable<List<Movie>> = repository.getSearchMovies(query)
+        query: String,
+    ): Flowable<List<Movie>> = repository.getSearchMovies(query)
 }

@@ -4,6 +4,7 @@ import com.example.domain.model.Movie
 import com.example.domain.repository.MovieRepository
 import io.reactivex.Flowable
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 /**
  * Movie Data 를 가져오기 위한 함수.
@@ -11,12 +12,12 @@ import kotlinx.coroutines.flow.Flow
  *
  * @param repository Movie data 를 컨트롤 하는 Repository
  */
-class GetMoviesUseCase(private val repository: MovieRepository) {
+class GetMoviesUseCase @Inject constructor(private val repository: MovieRepository) {
     operator fun invoke(
-        query: String
+        query: String,
     ): Flowable<List<Movie>> = repository.getSearchMovies(query)
 
     fun getFlowData(
-        query: String
+        query: String,
     ): Flow<List<Movie>> = repository.getSearchMoviesFlow(query)
 }

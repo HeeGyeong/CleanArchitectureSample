@@ -1,6 +1,5 @@
 package com.example.cleanarchitecturestudy.view.search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -10,6 +9,7 @@ import com.example.domain.model.Movie
 import com.example.domain.usecase.movie.GetLocalMoviesUseCase
 import com.example.domain.usecase.movie.GetMoviesUseCase
 import com.example.domain.usecase.movie.GetPagingMoviesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.flow.catch
@@ -17,17 +17,19 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * MovieSearchActivity 에 사용되는 VM
  *
  * 해당 Activity 에서 사용되는 UseCase 를 모두 파라미터로 받는다.
  */
-class MovieSearchViewModel(
+@HiltViewModel
+class MovieSearchViewModel @Inject constructor(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val getPagingMoviesUseCase: GetPagingMoviesUseCase,
     private val getLocalMoviesUseCase: GetLocalMoviesUseCase,
-    private val networkManager: NetworkManager
+    private val networkManager: NetworkManager,
 ) : BaseViewModel() {
 
     private var currentQuery: String = "" // 현재 검색어

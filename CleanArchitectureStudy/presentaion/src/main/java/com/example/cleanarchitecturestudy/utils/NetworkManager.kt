@@ -4,8 +4,11 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 
-class NetworkManager(private val context: Context) {
+
+class NetworkManager @Inject constructor(@ApplicationContext private val context: Context) {
 
     fun checkNetworkState(): Boolean {
         val connectivityManager =
