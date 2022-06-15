@@ -4,11 +4,6 @@ buildscript {
     ext.compileSdk_Version = 31
     ext.buildTools_Version = "30.0.3"
     ext.minSdk_Version = 24
-    // 2.28-alpha 버전에서 발생하는 오류. > 2.28.3-alpha 로 수정하면 된다.
-    // @DefineComponent dagger.hilt.components.SingletonComponent is missing a parent declaration.
-    // https://github.com/googlecodelabs/android-hilt/issues/10
-//    ext.hilt_version = '2.28.3-alpha'
-    // 위의 버전에서 viewBinding 부분에서 계속해서 에러 발생. 따라서 hilt 버전을 올림.
     ext.hilt_version = '2.35'
 
     repositories {
@@ -17,12 +12,6 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.1"
-        // Unsupported metadata version. Check that your Kotlin version is >= 1.0
-        // 해당 오류 뜨면 > setting > kotlin 검색 해서 버전 맞춰서 classPath 변경.
-        // + 각 Module 범위 gradle에
-        // kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.2.0") 추가 필요.
-        // dagger는 kotlin의 1.5.x 버전을 지원하지 않아 위의 값을 추가해야함.
-        // https://youtrack.jetbrains.com/issue/KT-45885
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
 
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"

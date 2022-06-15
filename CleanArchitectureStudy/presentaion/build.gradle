@@ -44,10 +44,6 @@ dependencies {
     // hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-    // '2.35' 버전으로 올린 후 사용하지 않음.
-//    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
-//    kapt 'androidx.hilt:hilt-compiler:1.0.0'
-//    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.2.0")
     // Room
     implementation "androidx.room:room-runtime:2.4.1"
     //rxjava
