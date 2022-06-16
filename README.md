@@ -17,7 +17,9 @@ Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, depen
 각 Detector Class에 어느 부분을 감지하는지에 대한 주석을 추가해두었습니다.
 
 ## DI
-Koin으로 작업 되어있으며, 현재 Hilt로 Migration 작업 중에 있습니다. (06.13)
+Koin에서 Hilt로 마이그레이션 작업을 진행하였으며,
+
+두 가지 DI의 사용 방법을 모두 확인할 수 있도록 Koin을 완전히 제거하지 않고 Application단에서 주석처리만 해두었습니다.
 
 ## Test Code
 ### Instrumented Test
