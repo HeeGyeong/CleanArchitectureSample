@@ -21,6 +21,15 @@
         앱을 최초 실행하는 Main(LAUNCHER) 의 경우 false 로 설정하게 되면 앱 아이콘 클릭 시 앱이 실행되지 않는다. -->
         <activity android:name=".view.MainActivity"
             android:exported="true">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".view.intro.IntroActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CleanArchitectureStudy">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

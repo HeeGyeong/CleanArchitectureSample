@@ -4,6 +4,10 @@
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_web.xml"
     },
     {
+        "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_intro.xml",
+        "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_intro.xml"
+    },
+    {
         "merged": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_movie_search.xml",
         "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/layout/activity_movie_search.xml"
     },

@@ -1,0 +1,44 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v31/values-v31.xml",
+            "map": [
+                {
+                    "source": "/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/res/values-v31/themes.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "103",
+                        "endLines": "27",
+                        "endColumns": "12",
+                        "endOffsets": "1695"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "26",
+                        "endColumns": "12",
+                        "endOffsets": "1690"
+                    }
+                },
+                {
+                    "source": "/Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/38e7fff4803acc1b833a9adf4feabaed/core-splashscreen-1.0.0-rc01/res/values-v31/values-v31.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "27,34",
+                        "startColumns": "4,4",
+                        "startOffsets": "1695,2113",
+                        "endLines": "33,38",
+                        "endColumns": "12,12",
+                        "endOffsets": "2108,2337"
+                    }
+                }
+            ]
+        }
+    ]
+}

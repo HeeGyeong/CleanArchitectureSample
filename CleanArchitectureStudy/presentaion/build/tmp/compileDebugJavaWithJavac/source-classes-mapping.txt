@@ -58,6 +58,8 @@ com/example/cleanarchitecturestudy/di/DIApplication_HiltComponents.java
  com.example.cleanarchitecturestudy.di.DIApplication_HiltComponents$ViewWithFragmentC
  com.example.cleanarchitecturestudy.di.DIApplication_HiltComponents$ViewWithFragmentC$Builder
  com.example.cleanarchitecturestudy.di.DIApplication_HiltComponents$ViewWithFragmentCBuilderModule
+com/example/cleanarchitecturestudy/databinding/ActivityIntroBindingImpl.java
+ com.example.cleanarchitecturestudy.databinding.ActivityIntroBindingImpl
 com/example/cleanarchitecturestudy/databinding/ItemMovieBindingImpl.java
  com.example.cleanarchitecturestudy.databinding.ItemMovieBindingImpl
 com/example/cleanarchitecturestudy/view/web/WebViewActivity_GeneratedInjector.java
@@ -69,6 +71,8 @@ com/example/cleanarchitecturestudy/di/DIApplication_GeneratedInjector.java
 com/example/cleanarchitecturestudy/view/web/Hilt_WebViewActivity.java
  com.example.cleanarchitecturestudy.view.web.Hilt_WebViewActivity
  com.example.cleanarchitecturestudy.view.web.Hilt_WebViewActivity$1
+com/example/cleanarchitecturestudy/databinding/ActivityIntroBinding.java
+ com.example.cleanarchitecturestudy.databinding.ActivityIntroBinding
 com/example/cleanarchitecturestudy/BR.java
  com.example.cleanarchitecturestudy.BR
 hilt_aggregated_deps/_com_example_cleanarchitecturestudy_view_search_MovieSearchViewModel_HiltModules_KeyModule.java

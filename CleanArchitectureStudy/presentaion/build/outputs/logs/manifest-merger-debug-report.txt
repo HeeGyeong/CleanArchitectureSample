@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-40:12
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-49:12
 MERGED from [androidx.databinding:databinding-adapters:4.2.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/dfb78b0cf7fdc3b21b1d6ea712d6fc29/databinding-adapters-4.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:4.2.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5639ed893f6107067e959c939c86723c/databinding-runtime-4.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [:data] /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -11,6 +11,7 @@ MERGED from [org.koin:koin-androidx-scope:2.2.2] /Users/youheegyeong/AppUnifyKot
 MERGED from [androidx.fragment:fragment-ktx:1.2.5] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/26ebdc8f3d2575037e7f6573bef76618/fragment-ktx-1.2.5/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/29087f08900a4e8690814d2eef2e3b9b/activity-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/3195f9a482c963c35a269dc90eac8cf7/core-ktx-1.7.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.core:core-splashscreen:1.0.0-rc01] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/38e7fff4803acc1b833a9adf4feabaed/core-splashscreen-1.0.0-rc01/AndroidManifest.xml:17:1-24:12
 MERGED from [org.koin:koin-android:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c25d0e03fa5d87fbf3e297388fffa5eb/koin-android-2.2.2/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-rc01] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1aa4fae445566a587a8e35fc67ca320e/lifecycle-runtime-ktx-2.3.0-rc01/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-ktx:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/a6d357ea817a478a6755031448ae5852/room-ktx-2.4.1/AndroidManifest.xml:17:1-24:12
@@ -73,7 +74,7 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/7084794caa40b04dacd4db564ac043ef/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cf291a29c3f3fc4062ead491e88417db/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.35] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/7af5652248b96fbc322a502813cb490a/dagger-lint-aar-2.35/AndroidManifest.xml:16:1-19:12
-INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:4:5-49
 		INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml
@@ -101,7 +102,7 @@ MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/A
 	android:name
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:8:22-62
 application
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:5-38:19
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:5-47:19
 MERGED from [org.koin:koin-androidx-viewmodel:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/a8408d843ee56380241e62d87f437e56/koin-androidx-viewmodel-2.2.2/AndroidManifest.xml:7:5-20
 MERGED from [org.koin:koin-androidx-viewmodel:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/a8408d843ee56380241e62d87f437e56/koin-androidx-viewmodel-2.2.2/AndroidManifest.xml:7:5-20
 MERGED from [org.koin:koin-androidx-scope:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c3f80509c59ba5a807496d178e1f39e1/koin-androidx-scope-2.2.2/AndroidManifest.xml:7:5-20
@@ -154,34 +155,42 @@ ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/pr
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:23:13-36
 	android:name
 		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:22:19-52
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:24:13-27:29
-action#android.intent.action.MAIN
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:25:17-69
-	android:name
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:25:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:26:17-77
-	android:name
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:26:27-74
-activity#com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:9-32:39
-	android:windowSoftInputMode
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:31:13-56
+activity#com.example.cleanarchitecturestudy.view.intro.IntroActivity
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:9-37:20
 	android:exported
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:32:13-37
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:31:13-36
+	android:theme
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:32:13-64
 	android:name
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:19-66
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:30:19-59
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:33:13-36:29
+action#android.intent.action.MAIN
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:35:27-74
+activity#com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:39:9-41:39
+	android:windowSoftInputMode
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:40:13-56
+	android:exported
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:39:19-66
 activity#com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:9-35:53
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:43:9-44:53
 	android:screenOrientation
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:35:13-51
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:44:13-51
 	android:name
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:34:19-57
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:43:19-57
 activity#com.example.cleanarchitecturestudy.view.web.WebViewActivity
-ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:37:9-61
+ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:46:9-61
 	android:name
-		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:37:19-59
+		ADDED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:46:19-59
 uses-sdk
 INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml
@@ -203,6 +212,8 @@ MERGED from [androidx.activity:activity-ktx:1.1.0] /Users/youheegyeong/AppUnifyK
 MERGED from [androidx.activity:activity-ktx:1.1.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/29087f08900a4e8690814d2eef2e3b9b/activity-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/3195f9a482c963c35a269dc90eac8cf7/core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/3195f9a482c963c35a269dc90eac8cf7/core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-splashscreen:1.0.0-rc01] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/38e7fff4803acc1b833a9adf4feabaed/core-splashscreen-1.0.0-rc01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.0-rc01] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/38e7fff4803acc1b833a9adf4feabaed/core-splashscreen-1.0.0-rc01/AndroidManifest.xml:20:5-22:41
 MERGED from [org.koin:koin-android:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c25d0e03fa5d87fbf3e297388fffa5eb/koin-android-2.2.2/AndroidManifest.xml:5:5-44
 MERGED from [org.koin:koin-android:2.2.2] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c25d0e03fa5d87fbf3e297388fffa5eb/koin-android-2.2.2/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-rc01] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1aa4fae445566a587a8e35fc67ca320e/lifecycle-runtime-ktx-2.3.0-rc01/AndroidManifest.xml:20:5-22:41

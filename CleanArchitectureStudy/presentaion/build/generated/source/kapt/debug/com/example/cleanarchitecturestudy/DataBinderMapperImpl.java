@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.example.cleanarchitecturestudy.databinding.ActivityIntroBindingImpl;
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBindingImpl;
 import com.example.cleanarchitecturestudy.databinding.ActivityQrBindingImpl;
 import com.example.cleanarchitecturestudy.databinding.ActivityWebBindingImpl;
@@ -21,17 +22,20 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_ACTIVITYMOVIESEARCH = 1;
+  private static final int LAYOUT_ACTIVITYINTRO = 1;
 
-  private static final int LAYOUT_ACTIVITYQR = 2;
+  private static final int LAYOUT_ACTIVITYMOVIESEARCH = 2;
 
-  private static final int LAYOUT_ACTIVITYWEB = 3;
+  private static final int LAYOUT_ACTIVITYQR = 3;
 
-  private static final int LAYOUT_ITEMMOVIE = 4;
+  private static final int LAYOUT_ACTIVITYWEB = 4;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
+  private static final int LAYOUT_ITEMMOVIE = 5;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.activity_intro, LAYOUT_ACTIVITYINTRO);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.activity_movie_search, LAYOUT_ACTIVITYMOVIESEARCH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.activity_qr, LAYOUT_ACTIVITYQR);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.cleanarchitecturestudy.R.layout.activity_web, LAYOUT_ACTIVITYWEB);
@@ -47,6 +51,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_ACTIVITYINTRO: {
+          if ("layout/activity_intro_0".equals(tag)) {
+            return new ActivityIntroBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_intro is invalid. Received: " + tag);
+        }
         case  LAYOUT_ACTIVITYMOVIESEARCH: {
           if ("layout/activity_movie_search_0".equals(tag)) {
             return new ActivityMovieSearchBindingImpl(component, view);
@@ -126,9 +136,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
 
     static {
+      sKeys.put("layout/activity_intro_0", com.example.cleanarchitecturestudy.R.layout.activity_intro);
       sKeys.put("layout/activity_movie_search_0", com.example.cleanarchitecturestudy.R.layout.activity_movie_search);
       sKeys.put("layout/activity_qr_0", com.example.cleanarchitecturestudy.R.layout.activity_qr);
       sKeys.put("layout/activity_web_0", com.example.cleanarchitecturestudy.R.layout.activity_web);

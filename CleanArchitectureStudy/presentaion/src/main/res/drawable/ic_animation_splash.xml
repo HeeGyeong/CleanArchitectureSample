@@ -1,0 +1,96 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="108dp"
+            android:height="108dp"
+            android:viewportWidth="108"
+            android:viewportHeight="108">
+            <group
+                android:name="background"
+                android:pivotX="54"
+                android:pivotY="54"
+                android:scaleX="0"
+                android:scaleY="0">
+                <path
+                    android:name="path"
+                    android:pathData="M 0 54 C 0 24.177 24.177 0 54 0 C 83.823 0 108 24.177 108 54 C 108 83.823 83.823 108 54 108 C 24.177 108 0 83.823 0 54 Z"
+                    android:fillColor="#dddddd"
+                    android:strokeWidth="1"/>
+            </group>
+            <group
+                android:name="forground"
+                android:pivotX="54"
+                android:pivotY="54"
+                android:scaleX="0"
+                android:scaleY="0">
+                <group android:name="wrapper">
+                    <clip-path
+                        android:name="clip0"
+                        android:pathData="M 0 0 L 108 0 L 108 108 L 0 108 Z"/>
+                    <group android:name="group">
+                        <path
+                            android:name="path_1"
+                            android:pathData="M 0 54 C 0 24.177 24.177 0 54 0 C 83.823 0 108 24.177 108 54 C 108 83.823 83.823 108 54 108 C 24.177 108 0 83.823 0 54 Z"
+                            android:fillColor="#00a0a0"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_2"
+                            android:pathData="M 31 63.928 C 31 63.928 37.4 52.928 43.1 50.828 C 50.3 48.228 69.1 49.428 69.1 49.428 L 107.2 87.528 L 107 108.928 L 75 107.928 L 31 63.928 Z"
+                            android:fillColor="#00000000"
+                            android:strokeWidth="1"/>
+                        <path
+                            android:name="path_3"
+                            android:pathData="M 65.3 45.828 L 69.1 39.228 C 69.3 38.828 69.2 38.328 68.8 38.128 C 68.4 37.928 67.9 38.028 67.7 38.428 L 63.8 45.128 C 57.5 42.328 50.4 42.328 44.1 45.128 L 40.2 38.428 C 40 38.028 39.5 37.928 39.1 38.128 C 38.8 38.328 38.7 38.828 38.9 39.228 L 42.7 45.828 C 36.2 49.428 31.7 56.028 31 63.928 L 77 63.928 C 76.3 56.028 71.8 49.428 65.3 45.828 Z M 43.4 57.328 C 42.6 57.328 41.9 56.828 41.6 56.128 C 41.3 55.428 41.5 54.628 42 54.028 C 42.5 53.528 43.4 53.328 44.1 53.628 C 44.8 53.928 45.3 54.628 45.3 55.428 C 45.3 56.528 44.5 57.328 43.4 57.328 Z M 64.6 57.328 C 63.8 57.328 63.1 56.828 62.8 56.128 C 62.5 55.428 62.7 54.628 63.2 54.028 C 63.7 53.528 64.6 53.328 65.3 53.628 C 66 53.928 66.5 54.628 66.5 55.428 C 66.5 56.528 65.6 57.328 64.6 57.328 Z"
+                            android:fillColor="#ffffff"
+                            android:strokeWidth="1"/>
+                    </group>
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="background">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="1000"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="1000"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="forground">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="200"
+                    android:duration="3000"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="200"
+                    android:duration="3000"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
