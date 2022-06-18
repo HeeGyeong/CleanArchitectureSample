@@ -1,5 +1,7 @@
 # Clean Architecture Sample
 
+22.06.17 ~
+Android 12 Splash Screen 관련 작업 중입니다.
 
 ## Architecture 
 Clean Architecture를 스터디 하면서 Clean Architecture의 기본적인 구조를 만들어두었습니다.
