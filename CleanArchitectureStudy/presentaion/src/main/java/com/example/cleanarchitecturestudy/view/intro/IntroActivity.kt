@@ -19,6 +19,7 @@ import kotlin.concurrent.thread
 class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro) {
 
     var isReady = false
+    var isStart = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -30,6 +31,7 @@ class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro
     private fun initSplashScreen() {
 
         initData()
+        errorGuard()
 
         val content: View = findViewById(android.R.id.content)
         // SplashScreen이 생성되고 그려질 때 계속해서 호출된다.
@@ -62,6 +64,7 @@ class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro
                 )
                 slideUp.interpolator = AnticipateInterpolator()
                 slideUp.duration = 1000L // Splash Screen이 사라지는 시간.
+                isStart = true
 
                 // Custom animation이 끝나면 SplashScreenView.remove 호출
                 slideUp.doOnEnd {
@@ -80,7 +83,6 @@ class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro
 
     private fun initData() {
         // do something .. Set Data
-
         // 별도의 데이터 처리가 없기 때문에 3초의 딜레이를 줌.
         // 선행되어야 하는 작업이 있는 경우, 이곳에서 처리 후 isReady를 변경.
         thread(start = true) {
@@ -90,6 +92,20 @@ class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro
             }
             // remove Splash Screen after 3 sec
             isReady = true
+        }
+    }
+
+    /**
+     * 최초 빌드 시, setOnExitAnimationListener 가 호출이 안됨.
+     * 따라서 해당 경우에 MainActivity로 넘어가기 위하여 코드 추가.
+     */
+    private fun errorGuard() {
+        thread(start = true) {
+            Thread.sleep(5000)
+
+            if (!isStart) {
+                startMainActivity()
+            }
         }
     }
 
