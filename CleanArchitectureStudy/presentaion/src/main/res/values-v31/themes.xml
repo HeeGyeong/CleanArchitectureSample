@@ -17,13 +17,12 @@
         <!-- SplashScreen의 Background 색상.-->
         <item name="android:windowSplashScreenBackground">#442233</item>
         <!-- SplashScreen에서 사용 될 아이콘. 설정하지 않으면 앱 아이콘이 사용된다. -->
-        <!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_animation_sample</item>-->
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_animation_splash</item>
         <!-- 앱 아이콘의 Default 배경 색상. 해당 값을 설정 하지 않으면 아무런 색도 보이지 않는다. -->
         <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>
         <!-- Animation이 그려지는 Max 시간. 해당 시간이 지나면 애니메이션이 동작하는 도중이라도 마지막 결과로 이동한다. -->
         <item name="android:windowSplashScreenAnimationDuration">5000</item>
-        <!-- 화면 하단에 나오는 Branding 이미지. 31버전에서만 사용 가능. -->
+        <!-- 화면 하단에 나오는 Branding 이미지. -->
         <item name="android:windowSplashScreenBrandingImage">@drawable/ic_launcher_background</item>
     </style>
 </resources>

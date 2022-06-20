@@ -31,28 +31,30 @@ class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro
     private fun initSplashScreen() {
 
         initData()
-        errorGuard()
-
-        val content: View = findViewById(android.R.id.content)
-        // SplashScreen이 생성되고 그려질 때 계속해서 호출된다.
-        content.viewTreeObserver.addOnPreDrawListener(
-            object : ViewTreeObserver.OnPreDrawListener {
-                override fun onPreDraw(): Boolean {
-                    // Check if the initial data is ready.
-                    return if (isReady) {
-                        // 3초 후 Splash Screen 제거
-                        content.viewTreeObserver.removeOnPreDrawListener(this)
-                        true
-                    } else {
-                        // The content is not ready
-                        false
-                    }
-                }
-            }
-        )
 
         // 31 버전일 때와 아닐 때의 분기 처리.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            errorGuard()
+
+            // Android 12 미만 버전에서 바로 IntroActivity의 UI가 뜨도록.
+            val content: View = findViewById(android.R.id.content)
+            // SplashScreen이 생성되고 그려질 때 계속해서 호출된다.
+            content.viewTreeObserver.addOnPreDrawListener(
+                object : ViewTreeObserver.OnPreDrawListener {
+                    override fun onPreDraw(): Boolean {
+                        // Check if the initial data is ready.
+                        return if (isReady) {
+                            // 3초 후 Splash Screen 제거
+                            content.viewTreeObserver.removeOnPreDrawListener(this)
+                            true
+                        } else {
+                            // The content is not ready
+                            false
+                        }
+                    }
+                }
+            )
+
             // splashScreen이 종료 될 때 애니메이션 컨트롤.
             splashScreen.setOnExitAnimationListener { splashScreenView ->
                 // Create your custom animation.
@@ -104,13 +106,13 @@ class IntroActivity : BaseActivity<ActivityIntroBinding>(R.layout.activity_intro
             Thread.sleep(5000)
 
             if (!isStart) {
+                Log.d("loggingTest" , "start $isStart :: startActivity")
                 startMainActivity()
             }
         }
     }
 
     private fun startMainActivity() {
-
         thread(start = true) {
             Thread.sleep(1000)
             startActivity(Intent(this, MainActivity::class.java))

@@ -7878,7 +7878,6 @@
         
         <item name="android:windowSplashScreenBackground">#442233</item>
         
-        
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_animation_splash</item>
         
         <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>
