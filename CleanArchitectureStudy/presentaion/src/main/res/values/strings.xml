@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">CleanArchitectureStudy</string>
-    <string name="finish_app">한번 더 누르시면 앱이 종료됩니다.</string>
+    <string name="go_to_main">한번 더 누르시면 Main으로 이동합니다.</string>
     <string name="splash_text">Splash Activity</string>
 
     <string name="search_input_query_msg">검색어를 입력해주세요</string>

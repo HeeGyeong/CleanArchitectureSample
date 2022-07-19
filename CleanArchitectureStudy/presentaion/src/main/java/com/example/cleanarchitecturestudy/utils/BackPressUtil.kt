@@ -20,7 +20,7 @@ class BackPressUtil(private val activity: Activity) {
 
     private fun showToast() {
         toast =
-            Toast.makeText(activity, activity.getString(R.string.finish_app), Toast.LENGTH_SHORT)
+            Toast.makeText(activity, activity.getString(R.string.go_to_main), Toast.LENGTH_SHORT)
         toast!!.show()
     }
 }
