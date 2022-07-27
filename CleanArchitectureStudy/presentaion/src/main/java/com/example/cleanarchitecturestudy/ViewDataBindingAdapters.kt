@@ -15,6 +15,9 @@ import com.example.domain.model.Movie
 
 /**
  * DataBinding
+ *
+ * DataBinding이 사용 된 xml 파일 내에 호출 부분이 선언 되어 있음.
+ * 어노테이션으로 선언 한 부분이 xml에서 호출 하는 ID
  */
 @BindingAdapter("setItems")
 fun RecyclerView.setAdapterItems(items: MutableList<Movie>?) {

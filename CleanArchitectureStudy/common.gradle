@@ -2,7 +2,6 @@ def isLibraryPlugin = pluginManager.hasPlugin("com.android.library")
 def isApplicationPlugin = pluginManager.hasPlugin("com.android.application")
 
 if (isLibraryPlugin || isApplicationPlugin) {
-
     android {
         defaultConfig {
             if(isApplicationPlugin) {

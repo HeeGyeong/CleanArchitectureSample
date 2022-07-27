@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.lifecycle.Observer
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
@@ -16,10 +15,11 @@ class MovieSearchActivity :
     BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
     private lateinit var movieAdapter: MovieAdapter
 
-    // Koin
+    // Koin 사용 시
     // import org.koin.androidx.viewmodel.ext.android.viewModel
 //    private val viewModel: MovieSearchViewModel by viewModel()
-    // Hilt
+
+    // Hilt 사용 시
     // import androidx.activity.viewModels
     private val viewModel: MovieSearchViewModel by viewModels()
 

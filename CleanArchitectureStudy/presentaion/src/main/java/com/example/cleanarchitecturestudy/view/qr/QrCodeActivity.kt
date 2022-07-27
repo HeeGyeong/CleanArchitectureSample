@@ -16,6 +16,9 @@ import com.journeyapps.barcodescanner.ScanOptions
 
 class QrCodeActivity: BaseActivity<ActivityQrBinding>(R.layout.activity_qr) {
 
+    /**
+     * zxing Library 버전에 따라 사용되는 방법이 다르기 때문에, 두 가지 방법으로 사용해 보았음.
+     */
     fun btnClick(view: View) {
         when(view.id) {
             R.id.btn_qr_code -> {
