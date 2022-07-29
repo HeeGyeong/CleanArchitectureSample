@@ -33,19 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ceeb47a-5376-4291-84d5-eaeeed17b878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lint/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lint/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/ViewDataBindingAdapters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/ViewDataBindingAdapters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/utils/EndlessRecyclerViewScrollListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/utils/EndlessRecyclerViewScrollListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/utils/NetworkManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/utils/NetworkManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/view/qr/QrCodeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/view/qr/QrCodeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/view/search/MovieSearchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentaion/src/main/java/com/example/cleanarchitecturestudy/view/search/MovieSearchActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentaion/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/presentaion/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
