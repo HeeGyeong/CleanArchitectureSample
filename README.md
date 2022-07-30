@@ -14,7 +14,7 @@ Data, Domain, Presentation 구조이며, Lint 사용을 위하여 Lint 모듈도
 Gradle에서의 공통된 코드르 최소화하고, 관리의 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
 
 Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다.
-좀 더 확장된 Gradle 공통화 코드를 확인하고 싶으 경우, [Modular Architecture](https://github.com/HeeGyeong/ModuleArchitecture)에서 확인하면 됩니다.
+좀 더 확장된 Gradle 공통화 코드를 확인하고 싶은 경우, [Modular Architecture](https://github.com/HeeGyeong/ModuleArchitecture)에서 확인하면 됩니다.
 
 ## Lint
 여러가지 Custom Lint에 대한 조건을 작성하여 Module로 붙여두었습니다.
@@ -45,7 +45,8 @@ Splash Screen 관련하여 확인할 수 있는 코드 추가.
 
 ## Code Coverage
 Code Coverage를 확인할 수 있도록 Jacoco라이브러리를 추가하였습니다.
-Jacoco를 사용하는 방법은 다음 블로그에 작성해 두었습니다. [Jacoco 사용 방법](https://heegs.tistory.com/131 "How to use Jacoco basics")
+
+[Jacoco 사용 방법](https://heegs.tistory.com/131 "How to use Jacoco basics")은 블로그에 작성해 두었습니다.
 
 ## Blog
 Clean Architecture에 대한 설명은 다음 블로그에 작성해 두었습니다.
