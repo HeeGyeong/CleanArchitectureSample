@@ -43,6 +43,10 @@ Lint Unit Test도 간단하게 작성을 해두었으며, 추후에 확인하여
 ## Android 12
 Splash Screen 관련하여 확인할 수 있는 코드 추가.
 
+## Code Coverage
+Code Coverage를 확인할 수 있도록 Jacoco라이브러리를 추가하였습니다.
+Jacoco를 사용하는 방법은 다음 블로그에 작성해 두었습니다. [Jacoco 사용 방법](https://heegs.tistory.com/131 "How to use Jacoco basics")
+
 ## Blog
 Clean Architecture에 대한 설명은 다음 블로그에 작성해 두었습니다.
 
