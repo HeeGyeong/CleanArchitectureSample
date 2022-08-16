@@ -10,10 +10,12 @@ import androidx.lifecycle.ViewModel;
 import com.example.cleanarchitecturestudy.hilt.ApiModule;
 import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideApiInterfaceFactory;
 import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideHeaderInterceptorFactory;
+import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideHttpClientFactory;
 import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideLoggingInterceptorFactory;
 import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideOkHttpClientFactory;
 import com.example.cleanarchitecturestudy.hilt.ApiModule_ProvideRetrofitFactory;
 import com.example.cleanarchitecturestudy.hilt.DataModule;
+import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideKtorInterfaceFactory;
 import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideLocalDataSourceFactory;
 import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideMovieDaoFactory;
 import com.example.cleanarchitecturestudy.hilt.DataModule_ProvideMovieRepositoryFactory;
@@ -27,6 +29,7 @@ import com.example.cleanarchitecturestudy.view.web.WebViewActivity;
 import com.example.cleanarchitecturestudy.view.web.WebViewModel;
 import com.example.cleanarchitecturestudy.view.web.WebViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.data.api.ApiInterface;
+import com.example.data.api.KtorInterface;
 import com.example.data.db.movie.MovieDao;
 import com.example.data.db.movie.MovieDatabase;
 import com.example.data.repository.search.local.MovieLocalDataSource;
@@ -55,6 +58,7 @@ import dagger.internal.MapBuilder;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
 import dagger.internal.SetBuilder;
+import io.ktor.client.HttpClient;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
@@ -88,6 +92,10 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
   private volatile Object movieDao = new MemoizedSentinel();
 
   private volatile Object movieLocalDataSource = new MemoizedSentinel();
+
+  private volatile Object httpClient = new MemoizedSentinel();
+
+  private volatile Object ktorInterface = new MemoizedSentinel();
 
   private volatile Object movieRepository = new MemoizedSentinel();
 
@@ -226,13 +234,41 @@ public final class DaggerDIApplication_HiltComponents_SingletonC extends DIAppli
     return (MovieLocalDataSource) local;
   }
 
+  private HttpClient httpClient() {
+    Object local = httpClient;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = httpClient;
+        if (local instanceof MemoizedSentinel) {
+          local = ApiModule_ProvideHttpClientFactory.provideHttpClient();
+          httpClient = DoubleCheck.reentrantCheck(httpClient, local);
+        }
+      }
+    }
+    return (HttpClient) local;
+  }
+
+  private KtorInterface ktorInterface() {
+    Object local = ktorInterface;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = ktorInterface;
+        if (local instanceof MemoizedSentinel) {
+          local = DataModule_ProvideKtorInterfaceFactory.provideKtorInterface(httpClient());
+          ktorInterface = DoubleCheck.reentrantCheck(ktorInterface, local);
+        }
+      }
+    }
+    return (KtorInterface) local;
+  }
+
   private MovieRepository movieRepository() {
     Object local = movieRepository;
     if (local instanceof MemoizedSentinel) {
       synchronized (local) {
         local = movieRepository;
         if (local instanceof MemoizedSentinel) {
-          local = DataModule_ProvideMovieRepositoryFactory.provideMovieRepository(movieRemoteDataSource(), movieLocalDataSource());
+          local = DataModule_ProvideMovieRepositoryFactory.provideMovieRepository(movieRemoteDataSource(), movieLocalDataSource(), ktorInterface());
           movieRepository = DoubleCheck.reentrantCheck(movieRepository, local);
         }
       }

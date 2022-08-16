@@ -2617,7 +2617,7 @@ int string error_msg 0x7f100029
 int string exposed_dropdown_menu_content_description 0x7f10002a
 int string fab_transformation_scrim_behavior 0x7f10002b
 int string fab_transformation_sheet_behavior 0x7f10002c
-int string finish_app 0x7f10002d
+int string go_to_main 0x7f10002d
 int string hide_bottom_view_on_scroll_behavior 0x7f10002e
 int string icon_content_description 0x7f10002f
 int string id_empty_error_msg 0x7f100030

@@ -1,5 +1,6 @@
 package com.example.data.repository.search
 
+import com.example.data.api.KtorInterface
 import com.example.data.mapper.mapperToMovie
 import com.example.data.repository.search.local.MovieLocalDataSource
 import com.example.data.repository.search.remote.MovieRemoteDataSource
@@ -8,7 +9,6 @@ import com.example.domain.repository.MovieRepository
 import io.reactivex.Flowable
 import io.reactivex.Single
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
@@ -22,6 +22,7 @@ import javax.inject.Inject
 class MovieRepositoryImpl @Inject constructor(
     private val movieRemoteDataSource: MovieRemoteDataSource,
     private val movieLocalDataSource: MovieLocalDataSource,
+    private val ktorInterface: KtorInterface,
 ) : MovieRepository {
 
     // 최초 영화 검색
@@ -45,8 +46,14 @@ class MovieRepositoryImpl @Inject constructor(
 
     override fun getSearchMoviesFlow(query: String): Flow<List<Movie>> {
         return flow {
-            movieRemoteDataSource.getSearchMoviesFlow(query).collect {
+            // Retrofit을 사용하여 API 호출.
+            /*movieRemoteDataSource.getSearchMoviesFlow(query).collect {
                 emit(mapperToMovie(it.movies))
+            }*/
+
+            // Ktor을 사용하여 API 호출.
+            ktorInterface.requestMoveSearchData(query).collect {
+                emit(mapperToMovie(it.items))
             }
         }
     }
@@ -73,8 +80,8 @@ class MovieRepositoryImpl @Inject constructor(
             .flatMap {
                 // insertMovie 는 MovieEntity 로 localDB에 insert.
                 // andThen 연산자를 통해 localDB에 insert 한 Data 들을 Mapper 클래스를 사용하여 Movie type 으로 mapping 하고 해당 list 를 return
-                movieLocalDataSource.insertMovies(it.movies)
-                    .andThen(Single.just(mapperToMovie(it.movies)))
+                movieLocalDataSource.insertMovies(it.items)
+                    .andThen(Single.just(mapperToMovie(it.items)))
             }
     }
 
@@ -84,14 +91,14 @@ class MovieRepositoryImpl @Inject constructor(
         offset: Int,
     ): Single<List<Movie>> {
         return movieRemoteDataSource.getSearchMovies(query, offset).flatMap {
-            if (it.movies.isEmpty()) {
+            if (it.items.isEmpty()) {
                 Single.error(IllegalStateException("LAST_PAGE"))
             } else {
                 if (offset != it.start) {
                     Single.error(IllegalStateException("LAST_PAGE"))
                 } else {
-                    movieLocalDataSource.insertMovies(it.movies)
-                        .andThen(Single.just(mapperToMovie(it.movies)))
+                    movieLocalDataSource.insertMovies(it.items)
+                        .andThen(Single.just(mapperToMovie(it.items)))
                 }
             }
         }

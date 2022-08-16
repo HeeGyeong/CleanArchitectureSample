@@ -1,5 +1,6 @@
 package com.example.cleanarchitecturestudy.view.search
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -13,7 +14,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
@@ -84,7 +84,10 @@ class MovieSearchViewModel @Inject constructor(
             getMoviesUseCase.getFlowData(currentQuery)
                 .onStart { showProgress() }
                 .onCompletion { hideProgress() }
-                .catch { _toastMsg.value = MessageSet.ERROR }
+                .catch {
+                    Log.d("dataCheck", "Error ? $it")
+                    _toastMsg.value = MessageSet.ERROR
+                }
                 .collect { movies ->
                     if (movies.isEmpty()) {
                         _toastMsg.value = MessageSet.NO_RESULT

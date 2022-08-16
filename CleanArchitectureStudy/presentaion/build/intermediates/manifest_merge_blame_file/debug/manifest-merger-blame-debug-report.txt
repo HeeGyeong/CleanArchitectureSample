@@ -6,7 +6,7 @@
 6        android:minSdkVersion="24"
 6-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="28" />
-7-->[androidx.fragment:fragment-ktx:1.2.5] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/26ebdc8f3d2575037e7f6573bef76618/fragment-ktx-1.2.5/AndroidManifest.xml:22:9-38
+7-->[androidx.fragment:fragment-ktx:1.2.5] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6f1686b4e757a3a5561ef72f15ca0c9e/fragment-ktx-1.2.5/AndroidManifest.xml:22:9-38
 8
 9    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 9-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:6:5-79
@@ -20,42 +20,42 @@
 12
 13    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
 14    <uses-feature
-14-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
+14-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
 15        android:name="android.hardware.camera"
-15-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:26:9-47
+15-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:26:9-47
 16        android:required="false" />
-16-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:27:9-33
+16-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:27:9-33
 17    <uses-feature
-17-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+17-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
 18        android:name="android.hardware.camera.front"
-18-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+18-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
 19        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-19-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+19-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
 20    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 21    <uses-feature
-21-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+21-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
 22        android:name="android.hardware.camera.autofocus"
-22-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+22-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
 23        android:required="false" />
-23-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
 24    <uses-feature
-24-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
 25        android:name="android.hardware.camera.flash"
-25-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
 26        android:required="false" />
-26-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
 27    <uses-feature
-27-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
 28        android:name="android.hardware.screen.landscape"
-28-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
 29        android:required="false" />
-29-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
 30    <uses-feature
-30-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
 31        android:name="android.hardware.wifi"
-31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
 32        android:required="false" />
-32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
 33
 34    <application
 34-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:10:5-47:19
@@ -64,7 +64,7 @@
 36        android:allowBackup="true"
 36-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:12:9-35
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/62aa569ce45426ea2e0686eaa7ac0964/core-1.7.0/AndroidManifest.xml:24:18-86
+37-->[androidx.core:core:1.7.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/9d4bb88b8e524563505cbda3c9b7e2fc/core-1.7.0/AndroidManifest.xml:24:18-86
 38        android:debuggable="true"
 39        android:extractNativeLibs="false"
 40        android:icon="@mipmap/ic_launcher"
@@ -137,49 +137,49 @@
 81-->/Users/youheegyeong/CleanArchitectureSample/CleanArchitectureStudy/presentaion/src/main/AndroidManifest.xml:46:19-59
 82
 83        <service
-83-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/089a2647e7e08f8d1fa28eda93f23a32/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
+83-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/938622a743872ac2bb2b9d4ec3ba4c06/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
 84            android:name="androidx.room.MultiInstanceInvalidationService"
-84-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/089a2647e7e08f8d1fa28eda93f23a32/room-runtime-2.4.1/AndroidManifest.xml:26:13-74
+84-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/938622a743872ac2bb2b9d4ec3ba4c06/room-runtime-2.4.1/AndroidManifest.xml:26:13-74
 85            android:directBootAware="true"
-85-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/089a2647e7e08f8d1fa28eda93f23a32/room-runtime-2.4.1/AndroidManifest.xml:27:13-43
+85-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/938622a743872ac2bb2b9d4ec3ba4c06/room-runtime-2.4.1/AndroidManifest.xml:27:13-43
 86            android:exported="false" />
-86-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/089a2647e7e08f8d1fa28eda93f23a32/room-runtime-2.4.1/AndroidManifest.xml:28:13-37
+86-->[androidx.room:room-runtime:2.4.1] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/938622a743872ac2bb2b9d4ec3ba4c06/room-runtime-2.4.1/AndroidManifest.xml:28:13-37
 87
 88        <activity
-88-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+88-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
 89            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-89-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+89-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
 90            android:clearTaskOnLaunch="true"
-90-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+90-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
 91            android:screenOrientation="sensorLandscape"
-91-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+91-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
 92            android:stateNotNeeded="true"
-92-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+92-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
 93            android:theme="@style/zxing_CaptureTheme"
-93-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+93-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
 94            android:windowSoftInputMode="stateAlwaysHidden" />
-94-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d6a724b694b65b6ab310dc974a41020a/zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+94-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b3c01d3b7adb76a693ebc0b82e182f11/zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
 95
 96        <provider
-96-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+96-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
 97            android:name="androidx.startup.InitializationProvider"
-97-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+97-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:27:13-67
 98            android:authorities="com.example.cleanarchitecturestudy.androidx-startup"
-98-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+98-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:28:13-68
 99            android:exported="false" >
-99-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+99-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:29:13-37
 100            <meta-data
-100-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+100-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
 101                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-101-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+101-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:32:17-75
 102                android:value="androidx.startup" />
-102-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/16f9be519fc6321f141ce2f6b9e1f65e/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+102-->[androidx.emoji2:emoji2:1.0.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cc75873e72ae634077fe3332cec42fd0/emoji2-1.0.0/AndroidManifest.xml:33:17-49
 103            <meta-data
-103-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/3c676b7a199e7419a2a5b51f9765de94/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+103-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/f04c52e7c98437523ed3e4d1f2784134/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
 104                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-104-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/3c676b7a199e7419a2a5b51f9765de94/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+104-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/f04c52e7c98437523ed3e4d1f2784134/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
 105                android:value="androidx.startup" />
-105-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/3c676b7a199e7419a2a5b51f9765de94/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+105-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/f04c52e7c98437523ed3e4d1f2784134/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
 106        </provider>
 107    </application>
 108

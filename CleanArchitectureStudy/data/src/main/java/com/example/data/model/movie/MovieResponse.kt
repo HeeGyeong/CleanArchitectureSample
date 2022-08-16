@@ -1,16 +1,18 @@
 package com.example.data.model.movie
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
 
 /**
  * api return 값의 형태
  */
+@Serializable
 data class MovieResponse(
     @SerializedName("display")
     val display: Int,
 
     @SerializedName("items")
-    val movies: List<MovieEntity>,
+    val items: List<MovieEntity>,
 
     @SerializedName("lastBuildDate")
     val lastBuildDate: String,

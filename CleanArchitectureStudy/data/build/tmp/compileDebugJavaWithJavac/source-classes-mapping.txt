@@ -1,5 +1,7 @@
 com/example/data/BuildConfig.java
  com.example.data.BuildConfig
+com/example/data/repository/search/ktor/KtorInterfaceImpl_Factory.java
+ com.example.data.repository.search.ktor.KtorInterfaceImpl_Factory
 com/example/data/db/movie/MovieDao_Impl.java
  com.example.data.db.movie.MovieDao_Impl
  com.example.data.db.movie.MovieDao_Impl$1

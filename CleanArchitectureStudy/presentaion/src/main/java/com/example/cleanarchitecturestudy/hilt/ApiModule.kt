@@ -1,5 +1,6 @@
 package com.example.cleanarchitecturestudy.hilt
 
+import android.util.Log
 import com.example.cleanarchitecturestudy.BuildConfig
 import com.example.data.api.ApiClient
 import com.example.data.api.ApiInterface
@@ -10,6 +11,15 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import io.ktor.client.*
+import io.ktor.client.engine.cio.*
+import io.ktor.client.plugins.*
+import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.plugins.logging.*
+import io.ktor.client.request.*
+import io.ktor.http.*
+import io.ktor.serialization.kotlinx.json.*
+import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -82,6 +92,43 @@ object ApiModule {
                 it.setLevel(HttpLoggingInterceptor.Level.BODY)
             } else {
                 it.setLevel(HttpLoggingInterceptor.Level.NONE)
+            }
+        }
+    }
+
+    @Singleton
+    @Provides
+    fun provideHttpClient(): HttpClient {
+        return HttpClient(CIO) {
+            install(Logging) {
+                logger = object : io.ktor.client.plugins.logging.Logger {
+                    override fun log(message: String) {
+                        Log.d("ktorLogger", "message : $message")
+                    }
+                }
+                level = LogLevel.ALL
+            }
+
+            install(ContentNegotiation) {
+                json(Json {
+                    ignoreUnknownKeys = true
+                    isLenient = true
+                    encodeDefaults = true
+                })
+            }
+
+            install(HttpTimeout) {
+                connectTimeoutMillis = 6000
+                requestTimeoutMillis = 6000
+                socketTimeoutMillis = 6000
+            }
+
+            defaultRequest {
+                contentType(ContentType.Application.Json)
+                headers {
+                    append("X-Naver-Client-Id", "33chRuAiqlSn5hn8tIme")
+                    append("X-Naver-Client-Secret", "fyfwt9PCUN")
+                }
             }
         }
     }

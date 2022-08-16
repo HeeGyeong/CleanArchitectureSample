@@ -10,6 +10,9 @@ public final class QrCodeActivity extends com.example.cleanarchitecturestudy.bas
         super(0);
     }
     
+    /**
+     * zxing Library 버전에 따라 사용되는 방법이 다르기 때문에, 두 가지 방법으로 사용해 보았음.
+     */
     public final void btnClick(@org.jetbrains.annotations.NotNull()
     android.view.View view) {
     }
