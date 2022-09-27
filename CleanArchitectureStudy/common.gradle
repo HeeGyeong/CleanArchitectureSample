@@ -7,9 +7,9 @@ if (isLibraryPlugin || isApplicationPlugin) {
             if(isApplicationPlugin) {
                 applicationId App.appId
             }
-            targetSdkVersion 31
-            versionCode 1
-            versionName "1.0"
+            targetSdkVersion targetSdk_Version
+            versionCode versionCode
+            versionName versionName
 
             testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         }

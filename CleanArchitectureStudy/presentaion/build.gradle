@@ -46,23 +46,23 @@ dependencies {
     implementation project(':domain')
     implementation project(':data')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
     // Splash Screen
-    implementation 'androidx.core:core-splashscreen:1.0.0-rc01'
+    implementation "androidx.core:core-splashscreen:$splashVersion"
 
     // koin
-    implementation("org.koin:koin-android:2.2.2")
-    implementation 'org.koin:koin-androidx-viewmodel:2.2.2'
+    implementation "org.koin:koin-android:$koinVersion"
+    implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
     // hilt
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
     // Room
-    implementation "androidx.room:room-runtime:2.4.1"
+    implementation "androidx.room:room-runtime:$roomVersion"
     //rxjava
     implementation "io.reactivex.rxjava2:rxjava:2.2.17"
     implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
@@ -70,14 +70,14 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
     // Gson
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:$gsonVersion"
     //coroutine lifecycle
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-rc01"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutineVersion"
     //ktx extensions
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$ktxVersion"
     //glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation "com.github.bumptech.glide:glide:$glibeVersion"
+    kapt "com.github.bumptech.glide:compiler:$glibeVersion"
     // other library
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation 'de.hdodenhof:circleimageview:3.1.0'
@@ -88,25 +88,24 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
 
     // ktor
-    def ktor_version = "2.0.3"
-    implementation "io.ktor:ktor-client-core:$ktor_version"
-    implementation "io.ktor:ktor-client-cio:$ktor_version"
-    implementation "io.ktor:ktor-client-serialization:$ktor_version"
-    implementation "io.ktor:ktor-client-logging-jvm:$ktor_version"
-    implementation "io.ktor:ktor-client-content-negotiation:$ktor_version"
-    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktor_version"
+    implementation "io.ktor:ktor-client-core:$ktorVersion"
+    implementation "io.ktor:ktor-client-cio:$ktorVersion"
+    implementation "io.ktor:ktor-client-serialization:$ktorVersion"
+    implementation "io.ktor:ktor-client-logging-jvm:$ktorVersion"
+    implementation "io.ktor:ktor-client-content-negotiation:$ktorVersion"
+    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktorVersion"
 
     // Espresso
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     // Trust
-    testImplementation "com.google.truth:truth:1.1.3"
+    testImplementation "com.google.truth:truth:$truthVersion"
     // Mockito
-    testImplementation "org.mockito:mockito-core:3.6.0"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
     // Kotlin 으로 사용 시 발생하는 Mockito cannot mock/spy because : - final class 에러 해결을 위해 inline 추가.
-    testImplementation 'org.mockito:mockito-inline:3.6.0'
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
     // InstrumentedTest 에서 사용하기 위해 적용.
-    androidTestImplementation 'org.mockito:mockito-android:3.6.0'
-    androidTestImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation "org.mockito:mockito-android:$mockitoVersion"
+    androidTestImplementation "com.google.truth:truth:$truthVersion"
     // Test Implement
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
