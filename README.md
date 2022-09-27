@@ -16,6 +16,10 @@ Gradle에서의 공통된 코드르 최소화하고, 관리의 용의성을 높�
 Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다.
 좀 더 확장된 Gradle 공통화 코드를 확인하고 싶은 경우, [Modular Architecture](https://github.com/HeeGyeong/ModuleArchitecture)에서 확인하면 됩니다.
 
+2022.09. Library Version에 관련된 gradle 파일 추가
+
+Gradle 파일을 분리하는 방법은 [Tistory Blog](https://heegs.tistory.com/110)에서 확인하면 됩니다.
+
 ## Lint
 여러가지 Custom Lint에 대한 조건을 작성하여 Module로 붙여두었습니다.
 
