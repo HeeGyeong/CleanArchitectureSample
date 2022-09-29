@@ -13,9 +13,10 @@ Data, Domain, Presentation 구조이며, Lint 사용을 위하여 Lint 모듈도
 기본적인 WebView에 대한 구조도 붙여두었으며, assets에 html 파일을 선언하여 테스트했습니다.
 
 ## Gradle
-Gradle에서의 공통된 코드르 최소화하고, 관리의 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
+Gradle에서의 공통된 코드를 최소화하고, 관리의 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
 
 Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다.
+
 좀 더 확장된 Gradle 공통화 코드를 확인하고 싶은 경우, [Modular Architecture](https://github.com/HeeGyeong/ModuleArchitecture)에서 확인하면 됩니다.
 
 2022.09. Library Version에 관련된 gradle 파일 추가
