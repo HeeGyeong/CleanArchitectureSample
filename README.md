@@ -2,13 +2,15 @@
 
 ## Description
 Clean Architecture 스터디를 위하여 작성한 Sample Code.
+
 Clean Architecture 개념을 이해하 위하여 기본적인 구조, API 통신, DI 등의 기본적인 사용 방법을 가이드 하기 위하여 만들었습니다.
 
 ## Architecture 
 Clean Architecture의 기본적인 구조.
-Data, Domain, Presentation 구조이며, Lint 사용을 위하여 Lint 모듈도 추가해 두었으나, Clean Architecture 구조에서는 제외하고 보아도 무관합니다.
 
-기본적인 WebView에 대한 구조도 붙여두었으며, assets에 html파일을 선언하여 테스트했습니다.
+Data, Domain, Presentation 구조이며, Lint 사용을 위하여 Lint 모듈도 추가해 두었으나 Clean Architecture 구조에서는 제외하고 보아도 무관합니다.
+
+기본적인 WebView에 대한 구조도 붙여두었으며, assets에 html 파일을 선언하여 테스트했습니다.
 
 ## Gradle
 Gradle에서의 공통된 코드르 최소화하고, 관리의 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
@@ -18,7 +20,7 @@ Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, depen
 
 2022.09. Library Version에 관련된 gradle 파일 추가
 
-Gradle 파일을 분리하는 방법은 [Tistory Blog](https://heegs.tistory.com/110)에서 확인하면 됩니다.
+[Gradle 파일을 분리하는 방법](https://heegs.tistory.com/110)은 블로그에서 확인하면 됩니다.
 
 ## Lint
 여러가지 Custom Lint에 대한 조건을 작성하여 Module로 붙여두었습니다.
