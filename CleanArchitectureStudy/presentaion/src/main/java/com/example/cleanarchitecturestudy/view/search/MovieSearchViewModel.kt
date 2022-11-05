@@ -36,8 +36,8 @@ class MovieSearchViewModel @Inject constructor(
     val query = MutableLiveData<String>() // 검색어(EditText two-way binding)
 
     // 영화 리스트가 저장되는 변수. 해당 변수는 xml 에서 binding 되어 실제로 데이터를 뿌려주게 된다.
-    private val _movieList = MutableLiveData<MutableList<Movie>>()
-    val movieList: LiveData<MutableList<Movie>> get() = _movieList
+    private val _movieList = MutableLiveData<ArrayList<Movie>>()
+    val movieList: LiveData<ArrayList<Movie>> get() = _movieList
 
     // 검색 결과에 따른 toast 메세지.
     private val _toastMsg = MutableLiveData<MessageSet>()

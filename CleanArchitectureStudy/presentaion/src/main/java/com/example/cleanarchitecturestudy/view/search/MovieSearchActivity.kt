@@ -5,10 +5,13 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.ItemTouchHelper
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
+import com.example.cleanarchitecturestudy.utils.ItemMoveCallback
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class MovieSearchActivity :
@@ -27,6 +30,7 @@ class MovieSearchActivity :
         super.onCreate(savedInstanceState)
         binding.vm = viewModel
         initViewModelCallback()
+        initObserver()
         initAdapter()
     }
 
@@ -36,7 +40,18 @@ class MovieSearchActivity :
                 it.resolveActivity(packageManager) != null
             }?.run(this::startActivity)
         }
+
+        val callback: ItemTouchHelper.Callback = ItemMoveCallback(movieAdapter)
+        val touchHelper = ItemTouchHelper(callback)
+        touchHelper.attachToRecyclerView(binding.rvMovies)
+
         binding.rvMovies.adapter = movieAdapter
+    }
+
+    private fun initObserver() {
+        viewModel.movieList.observe(this@MovieSearchActivity, Observer {
+            movieAdapter.setMovieList(it)
+        })
     }
 
     private fun initViewModelCallback() {
