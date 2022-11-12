@@ -23,7 +23,10 @@ class ItemMoveCallback(private val mAdapter: ItemTouchInterface) :
         recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder,
         target: RecyclerView.ViewHolder
     ): Boolean {
-        mAdapter.onRowMoved(viewHolder.adapterPosition, target.adapterPosition)
+        if (viewHolder is MovieAdapter.ViewHolder) {
+            val itemViewHolder: MovieAdapter.ViewHolder = viewHolder
+            mAdapter.onRowMoved(itemViewHolder.adapterPosition, target.adapterPosition)
+        }
         return true
     }
 
