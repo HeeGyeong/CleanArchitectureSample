@@ -23,23 +23,6 @@
                     }
                 },
                 {
-                    "source": "/Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/d031267b2bde03e0b64a261752507804/core-splashscreen-1.0.0-rc01/res/values-night-v8/values-night-v8.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "85",
-                        "endOffsets": "136"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endColumns": "85",
-                        "endOffsets": "181"
-                    }
-                },
-                {
                     "source": "/Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5c0ad8a18ad6a6500532ed7d62b7191b/appcompat-1.4.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -71,6 +54,23 @@
                         "startOffsets": "1552,1640,1764,1866,1968,2084,2186,2300,2428,2544,2666,2802,2922,3056,3176,3288,3503,3627,3757,3879,4017,4151,4267",
                         "endColumns": "87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,123,129,121,137,133,115,119",
                         "endOffsets": "1635,1759,1861,1963,2079,2181,2295,2423,2539,2661,2797,2917,3051,3171,3283,3409,3622,3752,3874,4012,4146,4262,4382"
+                    }
+                },
+                {
+                    "source": "/Users/youheegyeong/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/f475a954ec6fa19b652c8190f7578056/core-splashscreen-1.0.0/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endColumns": "85",
+                        "endOffsets": "181"
                     }
                 }
             ]

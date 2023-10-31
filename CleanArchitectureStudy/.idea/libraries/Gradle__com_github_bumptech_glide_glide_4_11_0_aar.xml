@@ -1,12 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:glide:4.11.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b75ff39f9e48297e94efd05100b7d9e/glide-4.11.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b75ff39f9e48297e94efd05100b7d9e/glide-4.11.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b75ff39f9e48297e94efd05100b7d9e/glide-4.11.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5b96dcce3a40ab5f0b7a1224409833d7/glide-4.11.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5b96dcce3a40ab5f0b7a1224409833d7/glide-4.11.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5b96dcce3a40ab5f0b7a1224409833d7/glide-4.11.0/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/126bc9161616518ce6da13d0e553ae9b/glide-4.11.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/126bc9161616518ce6da13d0e553ae9b/glide-4.11.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/126bc9161616518ce6da13d0e553ae9b/glide-4.11.0/res" />

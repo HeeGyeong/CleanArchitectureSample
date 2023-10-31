@@ -16,8 +16,6 @@ public class ItemMovieBindingImpl extends ItemMovieBinding  {
         sViewsWithIds = null;
     }
     // views
-    @NonNull
-    private final androidx.appcompat.widget.LinearLayoutCompat mboundView0;
     // variables
     // values
     // listeners
@@ -29,6 +27,7 @@ public class ItemMovieBindingImpl extends ItemMovieBinding  {
     private ItemMovieBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.ImageView) bindings[1]
+            , (androidx.appcompat.widget.LinearLayoutCompat) bindings[0]
             , (android.widget.RatingBar) bindings[3]
             , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[5]
@@ -36,8 +35,7 @@ public class ItemMovieBindingImpl extends ItemMovieBinding  {
             , (android.widget.TextView) bindings[2]
             );
         this.ivPoster.setTag(null);
-        this.mboundView0 = (androidx.appcompat.widget.LinearLayoutCompat) bindings[0];
-        this.mboundView0.setTag(null);
+        this.movieItemContainer.setTag(null);
         this.rbRating.setTag(null);
         this.tvActor.setTag(null);
         this.tvDirector.setTag(null);

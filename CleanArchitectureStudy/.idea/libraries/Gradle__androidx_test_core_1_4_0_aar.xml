@@ -1,15 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.test:core:1.4.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/da4c88c8575e0aef5b2d3a9364306891/core-1.4.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/9039cb4a5db2e5faf59551dacfd6890a/core-1.4.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/9039cb4a5db2e5faf59551dacfd6890a/core-1.4.0/res" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/9039cb4a5db2e5faf59551dacfd6890a/core-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6b5fed62998bb0d65624514b3df96b5d/core-1.4.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c9753ce81f3cc261a610d3c54b3f3a9c/core-1.4.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/b9b75c59d8578bf4e1fecfeabfa3a17e/core-1.4.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/46fa628c9ba020bdccf337f6878becd5/core-1.4.0/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/46fa628c9ba020bdccf337f6878becd5/core-1.4.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/46fa628c9ba020bdccf337f6878becd5/core-1.4.0/jars/classes.jar!/" />
     </CLASSES>

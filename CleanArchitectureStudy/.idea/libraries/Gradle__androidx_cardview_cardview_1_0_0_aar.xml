@@ -1,9 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.cardview:cardview:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5972219093d14d5beb082b3a20177674/cardview-1.0.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5972219093d14d5beb082b3a20177674/cardview-1.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/5972219093d14d5beb082b3a20177674/cardview-1.0.0/jars/classes.jar!/" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/07ef7b0f0d1a8291160878e3a31a6459/cardview-1.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/07ef7b0f0d1a8291160878e3a31a6459/cardview-1.0.0/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/07ef7b0f0d1a8291160878e3a31a6459/cardview-1.0.0/AndroidManifest.xml" />

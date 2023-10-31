@@ -134,7 +134,7 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeVmMovieList((androidx.lifecycle.LiveData<java.util.List<com.example.domain.model.Movie>>) object, fieldId);
+                return onChangeVmMovieList((androidx.lifecycle.LiveData<java.util.ArrayList<com.example.domain.model.Movie>>) object, fieldId);
             case 1 :
                 return onChangeVmIsLoading((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
             case 2 :
@@ -142,7 +142,7 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
         }
         return false;
     }
-    private boolean onChangeVmMovieList(androidx.lifecycle.LiveData<java.util.List<com.example.domain.model.Movie>> VmMovieList, int fieldId) {
+    private boolean onChangeVmMovieList(androidx.lifecycle.LiveData<java.util.ArrayList<com.example.domain.model.Movie>> VmMovieList, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -181,10 +181,10 @@ public class ActivityMovieSearchBindingImpl extends ActivityMovieSearchBinding i
         boolean androidxDatabindingViewDataBindingSafeUnboxVmIsLoadingGetValue = false;
         java.lang.String vmQueryGetValue = null;
         com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel vm = mVm;
-        androidx.lifecycle.LiveData<java.util.List<com.example.domain.model.Movie>> vmMovieList = null;
+        androidx.lifecycle.LiveData<java.util.ArrayList<com.example.domain.model.Movie>> vmMovieList = null;
         java.lang.Boolean vmIsLoadingGetValue = null;
         androidx.lifecycle.LiveData<java.lang.Boolean> vmIsLoading = null;
-        java.util.List<com.example.domain.model.Movie> vmMovieListGetValue = null;
+        java.util.ArrayList<com.example.domain.model.Movie> vmMovieListGetValue = null;
         androidx.lifecycle.MutableLiveData<java.lang.String> vmQuery = null;
 
         if ((dirtyFlags & 0x1fL) != 0) {

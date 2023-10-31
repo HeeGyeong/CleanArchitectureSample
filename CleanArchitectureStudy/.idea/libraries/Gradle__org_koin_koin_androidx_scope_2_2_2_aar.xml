@@ -1,15 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: org.koin:koin-androidx-scope:2.2.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/38d791fa678f7283bf85925200c8d54b/koin-androidx-scope-2.2.2/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/38d791fa678f7283bf85925200c8d54b/koin-androidx-scope-2.2.2/res" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/8ad317768c2e50c0729df803e3eda9c5/koin-androidx-scope-2.2.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/8ad317768c2e50c0729df803e3eda9c5/koin-androidx-scope-2.2.2/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/8ad317768c2e50c0729df803e3eda9c5/koin-androidx-scope-2.2.2/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/17f172d683d10b41c45c63987f0576b1/koin-androidx-scope-2.2.2/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/4137b93bef6218de6530d74dc32bfa8e/koin-androidx-scope-2.2.2/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/c3f80509c59ba5a807496d178e1f39e1/koin-androidx-scope-2.2.2/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ea177e5441a9e9aa9f402160fd2b16d6/koin-androidx-scope-2.2.2/res" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ea177e5441a9e9aa9f402160fd2b16d6/koin-androidx-scope-2.2.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ea177e5441a9e9aa9f402160fd2b16d6/koin-androidx-scope-2.2.2/AndroidManifest.xml" />
     </CLASSES>

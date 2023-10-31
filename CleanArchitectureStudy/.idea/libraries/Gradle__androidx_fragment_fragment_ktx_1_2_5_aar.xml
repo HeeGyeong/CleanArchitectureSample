@@ -1,19 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.fragment:fragment-ktx:1.2.5@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64d5c92ea42eff69e57de551503739c1/fragment-ktx-1.2.5/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/64d5c92ea42eff69e57de551503739c1/fragment-ktx-1.2.5/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64d5c92ea42eff69e57de551503739c1/fragment-ktx-1.2.5/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64d5c92ea42eff69e57de551503739c1/fragment-ktx-1.2.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ea0bdd002d9f73313e642bd6d822b011/fragment-ktx-1.2.5/res" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ea0bdd002d9f73313e642bd6d822b011/fragment-ktx-1.2.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/ea0bdd002d9f73313e642bd6d822b011/fragment-ktx-1.2.5/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/efbc793bcf4d194ff69f46182e1dcc65/fragment-ktx-1.2.5/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6fc3eb026381792cc1adb8489bfe6184/fragment-ktx-1.2.5/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/26ebdc8f3d2575037e7f6573bef76618/fragment-ktx-1.2.5/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6f1686b4e757a3a5561ef72f15ca0c9e/fragment-ktx-1.2.5/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6f1686b4e757a3a5561ef72f15ca0c9e/fragment-ktx-1.2.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/6f1686b4e757a3a5561ef72f15ca0c9e/fragment-ktx-1.2.5/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

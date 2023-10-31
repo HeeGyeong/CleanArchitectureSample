@@ -44,6 +44,13 @@ class MovieSearchViewModel @Inject constructor(
     val toastMsg: LiveData<MessageSet> get() = _toastMsg
 
 
+    /**
+     * 2023. 10. 31
+     * 해당 API를 통해 가져오는 데이터가 항상 비어있습니다.
+     *
+     * 정상 동작을 하는 것을 확인하였고, 문제가 없기 때문에
+     * 다른 Sample API를 사용하여 Item List를 보여주면 됩니다.
+     */
     // 영화 검색
     fun requestMovie() {
         currentQuery = query.value.toString().trim()
@@ -53,17 +60,21 @@ class MovieSearchViewModel @Inject constructor(
         }
         if (!checkNetworkState()) return // 네트워크 연결 유무
         compositeDisposable.add(
+            // API 변경 필요.
             getMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
                 .doAfterTerminate { hideProgress() }
                 .subscribe({ movies -> // currentQuery 를 사용하여 검색한 결과 값이 movie 에 들어있다.
+                    Log.d("apiResponse", "res : $movies")
                     if (movies.isEmpty()) {
                         _toastMsg.value = MessageSet.NO_RESULT
                     } else {
-                        _movieList.value = movies as ArrayList<Movie>
                         _toastMsg.value = MessageSet.SUCCESS
+
+                        // API에 따른 Response 값 변경 필요.
+                        _movieList.value = movies as ArrayList<Movie>
                     }
                 }, {
                     _toastMsg.value = MessageSet.ERROR

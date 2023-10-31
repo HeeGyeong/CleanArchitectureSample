@@ -1,17 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.appcompat:appcompat:1.4.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2fd2e05952f29f44cf774ac2005d81a/appcompat-1.4.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/7125d9b86e40e3be13d4333f97cf07ec/appcompat-1.4.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bc763d94e9586d3fa31235af8b2a6843/appcompat-1.4.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2fd2e05952f29f44cf774ac2005d81a/appcompat-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2fd2e05952f29f44cf774ac2005d81a/appcompat-1.4.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2fd2e05952f29f44cf774ac2005d81a/appcompat-1.4.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/7125d9b86e40e3be13d4333f97cf07ec/appcompat-1.4.0/res" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/7125d9b86e40e3be13d4333f97cf07ec/appcompat-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/7125d9b86e40e3be13d4333f97cf07ec/appcompat-1.4.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bc763d94e9586d3fa31235af8b2a6843/appcompat-1.4.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bc763d94e9586d3fa31235af8b2a6843/appcompat-1.4.0/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/bc763d94e9586d3fa31235af8b2a6843/appcompat-1.4.0/AndroidManifest.xml" />

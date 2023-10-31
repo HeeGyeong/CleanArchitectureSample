@@ -1,13 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.transition:transition:1.2.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/51bb0f6e678805749717b235ab082ffa/transition-1.2.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/54b5f253dfe40f879d438ddd3ca669b7/transition-1.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/51bb0f6e678805749717b235ab082ffa/transition-1.2.0/res" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/51bb0f6e678805749717b235ab082ffa/transition-1.2.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/51bb0f6e678805749717b235ab082ffa/transition-1.2.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/54b5f253dfe40f879d438ddd3ca669b7/transition-1.2.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/54b5f253dfe40f879d438ddd3ca669b7/transition-1.2.0/res" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/54b5f253dfe40f879d438ddd3ca669b7/transition-1.2.0/jars/classes.jar!/" />

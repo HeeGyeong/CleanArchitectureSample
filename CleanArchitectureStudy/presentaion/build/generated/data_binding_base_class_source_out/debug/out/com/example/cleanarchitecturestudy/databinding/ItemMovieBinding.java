@@ -9,6 +9,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -20,6 +21,9 @@ import java.lang.Object;
 public abstract class ItemMovieBinding extends ViewDataBinding {
   @NonNull
   public final ImageView ivPoster;
+
+  @NonNull
+  public final LinearLayoutCompat movieItemContainer;
 
   @NonNull
   public final RatingBar rbRating;
@@ -40,10 +44,11 @@ public abstract class ItemMovieBinding extends ViewDataBinding {
   protected Movie mMovie;
 
   protected ItemMovieBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ImageView ivPoster, RatingBar rbRating, TextView tvActor, TextView tvDirector,
-      TextView tvReleaseDate, TextView tvTitle) {
+      ImageView ivPoster, LinearLayoutCompat movieItemContainer, RatingBar rbRating,
+      TextView tvActor, TextView tvDirector, TextView tvReleaseDate, TextView tvTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.ivPoster = ivPoster;
+    this.movieItemContainer = movieItemContainer;
     this.rbRating = rbRating;
     this.tvActor = tvActor;
     this.tvDirector = tvDirector;

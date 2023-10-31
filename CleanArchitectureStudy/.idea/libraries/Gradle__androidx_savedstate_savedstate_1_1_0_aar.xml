@@ -1,9 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.savedstate:savedstate:1.1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cd69ea68c5bb937620da687c1385b667/savedstate-1.1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cd69ea68c5bb937620da687c1385b667/savedstate-1.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/cd69ea68c5bb937620da687c1385b667/savedstate-1.1.0/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1d4ce2fc49c33c866215b8d61c62f7bd/savedstate-1.1.0/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1d4ce2fc49c33c866215b8d61c62f7bd/savedstate-1.1.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/1d4ce2fc49c33c866215b8d61c62f7bd/savedstate-1.1.0/jars/classes.jar!/" />

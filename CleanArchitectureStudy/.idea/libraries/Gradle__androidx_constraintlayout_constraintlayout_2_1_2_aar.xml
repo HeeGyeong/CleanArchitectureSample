@@ -1,12 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.constraintlayout:constraintlayout:2.1.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea5609be029b081059dd39a0d0e2644c/constraintlayout-2.1.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea5609be029b081059dd39a0d0e2644c/constraintlayout-2.1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea5609be029b081059dd39a0d0e2644c/constraintlayout-2.1.2/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/392b73bc1d10dd54472f3983883bf94a/constraintlayout-2.1.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/392b73bc1d10dd54472f3983883bf94a/constraintlayout-2.1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/392b73bc1d10dd54472f3983883bf94a/constraintlayout-2.1.2/res" />
       <root url="jar://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/2fe0894e0f923a9b806e46202c4c14e5/constraintlayout-2.1.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/2fe0894e0f923a9b806e46202c4c14e5/constraintlayout-2.1.2/res" />
       <root url="file://$USER_HOME$/AppUnifyKotlin_Android/AppUnifyKotlin/gradle/caches/transforms-2/files-2.1/2fe0894e0f923a9b806e46202c4c14e5/constraintlayout-2.1.2/AndroidManifest.xml" />
