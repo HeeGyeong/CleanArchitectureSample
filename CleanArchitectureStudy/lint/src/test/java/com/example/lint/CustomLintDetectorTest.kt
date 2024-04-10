@@ -19,7 +19,7 @@ class CustomLintDetectorTest : LintDetectorTest() {
                     """
                     class TestClass {
                         fun checkMethod() {
-                            val sampleTest = "123";
+                            val sampleTest = "123"
                         }
                     }
                     """

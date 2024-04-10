@@ -45,7 +45,8 @@ class MovieSearchViewModel @Inject constructor(
 
 
     /**
-     * 2023. 10. 31
+     * 2023.10.31
+     *
      * 해당 API를 통해 가져오는 데이터가 항상 비어있습니다.
      *
      * 정상 동작을 하는 것을 확인하였고, 문제가 없기 때문에
