@@ -3,7 +3,7 @@
 ## Description
 Clean Architecture 스터디를 위하여 작성한 Sample Code.
 
-Clean Architecture 개념을 이해하 위하여 기본적인 구조, API 통신, DI 등의 기본적인 사용 방법을 가이드 하기 위하여 만들었습니다.
+Clean Architecture 개념을 이해하기 위하여 기본적인 구조, API 통신, DI 등의 기본적인 사용 방법을 가이드 하기 위하여 만들었습니다.
 
 ## Architecture 
 Clean Architecture의 기본적인 구조.
