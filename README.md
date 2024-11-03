@@ -2,7 +2,9 @@
 
 ## 소개
 
-이 프로젝트는 Clean Architecture를 이해하고 적용하기 위한 샘플 코드입니다. 기본적인 구조, API 통신, 의존성 주입(DI) 등의 사용 방법을 안내하기 위해 만들어졌습니다.
+이 프로젝트는 Clean Architecture를 이해하고 적용하기 위한 샘플 코드입니다.
+
+기본적인 구조, API 통신, 의존성 주입(DI) 등의 사용 방법을 안내하기 위해 만들어졌습니다.
 
 이 샘플은 개발자들이 Clean Architecture의 개념을 쉽게 이해하고 실습할 수 있도록 돕기 위해 설계되었습니다.
 
@@ -19,10 +21,6 @@ Lint 모듈도 추가되어 있으며, Clean Architecture 구조에서는 제외
 ## Gradle 설정
 
 Gradle에서의 공통된 코드를 최소화하고 관리의 용이성을 높이기 위해 Gradle을 공통화하였습니다. Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다. 더 확장된 Gradle 공통화 코드를 확인하고 싶다면 Modular Architecture에서 확인할 수 있습니다.
-
-## 블로그
-
-Clean Architecture에 대한 자세한 설명은 [Tistory Blog](https://heegs.tistory.com)에서 확인할 수 있습니다.
 
 ## 유틸리티
 
@@ -74,8 +72,6 @@ RecyclerView의 Item을 Drag & Drop하여 순서를 쉽게 변경할 수 있는 
 
 RecyclerView Drag & Drop에 대한 설명은 [블로그](https://heegs.tistory.com/139)에 작성되어 있습니다.
 
-## 결론
+## 블로그
 
-이 프로젝트는 Clean Architecture를 학습하고 적용하는 데 유용한 자료로 사용하기 위해 만들어졌습니다.
-
-다양한 기능과 구조를 통해 개발자들이 Clean Architecture의 개념을 이해하고 실습할 수 있도록 돕고자 합니다.
+Clean Architecture에 대한 자세한 설명은 [Tistory Blog](https://heegs.tistory.com)에서 확인할 수 있습니다.
