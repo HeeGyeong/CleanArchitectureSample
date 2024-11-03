@@ -1,76 +1,81 @@
 # Clean Architecture Sample
 
-## Description
-Clean Architecture 스터디를 위하여 작성한 Sample Code.
+## 소개
 
-Clean Architecture 개념을 이해하기 위하여 기본적인 구조, API 통신, DI 등의 기본적인 사용 방법을 가이드 하기 위하여 만들었습니다.
+이 프로젝트는 Clean Architecture를 이해하고 적용하기 위한 샘플 코드입니다. 기본적인 구조, API 통신, 의존성 주입(DI) 등의 사용 방법을 안내하기 위해 만들어졌습니다.
 
-## Architecture 
-Clean Architecture의 기본적인 구조.
+이 샘플은 개발자들이 Clean Architecture의 개념을 쉽게 이해하고 실습할 수 있도록 돕기 위해 설계되었습니다.
 
-Data, Domain, Presentation 구조이며, Lint 사용을 위하여 Lint 모듈도 추가해 두었으나 Clean Architecture 구조에서는 제외하고 보아도 무관합니다.
+## 아키텍처
 
-기본적인 WebView에 대한 구조도 붙여두었으며, assets에 html 파일을 선언하여 테스트했습니다.
+이 프로젝트는 Clean Architecture의 기본적인 구조를 따릅니다. 주요 구성 요소는 다음과 같습니다:
 
-## Gradle
-Gradle에서의 공통된 코드를 최소화하고, 관리의 용의성을 높이기 위하여 Gradle을 공통화 하였습니다.
+- **Data Layer**: 데이터 소스와 관련된 모든 작업을 처리합니다.
+- **Domain Layer**: 비즈니스 로직을 포함하며, 애플리케이션의 핵심 기능을 정의합니다.
+- **Presentation Layer**: 사용자 인터페이스와 관련된 모든 작업을 처리합니다.
 
-Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다.
+Lint 모듈도 추가되어 있으며, Clean Architecture 구조에서는 제외하고 보아도 무관합니다. 기본적인 WebView 구조도 포함되어 있으며, assets에 HTML 파일을 선언하여 테스트했습니다.
 
-좀 더 확장된 Gradle 공통화 코드를 확인하고 싶은 경우, [Modular Architecture](https://github.com/HeeGyeong/ModuleArchitecture)에서 확인하면 됩니다.
+## Gradle 설정
 
-2022.09. Library Version에 관련된 gradle 파일 추가
+Gradle에서의 공통된 코드를 최소화하고 관리의 용이성을 높이기 위해 Gradle을 공통화하였습니다. Modular Architecture에 작업한 Gradle의 형태의 이전 버전으로, dependencies에 대한 설정을 따로 관리하지 않는 형태입니다. 더 확장된 Gradle 공통화 코드를 확인하고 싶다면 Modular Architecture에서 확인할 수 있습니다.
 
-[Gradle 파일을 분리하는 방법](https://heegs.tistory.com/110)은 블로그에서 확인하면 됩니다.
+## 블로그
 
-## Blog
-Clean Architecture에 대한 설명은 다음 블로그에 작성해 두었습니다.
+Clean Architecture에 대한 자세한 설명은 [Tistory Blog](https://heegs.tistory.com)에서 확인할 수 있습니다.
 
-[Tistory Blog](https://heegs.tistory.com/61?category=915533 "Clean Architecture Example")
+## 유틸리티
 
+### Lint
 
-# Utility
+여러 가지 Custom Lint 조건을 작성하여 모듈로 붙여두었습니다.
 
-## Lint
-여러가지 Custom Lint에 대한 조건을 작성하여 Module로 붙여두었습니다.
+각 Detector Class에 어떤 부분을 감지하는지에 대한 주석이 추가되어 있습니다. `@SuppressLint("Lint-ID")`를 통해 Lint를 무시할 수 있습니다.
 
-각 Detector Class에 어느 부분을 감지하는지에 대한 주석을 추가해두었습니다.
+### 의존성 주입(DI)
 
-@SuppressLint("Lint-ID")를 통해 Lint를 무시할 수 있습니다.
-
-## DI
-Koin에서 Hilt로 마이그레이션 작업을 진행하였으며,
-
-두 가지 DI의 사용 방법을 모두 확인할 수 있도록 Koin을 완전히 제거하지 않고 Application단에서 주석처리만 해두었습니다.
+Koin에서 Hilt로 마이그레이션 작업을 진행하였으며, 두 가지 DI의 사용 방법을 모두 확인할 수 있도록 Koin을 완전히 제거하지 않고 Application 단에서 주석 처리만 해두었습니다.
 
 Koin은 Module, Hilt는 Hilt Package를 확인하면 됩니다.
 
-## Test Code
-**두 가지 Test 모두, Detail한 Test Code가 아닌 이러한 형태로 사용할 수 있다 정도의 가이드입니다.**
+## 테스트 코드
 
+두 가지 테스트 모두, 상세한 테스트 코드가 아닌 이러한 형태로 사용할 수 있다는 정도의 가이드입니다.
 
 ### Instrumented Test
-Presentation Layer에서 Espresso를 사용하 기본적은 Test Code를 작성해두었습니다.
+
+Presentation Layer에서 Espresso를 사용하여 기본적인 테스트 코드를 작성해두었습니다.
 
 ### Lint Unit Test
-Lint Unit Test도 간단하게 작성을 해두었으며, 추후에 확인하여 작업하기 위한 기본 베이스 입니다.
+
+Lint Unit Test도 간단하게 작성해두었으며, 추후에 확인하여 작업하기 위한 기본 베이스입니다.
 
 ## Android 12
-Splash Screen 관련하여 확인할 수 있는 코드 추가.
 
-## Code Coverage
-Code Coverage를 확인할 수 있도록 Jacoco라이브러리를 추가하였습니다.
+Splash Screen 관련하여 확인할 수 있는 코드가 추가되었습니다.
 
-[Jacoco 사용 방법](https://heegs.tistory.com/131 "How to use Jacoco basics")은 블로그에 작성해 두었습니다.
+## 코드 커버리지
+
+코드 커버리지를 확인할 수 있도록 Jacoco 라이브러리를 추가하였습니다.
+
+Jacoco 사용 방법은 [블로그](https://heegs.tistory.com/131)에 작성되어 있습니다.
 
 ## Ktor
-JetBrains에서 만든 Framework로 Kotlin을 사용하여 비동기 서버 및 클라이언트를 구축할 때 사용하는 오픈소스 입니다.
 
-[Ktor 사용 방법](https://heegs.tistory.com/133 "How to use Ktor")은 블로그에 작성해 두었습니다.
+JetBrains에서 만든 Framework로, Kotlin을 사용하여 비동기 서버 및 클라이언트를 구축할 때 사용하는 오픈소스입니다.
+
+Ktor 사용 방법은 [블로그](https://heegs.tistory.com/133)에 작성되어 있습니다.
 
 ## RecyclerView Drag & Drop
-RecyclerView의 Item을 Drag & Drop을 하여 순서를 쉽게 변경할 수 있는 기능을 구현 해두었습니다.
 
-기본적인 구조에 기본적인 기능만 구현하였기 때문에, 필요에 맞춰 별도의 Error Handling 작업이 필수적으로 들어가야 합니다.
+RecyclerView의 Item을 Drag & Drop하여 순서를 쉽게 변경할 수 있는 기능이 구현되어 있습니다.
 
-[RecyclerView Drag & Drop](https://heegs.tistory.com/139 "RecyclerView Drag & Drop")에 대한 설명은 블로그에 작성해 두었습니다.
+기본적인 구조에 기본적인 기능만 구현하였기 때문에, 필요에 맞춰 별도의 Error Handling 작업이 필수적으로 들어가야 합니다. 
+
+RecyclerView Drag & Drop에 대한 설명은 [블로그](https://heegs.tistory.com/139)에 작성되어 있습니다.
+
+## 결론
+
+이 프로젝트는 Clean Architecture를 학습하고 적용하는 데 유용한 자료로 사용하기 위해 만들어졌습니다.
+
+다양한 기능과 구조를 통해 개발자들이 Clean Architecture의 개념을 이해하고 실습할 수 있도록 돕고자 합니다.
