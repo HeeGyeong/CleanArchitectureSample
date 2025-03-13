@@ -56,8 +56,8 @@ dependencies {
     implementation "androidx.core:core-splashscreen:$splashVersion"
 
     // koin
-    implementation "org.koin:koin-android:$koinVersion"
-    implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
+    implementation "io.insert-koin:koin-android:3.2.0"
+    implementation "io.insert-koin:koin-androidx-viewmodel:3.2.0"
     // hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
@@ -114,22 +114,22 @@ dependencies {
 }
 
 // dependsOn : 유닛 테스트를 수행하는 태스크 이름으로 설정.
-task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
-
-    // reports 생성 확장자
-    reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-
-    def mainSrc = "${project.projectDir}/src/main/java"
-    sourceDirectories.setFrom(files([mainSrc])) // 커버리지를 측정할 소스 디렉터리
-
-    // 커버리지에서 제외할 파일
-    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
-    def debugTree = fileTree(dir: "${buildDir}/intermediates/classes/debug", excludes: fileFilter)
-    classDirectories.setFrom(files([debugTree])) // 컴파일 결과 파일이 있는 디렉터리 지정.
-
-    // 커버리지 측정 결과를 저장할 파일
-    executionData.setFrom(fileTree(dir: "${buildDir}/jacoco/testDebugUnitTest.exec"))
-}
+//task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
+//
+//    // reports 생성 확장자
+//    reports {
+//        xml.enabled = true
+//        html.enabled = true
+//    }
+//
+//    def mainSrc = "${project.projectDir}/src/main/java"
+//    sourceDirectories.setFrom(files([mainSrc])) // 커버리지를 측정할 소스 디렉터리
+//
+//    // 커버리지에서 제외할 파일
+//    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+//    def debugTree = fileTree(dir: "${buildDir}/intermediates/classes/debug", excludes: fileFilter)
+//    classDirectories.setFrom(files([debugTree])) // 컴파일 결과 파일이 있는 디렉터리 지정.
+//
+//    // 커버리지 측정 결과를 저장할 파일
+//    executionData.setFrom(fileTree(dir: "${buildDir}/jacoco/testDebugUnitTest.exec"))
+//}

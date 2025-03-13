@@ -5,22 +5,16 @@ buildscript {
         google()
         mavenCentral()
     }
+
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
 
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
         classpath "org.jacoco:org.jacoco.core:$jacocoVersion"
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
-    }
-}
 
 subprojects {
     afterEvaluate {

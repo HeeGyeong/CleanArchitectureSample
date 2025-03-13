@@ -9,11 +9,11 @@ ext {
     kotlinVersion = "1.5.0"
 
     splashVersion = "1.0.0"
-    hiltVersion = "2.35"
+    hiltVersion = '2.40.1'
     jacocoVersion = "0.8.7"
     ktorVersion = "2.0.3"
     roomVersion = "2.4.2"
-    koinVersion = "2.2.2"
+    koinVersion = "3.4.3"
     gsonVersion = "2.9.0"
     ktxVersion = "2.2.0"
     coroutineVersion = "2.3.0-rc01"

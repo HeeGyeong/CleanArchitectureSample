@@ -1,5 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+// pluginManagement 다음에 다른 설정들이 와야 합니다
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
 rootProject.name = "CleanArchitectureStudy"
-include ':presentaion'
+include ':app'
 include ':data'
 include ':domain'
-include ':lint'
+include ':presentaion'
