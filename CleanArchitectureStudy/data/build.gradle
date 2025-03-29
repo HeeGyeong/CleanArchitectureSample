@@ -21,39 +21,27 @@ dependencies {
     implementation project(':domain')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation(libs.coreKtx)
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.material3)
 
     //rxjava
-    implementation "io.reactivex.rxjava2:rxjava:2.2.17"
-    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.1'
-    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
+//    implementation "io.reactivex.rxjava2:rxjava:2.2.17"
+//    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+//    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.1'
+//    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
     //retrofit2
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation "com.squareup.retrofit2:adapter-rxjava2:2.8.1"
+    implementation(libs.bundles.retrofit)
 
     // hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
-    // Gson
-    implementation "com.google.code.gson:gson:$gsonVersion"
     // Room
-    implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-rxjava2:$roomVersion"
-    testImplementation "androidx.room:room-testing:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
+    implementation(libs.bundles.room)
 
     // ktor
-    implementation "io.ktor:ktor-client-core:$ktorVersion"
-    implementation "io.ktor:ktor-client-cio:$ktorVersion"
-    implementation "io.ktor:ktor-client-serialization:$ktorVersion"
-    implementation "io.ktor:ktor-client-logging-jvm:$ktorVersion"
-    implementation "io.ktor:ktor-client-content-negotiation:$ktorVersion"
-    implementation "io.ktor:ktor-serialization-kotlinx-json:$ktorVersion"
+    implementation(libs.bundles.ktor)
 
     // Test
     testImplementation 'junit:junit:4.+'
