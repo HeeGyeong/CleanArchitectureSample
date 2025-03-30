@@ -5,7 +5,7 @@ import com.example.data.model.movie.MovieResponse
 import io.reactivex.Single
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
+//import javax.inject.Inject
 
 /**
  * DataSource 에서 선언한 Interface 의 구현부.
@@ -14,7 +14,7 @@ import javax.inject.Inject
  *
  * @param apiInterface api 호출을 위한 Interface
  */
-class MovieRemoteDataSourceImpl @Inject constructor(private val apiInterface: ApiInterface) :
+class MovieRemoteDataSourceImpl /*@Inject*/ constructor(private val apiInterface: ApiInterface) :
     MovieRemoteDataSource {
     override fun getSearchMovies(query: String, start: Int): Single<MovieResponse> {
         return apiInterface.getSearchMovie(query, start)

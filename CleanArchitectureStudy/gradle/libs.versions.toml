@@ -1,8 +1,8 @@
 [versions]
 # Android
-compileSdk = "35"
+compileSdk = "34"
 minSdk = "24"
-targetSdk = "35"
+targetSdk = "34"
 versionCode = "1"
 versionName = "1.0"
 
@@ -32,10 +32,13 @@ koinCore = "3.2.2"
 koinAndroid = "3.2.2"
 koinAndroidxCompose = "3.2.2"
 
+# Hilt
+hiltVersion = "2.50"
+
 # Core-dependencies
-coreKtx = "1.13.1"
-appcompat = "1.7.0"
-material = "1.7.4"
+coreKtx = "1.12.0"
+appcompat = "1.6.1"
+material = "1.5.4"
 material3 = "1.1.0"
 room = "2.6.1"
 retrofit = "2.9.0"

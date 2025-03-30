@@ -10,10 +10,10 @@ import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
 import com.example.cleanarchitecturestudy.utils.ItemMoveCallback
-import dagger.hilt.android.AndroidEntryPoint
+//import dagger.hilt.android.AndroidEntryPoint
 
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class MovieSearchActivity :
     BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
     private lateinit var movieAdapter: MovieAdapter
@@ -66,6 +66,7 @@ class MovieSearchActivity :
                     MovieSearchViewModel.MessageSet.NO_RESULT -> showToast(getString(R.string.no_movie_error_msg))
                     MovieSearchViewModel.MessageSet.ERROR -> showToast(getString(R.string.error_msg))
                     MovieSearchViewModel.MessageSet.LOCAL_SUCCESS -> showToast(getString(R.string.local_db_msg))
+                    else -> { Unit }
                 }
             })
         }

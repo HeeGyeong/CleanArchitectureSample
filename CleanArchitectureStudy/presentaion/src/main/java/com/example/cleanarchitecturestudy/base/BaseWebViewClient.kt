@@ -8,7 +8,7 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.example.cleanarchitecturestudy.view.web.WebViewModel
-import javax.inject.Inject
+//import javax.inject.Inject
 
 /**
  * WebViewClient를 Custom하기 위해 클래스로 만들어서 사용.
@@ -17,7 +17,7 @@ import javax.inject.Inject
  * 필요시 Base가 아닌 WebViewModel을 인자로 받아 사용해도 될 것으로 보인다.
  */
 @SuppressLint("Lint-LogDetector")
-class BaseWebViewClient @Inject constructor(vm: WebViewModel) : WebViewClient() {
+class BaseWebViewClient /*@Inject*/ constructor(vm: WebViewModel) : WebViewClient() {
     private var viewModel: WebViewModel? = null
 
     init {

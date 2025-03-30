@@ -1,27 +1,27 @@
 buildscript {
-    apply from : 'library-version.gradle'
-
-    repositories {
-        google()
-        mavenCentral()
-    }
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
-
-        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
-        classpath "org.jacoco:org.jacoco.core:$jacocoVersion"
+        classpath "com.android.tools.build:gradle:8.2.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+//        classpath "com.google.dagger:hilt-android-gradle-plugin:2.44"
     }
 }
 
+plugins {
+    // apply false : 플러그인을 즉시 적용하지 않고 선언만 함. 필요 시 하위 모듈에서 적용
+    // apply true : 플러그인을 현재 프로젝트에 즉시 적용.
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.ksp) apply false
+//    id 'com.google.dagger.hilt.android' version '2.50' apply false
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
 
 subprojects {
     afterEvaluate {
         project.apply {"$rootDir/common.gradle"}
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }

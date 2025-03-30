@@ -1,7 +1,7 @@
 package com.example.cleanarchitecturestudy.di
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+//import dagger.hilt.android.HiltAndroidApp
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -11,7 +11,7 @@ import org.koin.core.context.startKoin
  *
  * 해당 class 는 Manifest 에 선언하여 사용하기 때문에 별다른 호출부는 존재하지 않는다.
  */
-@HiltAndroidApp
+//@HiltAndroidApp
 class DIApplication: Application() {
     override fun onCreate() {
         super.onCreate()

@@ -1,11 +1,11 @@
 package com.example.data.repository.search.local
 
 import com.example.data.model.movie.MovieEntity
-import dagger.hilt.DefineComponent
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
-import dagger.hilt.components.SingletonComponent
+//import dagger.hilt.DefineComponent
+//import dagger.hilt.EntryPoint
+//import dagger.hilt.InstallIn
+//import dagger.hilt.android.components.ActivityComponent
+//import dagger.hilt.components.SingletonComponent
 import io.reactivex.Completable
 import io.reactivex.Single
 

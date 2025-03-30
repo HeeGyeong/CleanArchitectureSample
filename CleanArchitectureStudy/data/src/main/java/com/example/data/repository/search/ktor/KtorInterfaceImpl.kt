@@ -8,9 +8,9 @@ import io.ktor.client.call.*
 import io.ktor.client.request.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
+//import javax.inject.Inject
 
-class KtorInterfaceImpl @Inject constructor(private val client: HttpClient) : KtorInterface {
+class KtorInterfaceImpl /*@Inject*/ constructor(private val client: HttpClient) : KtorInterface {
 
     override suspend fun requestMoveSearchData(
         query: String,

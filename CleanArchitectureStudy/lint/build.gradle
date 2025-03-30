@@ -7,7 +7,7 @@ sourceSets {
 
 dependencies {
     // kotlin
-    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$libs.versions.kotlinVersion"
 
     // lint
     compileOnly "com.android.tools.lint:lint-api:$lintVersion"

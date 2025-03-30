@@ -1,11 +1,11 @@
 package com.example.data.repository.search.remote
 
 import com.example.data.model.movie.MovieResponse
-import dagger.hilt.DefineComponent
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
-import dagger.hilt.components.SingletonComponent
+//import dagger.hilt.DefineComponent
+//import dagger.hilt.EntryPoint
+//import dagger.hilt.InstallIn
+//import dagger.hilt.android.components.ActivityComponent
+//import dagger.hilt.components.SingletonComponent
 import io.reactivex.Single
 import kotlinx.coroutines.flow.Flow
 

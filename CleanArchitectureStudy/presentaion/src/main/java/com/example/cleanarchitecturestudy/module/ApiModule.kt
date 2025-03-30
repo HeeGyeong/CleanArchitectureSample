@@ -1,7 +1,6 @@
 package com.example.cleanarchitecturestudy.module
 
 import android.util.Log
-import com.example.cleanarchitecturestudy.BuildConfig
 import com.example.data.api.ApiClient
 import com.example.data.api.ApiInterface
 import com.orhanobut.logger.AndroidLogAdapter
@@ -9,6 +8,7 @@ import com.orhanobut.logger.Logger
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.BuildConfig
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit

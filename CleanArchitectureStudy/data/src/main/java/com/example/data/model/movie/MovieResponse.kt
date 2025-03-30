@@ -1,12 +1,11 @@
 package com.example.data.model.movie
 import com.google.gson.annotations.SerializedName
-import kotlinx.serialization.Serializable
 
 
 /**
  * api return 값의 형태
  */
-@Serializable
+//@Serializable
 data class MovieResponse(
     @SerializedName("display")
     val display: Int,

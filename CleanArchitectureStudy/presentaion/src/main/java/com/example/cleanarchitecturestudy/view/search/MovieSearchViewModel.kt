@@ -10,22 +10,22 @@ import com.example.domain.model.Movie
 import com.example.domain.usecase.movie.GetLocalMoviesUseCase
 import com.example.domain.usecase.movie.GetMoviesUseCase
 import com.example.domain.usecase.movie.GetPagingMoviesUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
-import io.reactivex.android.schedulers.AndroidSchedulers
+//import dagger.hilt.android.lifecycle.HiltViewModel
+//import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
-import javax.inject.Inject
+//import javax.inject.Inject
 
 /**
  * MovieSearchActivity 에 사용되는 VM
  *
  * 해당 Activity 에서 사용되는 UseCase 를 모두 파라미터로 받는다.
  */
-@HiltViewModel
-class MovieSearchViewModel @Inject constructor(
+//@HiltViewModel
+class MovieSearchViewModel /*@Inject*/ constructor(
     private val getMoviesUseCase: GetMoviesUseCase,
     private val getPagingMoviesUseCase: GetPagingMoviesUseCase,
     private val getLocalMoviesUseCase: GetLocalMoviesUseCase,
@@ -64,7 +64,7 @@ class MovieSearchViewModel @Inject constructor(
             // API 변경 필요.
             getMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+//                .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
                 .doAfterTerminate { hideProgress() }
                 .subscribe({ movies -> // currentQuery 를 사용하여 검색한 결과 값이 movie 에 들어있다.
@@ -117,13 +117,13 @@ class MovieSearchViewModel @Inject constructor(
         compositeDisposable.add(
             getPagingMoviesUseCase(currentQuery, offset)
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+//                .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
-                .doAfterTerminate { hideProgress() }
+//                .doAfterTerminate { hideProgress() }
                 .subscribe({ movies ->
                     val pagingMovieList = _movieList.value
                     pagingMovieList?.addAll(movies)
-                    _movieList.value = pagingMovieList
+//                    _movieList.value = pagingMovieList
                     _toastMsg.value = MessageSet.SUCCESS
                 }, {
                     when (it.message) {
@@ -148,7 +148,7 @@ class MovieSearchViewModel @Inject constructor(
             // getLocalMoviesUseCase.execute(currentQuery)
             getLocalMoviesUseCase(currentQuery)
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+//                .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe { showProgress() }
                 .doAfterTerminate { hideProgress() }
                 .subscribe({ movies ->

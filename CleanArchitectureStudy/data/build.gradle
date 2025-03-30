@@ -1,50 +1,40 @@
 plugins {
+    alias(libs.plugins.kotlin.android)
+
     id("com.android.library")
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
+//    id 'com.google.dagger.hilt.android'
     id 'kotlin-parcelize'
     id 'org.jetbrains.kotlin.plugin.serialization' version "1.5.0"
 }
 
-android {
-    compileSdkVersion compileSdk_Version
-    buildToolsVersion buildTools_Version
+apply {
+    from('../common.gradle')
+}
 
-    defaultConfig {
-        minSdkVersion minSdk_Version
-    }
+android {
+    namespace 'com.example.data'
 }
 
 dependencies {
     // multiModule
     implementation project(':domain')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     implementation(libs.coreKtx)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.material3)
 
-    //rxjava
-//    implementation "io.reactivex.rxjava2:rxjava:2.2.17"
-//    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
-//    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.1'
-//    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
     //retrofit2
     implementation(libs.bundles.retrofit)
 
     // hilt
-    implementation "com.google.dagger:hilt-android:$hiltVersion"
-    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+//    implementation "com.google.dagger:hilt-android:$libs.versions.hiltVersion"
+//    kapt "com.google.dagger:hilt-android-compiler:$libs.versions.hiltVersion"
     // Room
     implementation(libs.bundles.room)
 
     // ktor
     implementation(libs.bundles.ktor)
-
-    // Test
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

@@ -7,11 +7,11 @@ import androidx.activity.viewModels
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityWebBinding
-import dagger.hilt.android.AndroidEntryPoint
+//import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class WebViewActivity : BaseActivity<ActivityWebBinding>(R.layout.activity_web) {
     private var webView: WebView? = null
 
