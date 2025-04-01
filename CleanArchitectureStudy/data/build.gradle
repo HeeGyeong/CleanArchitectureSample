@@ -4,7 +4,7 @@ plugins {
     id("com.android.library")
     id 'kotlin-android'
     id 'kotlin-kapt'
-//    id 'com.google.dagger.hilt.android'
+    id 'com.google.dagger.hilt.android'
     id 'kotlin-parcelize'
     id 'org.jetbrains.kotlin.plugin.serialization' version "1.5.0"
 }
@@ -30,10 +30,11 @@ dependencies {
     implementation(libs.bundles.retrofit)
 
     // hilt
-//    implementation "com.google.dagger:hilt-android:$libs.versions.hiltVersion"
-//    kapt "com.google.dagger:hilt-android-compiler:$libs.versions.hiltVersion"
+    implementation(libs.bundles.hilt)
+    kapt libs.hiltCompiler
     // Room
     implementation(libs.bundles.room)
+    kapt libs.roomCompiler
 
     // ktor
     implementation(libs.bundles.ktor)

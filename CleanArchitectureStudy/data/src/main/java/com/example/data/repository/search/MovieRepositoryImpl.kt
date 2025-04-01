@@ -10,7 +10,7 @@ import io.reactivex.Flowable
 import io.reactivex.Single
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-//import javax.inject.Inject
+import javax.inject.Inject
 
 /**
  * Domain Layer 의 Repository Interface 구현부.
@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.flow
  * @param movieLocalDataSource Local 에 저장 되어있는 Data
  * @param movieRemoteDataSource api 에서 가져오는 Data
  */
-class MovieRepositoryImpl /*@Inject*/ constructor(
+class MovieRepositoryImpl @Inject constructor(
     private val movieRemoteDataSource: MovieRemoteDataSource,
     private val movieLocalDataSource: MovieLocalDataSource,
     private val ktorInterface: KtorInterface,

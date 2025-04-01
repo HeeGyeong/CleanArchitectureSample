@@ -35,6 +35,9 @@ koinAndroidxCompose = "3.2.2"
 # Hilt
 hiltVersion = "2.50"
 
+# Lint
+lintVersion = "30.1.3"
+
 # Core-dependencies
 coreKtx = "1.12.0"
 appcompat = "1.6.1"
@@ -107,6 +110,7 @@ material3 = { module = "androidx.compose.material3:material3", version.ref = "ma
 roomRuntime = { module = "androidx.room:room-runtime", version.ref = "room" }
 roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
 roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+roomRxJava2 = { module = "androidx.room:room-rxjava2", version.ref = "room" }
 
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 converterGson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
@@ -160,6 +164,10 @@ lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", ver
 koinCore = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 koinAndroidxCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
+
+# Dependency Injection - Hilt
+hiltCore = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
+hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion" }
 
 # Accompanist
 accompanistSystemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemUiController" }
@@ -215,7 +223,8 @@ ktor = [
 
 room = [
     "roomKtx",
-    "roomRuntime"
+    "roomRuntime",
+    "roomRxJava2"
 ]
 
 androidTest = [
@@ -250,6 +259,10 @@ koin = [
     "koinAndroid",
     "koinAndroidxCompose",
     "koinCore"
+]
+
+hilt = [
+    "hiltCore"
 ]
 
 reactive = [

@@ -10,12 +10,12 @@ dependencies {
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$libs.versions.kotlinVersion"
 
     // lint
-    compileOnly "com.android.tools.lint:lint-api:$lintVersion"
-    compileOnly "com.android.tools.lint:lint-checks:$lintVersion"
+    compileOnly "com.android.tools.lint:lint-api:$libs.versions.lintVersion"
+    compileOnly "com.android.tools.lint:lint-checks:$libs.versions.lintVersion"
 
     // test
     testImplementation 'junit:junit:4.13.2'
-    testImplementation "com.android.tools.lint:lint-tests:$lintVersion"
+    testImplementation "com.android.tools.lint:lint-tests:$libs.versions.lintVersion"
 }
 
 tasks.withType(Jar) {

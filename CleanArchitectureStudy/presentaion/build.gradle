@@ -4,7 +4,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-//    id 'com.google.dagger.hilt.android'
+    id 'com.google.dagger.hilt.android'
     id 'jacoco'
 }
 
@@ -73,10 +73,11 @@ dependencies {
     implementation(libs.bundles.koin)
 
     // hilt
-//    implementation "com.google.dagger:hilt-android:$libs.versions.hiltVersion"
-//    kapt "com.google.dagger:hilt-android-compiler:$libs.versions.hiltVersion"
+    implementation(libs.bundles.hilt)
+    kapt libs.hiltCompiler
     // Room
     implementation(libs.bundles.room)
+    kapt libs.roomCompiler
     // Gson
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     //coroutine lifecycle

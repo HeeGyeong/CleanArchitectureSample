@@ -3,17 +3,17 @@ package com.example.cleanarchitecturestudy.view.search
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.ItemTouchHelper
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.base.BaseActivity
 import com.example.cleanarchitecturestudy.databinding.ActivityMovieSearchBinding
 import com.example.cleanarchitecturestudy.utils.ItemMoveCallback
-//import dagger.hilt.android.AndroidEntryPoint
+import androidx.activity.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 
 
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class MovieSearchActivity :
     BaseActivity<ActivityMovieSearchBinding>(R.layout.activity_movie_search) {
     private lateinit var movieAdapter: MovieAdapter

@@ -4,7 +4,7 @@ plugins {
     id("com.android.library") // 모듈의경우 application 에서 library 로 변경해준다.
     id 'kotlin-android'
     id 'kotlin-kapt'
-//    id 'com.google.dagger.hilt.android'
+    id 'com.google.dagger.hilt.android'
 }
 
 apply {
@@ -27,8 +27,8 @@ dependencies {
     implementation(libs.bundles.ktor)
 
     // hilt
-//    implementation "com.google.dagger:hilt-android:$libs.versions.hiltVersion"
-//    kapt "com.google.dagger:hilt-android-compiler:$libs.versions.hiltVersion"
+    implementation(libs.bundles.hilt)
+    kapt libs.hiltCompiler
     // Flow
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
 }
