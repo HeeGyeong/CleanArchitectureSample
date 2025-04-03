@@ -20,6 +20,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.material3)
+    implementation(libs.coroutineCore)
 
     //retrofit2
     implementation(libs.bundles.retrofit)
@@ -29,6 +30,4 @@ dependencies {
     // hilt
     implementation(libs.bundles.hilt)
     kapt libs.hiltCompiler
-    // Flow
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
 }
