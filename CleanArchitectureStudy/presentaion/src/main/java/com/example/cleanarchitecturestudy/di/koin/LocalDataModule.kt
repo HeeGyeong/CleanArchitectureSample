@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.module
+package com.example.cleanarchitecturestudy.di.koin
 
 import androidx.room.Room
 import com.example.data.db.movie.MovieDao

@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.hilt
+package com.example.cleanarchitecturestudy.di.hilt
 
 import com.example.data.api.ApiInterface
 import com.example.data.api.KtorInterface

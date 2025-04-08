@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.module
+package com.example.cleanarchitecturestudy.di.koin
 
 import com.example.data.repository.search.MovieRepositoryImpl
 import com.example.domain.repository.MovieRepository

@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.di
+package com.example.cleanarchitecturestudy.di.hilt
 
 import com.example.data.repository.search.MovieRepositoryImpl
 import com.example.domain.repository.MovieRepository

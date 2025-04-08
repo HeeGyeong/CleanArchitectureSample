@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.module
+package com.example.cleanarchitecturestudy.di.koin
 
 import com.example.cleanarchitecturestudy.utils.NetworkManager
 import org.koin.core.module.Module

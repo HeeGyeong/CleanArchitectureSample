@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.di
+package com.example.cleanarchitecturestudy.di.hilt
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

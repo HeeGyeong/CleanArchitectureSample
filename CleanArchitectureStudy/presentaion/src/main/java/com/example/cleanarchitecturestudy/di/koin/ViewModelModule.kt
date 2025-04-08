@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.module
+package com.example.cleanarchitecturestudy.di.koin
 
 import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel
 import com.example.cleanarchitecturestudy.view.web.WebViewModel

@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.module
+package com.example.cleanarchitecturestudy.di.koin
 
 import com.example.domain.usecase.movie.GetLocalMoviesUseCase
 import com.example.domain.usecase.movie.GetMoviesUseCase

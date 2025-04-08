@@ -1,4 +1,4 @@
-package com.example.cleanarchitecturestudy.hilt
+package com.example.cleanarchitecturestudy.di.hilt
 
 import android.util.Log
 import com.orhanobut.logger.AndroidLogAdapter

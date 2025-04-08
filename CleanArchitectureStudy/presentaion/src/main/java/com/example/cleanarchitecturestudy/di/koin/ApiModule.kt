@@ -1,6 +1,5 @@
-package com.example.cleanarchitecturestudy.module
+package com.example.cleanarchitecturestudy.di.koin
 
-import android.util.Log
 import com.example.data.api.ApiClient
 import com.example.data.api.ApiInterface
 import com.orhanobut.logger.AndroidLogAdapter
