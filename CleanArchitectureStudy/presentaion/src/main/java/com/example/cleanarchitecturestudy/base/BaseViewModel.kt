@@ -19,15 +19,15 @@ abstract class BaseViewModel : ViewModel() {
     val percent: LiveData<String> get() = _percent
 
     fun showProgress() {
-        _isLoading.value = true
+        _isLoading.postValue(true)
     }
 
     fun hideProgress() {
-        _isLoading.value = false
+        _isLoading.postValue(false)
     }
 
     fun progressPercent(load: String) {
-        _percent.value = load
+        _percent.postValue(load)
     }
 
     override fun onCleared() {

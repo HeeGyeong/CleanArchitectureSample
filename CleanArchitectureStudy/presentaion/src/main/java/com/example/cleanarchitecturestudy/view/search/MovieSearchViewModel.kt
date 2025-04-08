@@ -69,15 +69,15 @@ class MovieSearchViewModel @Inject constructor(
                 .subscribe({ movies -> // currentQuery 를 사용하여 검색한 결과 값이 movie 에 들어있다.
                     Log.d("apiResponse", "res : $movies")
                     if (movies.isEmpty()) {
-                        _toastMsg.value = MessageSet.NO_RESULT
+                        _toastMsg.postValue(MessageSet.NO_RESULT)
                     } else {
-                        _toastMsg.value = MessageSet.SUCCESS
+                        _toastMsg.postValue(MessageSet.SUCCESS)
 
                         // API에 따른 Response 값 변경 필요.
-                        _movieList.value = movies as ArrayList<Movie>
+                        _movieList.postValue(movies as ArrayList<Movie>)
                     }
                 }, {
-                    _toastMsg.value = MessageSet.ERROR
+                    _toastMsg.postValue(MessageSet.ERROR)
                 })
         )
     }
