@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.cleanarchitecturestudy.utils.EndlessRecyclerViewScrollListener
 import com.example.cleanarchitecturestudy.view.search.MovieAdapter
 import com.example.cleanarchitecturestudy.view.search.MovieSearchViewModel
+import com.example.cleanarchitecturestudy.view.search.RecyclerAdapter
 import com.example.domain.model.Movie
 
 /**
@@ -23,6 +24,13 @@ import com.example.domain.model.Movie
 fun RecyclerView.setAdapterItems(items: MutableList<Movie>?) {
     items?.let {
         (adapter as MovieAdapter).submitList(it.toMutableList())
+    }
+}
+
+@BindingAdapter("setItemsExample")
+fun RecyclerView.setAdapterItemsExample(items: MutableList<Movie>?) {
+    items?.let {
+        (adapter as RecyclerAdapter).submitList(it.toMutableList())
     }
 }
 

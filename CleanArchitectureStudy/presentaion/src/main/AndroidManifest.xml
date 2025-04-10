@@ -44,6 +44,9 @@
         <activity android:name=".view.search.MovieSearchActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>
+        <activity android:name=".view.search.RecyclerActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false"/>
 
         <activity android:name=".view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor"/>

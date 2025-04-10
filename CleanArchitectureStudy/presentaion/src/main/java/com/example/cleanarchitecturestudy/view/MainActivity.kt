@@ -8,6 +8,7 @@ import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 //import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
+import com.example.cleanarchitecturestudy.view.search.RecyclerActivity
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity
 
 //import com.example.cleanarchitecturestudy.view.web.WebViewActivity
@@ -35,6 +36,9 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.web_btn -> {
                 startActivity(Intent(this, WebViewActivity::class.java))
+            }
+            R.id.example_btn -> {
+                startActivity(Intent(this, RecyclerActivity::class.java))
             }
         }
     }
