@@ -19,24 +19,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class RecyclerViewModel @Inject constructor(
-    private val networkManager: NetworkManager,
-) : BaseViewModel() {
+class RecyclerViewModel @Inject constructor() : BaseViewModel() {
 
     val query = MutableLiveData<String>() // 검색어(EditText two-way binding)
 
     // 영화 리스트가 저장되는 변수. 해당 변수는 xml 에서 binding 되어 실제로 데이터를 뿌려주게 된다.
     private val _movieList = MutableLiveData<ArrayList<Movie>>()
     val movieList: LiveData<ArrayList<Movie>> get() = _movieList
-
-
-    private fun checkNetworkState(): Boolean {
-        return if (networkManager.checkNetworkState()) {
-            true
-        } else {
-            false
-        }
-    }
 
     fun generateDummyMovies() {
         val dummyMovies = ArrayList<Movie>()
