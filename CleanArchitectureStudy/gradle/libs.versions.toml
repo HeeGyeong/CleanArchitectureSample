@@ -17,7 +17,9 @@ applicationVersion = "8.5.2"
 libraryVersion = "8.5.2"
 
 # Compose
-composeVersion = "1.5.2"
+activityCompose = "1.8.2"
+composeVersion = "1.5.4"
+composeAnimation = "1.5.4"
 
 # Coroutine
 coroutineVersion = "1.4.1"
@@ -42,7 +44,7 @@ coreKtx = "1.12.0"
 appcompat = "1.6.1"
 material = "1.11.0"
 materialCompose = "1.5.4"
-material3 = "1.1.0"
+material3 = "1.1.2"
 room = "2.6.1"
 retrofit = "2.9.0"
 retrofitRxJavaAdapter = "2.8.1"
@@ -139,6 +141,12 @@ testRules = { module = "androidx.test:rules", version.ref = "rules" }
 espressoIntents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntents" }
 
 # Module
+#Compose
+composeAnimation = { module = "androidx.compose.animation:animation", version.ref = "composeAnimation" }
+uiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "composeVersion" }
+composeUi = { module = "androidx.compose.ui:ui", version.ref = "composeVersion" }
+activityCompose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+
 # Lifecycle
 lifecycleViewmodelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }

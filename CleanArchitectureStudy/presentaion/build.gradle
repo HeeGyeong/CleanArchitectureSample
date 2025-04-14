@@ -28,6 +28,14 @@ android {
         viewBinding = true
     }
 
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtension.get()
+    }
+
     testOptions {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
@@ -54,6 +62,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.materialCompose)
     implementation(libs.material3)
+
+    // Compose
+    implementation(libs.composeAnimation)
+    implementation(libs.uiToolingPreview)
+    implementation(libs.composeUi)
+    implementation(libs.activityCompose)
 
     // DataBinding
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"

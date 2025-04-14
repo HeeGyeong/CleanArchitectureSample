@@ -4,6 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.unit.dp
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 //import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
@@ -24,6 +34,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
+
+        findViewById<ComposeView>(R.id.compose_view).setContent {
+            Column(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                ComposeTextComponent("Hello Compose")
+
+                Row {
+                    ComposeTextComponent("Hello Compose")
+
+                    Spacer(modifier = Modifier.width(10.dp))
+
+                    ComposeTextComponent("Hello Compose")
+                }
+            }
+        }
     }
 
     fun btnClick(view: View) {
@@ -40,6 +66,16 @@ class MainActivity : AppCompatActivity() {
             R.id.example_btn -> {
                 startActivity(Intent(this, RecyclerActivity::class.java))
             }
+            else -> {
+                Unit
+            }
         }
     }
+}
+
+@Composable
+fun ComposeTextComponent(text: String) {
+    Text(
+        text = text
+    )
 }
