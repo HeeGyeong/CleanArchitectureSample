@@ -1,27 +1,15 @@
 package com.example.cleanarchitecturestudy.view
 
+//import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.width
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.unit.dp
 import com.example.cleanarchitecturestudy.R
+import com.example.cleanarchitecturestudy.view.example.compose.ComposeActivity
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
-//import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
-import com.example.cleanarchitecturestudy.view.search.RecyclerActivity
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity
-
-//import com.example.cleanarchitecturestudy.view.web.WebViewActivity
 
 /**
  * MainActivity.
@@ -34,22 +22,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
-
-        findViewById<ComposeView>(R.id.compose_view).setContent {
-            Column(
-                modifier = Modifier.fillMaxSize()
-            ) {
-                ComposeTextComponent("Hello Compose")
-
-                Row {
-                    ComposeTextComponent("Hello Compose")
-
-                    Spacer(modifier = Modifier.width(10.dp))
-
-                    ComposeTextComponent("Hello Compose")
-                }
-            }
-        }
     }
 
     fun btnClick(view: View) {
@@ -57,25 +29,22 @@ class MainActivity : AppCompatActivity() {
             R.id.thirdBtn -> {
                 startActivity(Intent(this, MovieSearchActivity::class.java))
             }
+
             R.id.qr_btn -> {
                 startActivity(Intent(this, QrCodeActivity::class.java))
             }
+
             R.id.web_btn -> {
                 startActivity(Intent(this, WebViewActivity::class.java))
             }
+
             R.id.example_btn -> {
-                startActivity(Intent(this, RecyclerActivity::class.java))
+                startActivity(Intent(this, ComposeActivity::class.java))
             }
+
             else -> {
                 Unit
             }
         }
     }
-}
-
-@Composable
-fun ComposeTextComponent(text: String) {
-    Text(
-        text = text
-    )
 }

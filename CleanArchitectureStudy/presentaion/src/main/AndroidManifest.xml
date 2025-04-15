@@ -44,7 +44,7 @@
         <activity android:name=".view.search.MovieSearchActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>
-        <activity android:name=".view.search.RecyclerActivity"
+        <activity android:name=".view.example.compose.ComposeActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>
 
