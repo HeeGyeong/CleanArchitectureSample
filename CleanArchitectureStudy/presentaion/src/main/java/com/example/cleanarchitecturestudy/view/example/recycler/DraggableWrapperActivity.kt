@@ -4,6 +4,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
+import android.graphics.Color
 import android.os.Bundle
 import android.os.IBinder
 import android.view.ViewGroup
@@ -24,7 +25,25 @@ class DraggableWrapperActivity : AppCompatActivity() {
     
     // 드래그 상태 변경 리스너
     private val dragStateListener: (Boolean) -> Unit = { isEnabled ->
+        // draggableLayout 사용
         binding.draggableLayout.isDragEnabled = isEnabled
+
+        // handle 사용
+        // handle의 시각적 상태 변경
+//        binding.handle.apply {
+//            if (isEnabled) {
+//                // 드래그 활성화 상태 - 핸들 검은색, "Drag Handle" 텍스트
+//                setBackgroundColor(Color.BLACK)
+//                text = "Drag Handle"
+//                alpha = 1.0f  // 완전 불투명
+//            } else {
+//                // 드래그 비활성화 상태 - 핸들 회색, "Dragging Disabled" 텍스트
+//                setBackgroundColor(Color.GRAY)
+//                text = "Dragging Disabled"
+//                alpha = 0.5f  // 반투명
+//            }
+//        }
+
         runOnUiThread {
             val stateText = if (isEnabled) "드래그 활성화" else "드래그 비활성화"
             Toast.makeText(this, stateText, Toast.LENGTH_SHORT).show()
