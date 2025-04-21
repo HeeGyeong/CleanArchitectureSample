@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.example.compose.ComposeActivity
+import com.example.cleanarchitecturestudy.view.example.recycler.DraggableWrapperActivity
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
 import com.example.cleanarchitecturestudy.view.web.WebViewActivity
@@ -38,8 +39,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, WebViewActivity::class.java))
             }
 
-            R.id.example_btn -> {
+            R.id.compose_btn -> {
                 startActivity(Intent(this, ComposeActivity::class.java))
+            }
+
+            R.id.recycler_btn -> {
+                startActivity(Intent(this, DraggableWrapperActivity::class.java))
             }
 
             else -> {

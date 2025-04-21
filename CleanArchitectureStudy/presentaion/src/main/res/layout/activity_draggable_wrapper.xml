@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <!-- 예시 상단 콘텐츠 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상단 콘텐츠" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout
+                android:id="@+id/draggableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/wrapperContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#B4B4B4">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/handle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="#000000"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="Drag Handle"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/handle"
+                        tools:itemCount="50" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

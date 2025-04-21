@@ -47,6 +47,9 @@
         <activity android:name=".view.example.compose.ComposeActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>
+        <activity android:name=".view.example.recycler.DraggableWrapperActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false"/>
 
         <activity android:name=".view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor"/>
