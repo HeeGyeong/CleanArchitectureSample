@@ -18,6 +18,16 @@ class DraggableFrameLayout @JvmOverloads constructor(
     // targetRecyclerView가 설정되어 있으면, 해당 RecyclerView의 paddingBottom을 translationY에 맞게 조절합니다.
     var targetRecyclerView: RecyclerView? = null
 
+    // 드래그 가능 여부를 제어하는 플래그
+    var isDragEnabled = true
+        set(value) {
+            field = value
+            // 드래그가 비활성화되면 현재 진행중인 드래그 작업도 중단
+            if (!value) {
+                isDragging = false
+            }
+        }
+
     // 터치 시작 시의 좌표와 translationY, 그리고 targetRecyclerView의 원래 paddingBottom을 저장합니다.
     private var initialTouchY = 0f
     private var initialTranslationY = 0f
@@ -27,6 +37,9 @@ class DraggableFrameLayout @JvmOverloads constructor(
     private var isDragging = false
 
     override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
+        // 드래그가 비활성화되어 있으면 이벤트 가로채지 않음
+        if (!isDragEnabled) return false
+        
         return when (event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
                 // dragHandle 영역 내의 터치 여부 검사
@@ -60,6 +73,9 @@ class DraggableFrameLayout @JvmOverloads constructor(
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        // 드래그가 비활성화되어 있으면 이벤트 처리하지 않음
+        if (!isDragEnabled) return false
+        
         if (!isDragging) return super.onTouchEvent(event)
         when (event.actionMasked) {
             MotionEvent.ACTION_MOVE -> {

@@ -55,6 +55,12 @@
             android:screenOrientation="fullSensor"/>
 
         <activity android:name=".view.web.WebViewActivity"/>
+        
+        <!-- 드래그 상태 토글 서비스 등록 -->
+        <service
+            android:name=".view.example.recycler.DragFlagService"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>
