@@ -38,26 +38,26 @@
             android:id="@+id/image_container"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_buttons">
 
             <ImageView
-                android:id="@+id/iv_image_1"
+                android:id="@+id/iv_image1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 tools:src="@tools:sample/backgrounds/scenic" />
 
             <ImageView
-                android:id="@+id/iv_image_2"
+                android:id="@+id/iv_image2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:visibility="invisible"
                 tools:src="@tools:sample/backgrounds/scenic" />
-
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
