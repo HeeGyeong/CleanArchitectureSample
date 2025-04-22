@@ -50,6 +50,9 @@
         <activity android:name=".view.example.recycler.DraggableWrapperActivity"
             android:windowSoftInputMode="adjustNothing"
             android:exported="false"/>
+            
+        <activity android:name=".view.example.image.ImageViewActivity"
+            android:exported="false"/>
 
         <activity android:name=".view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor"/>

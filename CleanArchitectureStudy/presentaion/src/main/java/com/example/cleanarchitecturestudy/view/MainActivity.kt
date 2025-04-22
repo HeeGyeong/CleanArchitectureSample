@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.example.compose.ComposeActivity
+import com.example.cleanarchitecturestudy.view.example.image.ImageViewActivity
 import com.example.cleanarchitecturestudy.view.example.recycler.DraggableWrapperActivity
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
 import com.example.cleanarchitecturestudy.view.search.MovieSearchActivity
@@ -45,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
             R.id.recycler_btn -> {
                 startActivity(Intent(this, DraggableWrapperActivity::class.java))
+            }
+            
+            R.id.image_btn -> {
+                startActivity(Intent(this, ImageViewActivity::class.java))
             }
 
             else -> {

@@ -71,9 +71,22 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/black"
         android:onClick="btnClick"
-        android:text="Compose"
+        android:text="Recycler"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/compose_btn" />
+
+    <Button
+        android:id="@+id/image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="btnClick"
+        android:text="이미지 뷰"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/recycler_btn"
         app:layout_constraintTop_toBottomOf="@id/compose_btn" />
 
     <TextView
