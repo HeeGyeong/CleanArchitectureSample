@@ -18,13 +18,17 @@ class ImageViewActivity : AppCompatActivity() {
         "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop"
     )
     private var currentImageIndex = 0
+    
+    // 현재 보이는 이미지뷰 (1 또는 2)
+    private var currentVisibleImageView = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_image_view)
         
         setupUI()
-        loadCurrentImage()
+        // 첫 이미지 로드
+        loadImageToView(binding.ivImage1, imageList[currentImageIndex])
     }
     
     private fun setupUI() {
@@ -37,56 +41,64 @@ class ImageViewActivity : AppCompatActivity() {
         }
     }
     
-    private fun loadCurrentImage() {
+    private fun loadImageToView(imageView: View, imageUrl: String) {
         Glide.with(this)
-            .load(imageList[currentImageIndex])
+            .load(imageUrl)
             .centerCrop()
-            .into(binding.ivImage)
+            .into(imageView as android.widget.ImageView)
     }
     
     private fun showPreviousImage() {
         if (currentImageIndex > 0) {
             currentImageIndex--
-            animateImageSlide(false)
+            switchImageWithAnimation(false)
         }
     }
     
     private fun showNextImage() {
         if (currentImageIndex < imageList.size - 1) {
             currentImageIndex++
-            animateImageSlide(true)
+            switchImageWithAnimation(true)
         }
     }
     
-    private fun animateImageSlide(isNext: Boolean) {
-        // 이미지가 사라지는 애니메이션
+    private fun switchImageWithAnimation(isNext: Boolean) {
+        // 현재 보이는 이미지뷰와 숨겨진 이미지뷰를 결정
+        val currentImageView = if (currentVisibleImageView == 1) binding.ivImage1 else binding.ivImage2
+        val nextImageView = if (currentVisibleImageView == 1) binding.ivImage2 else binding.ivImage1
+        
+        // 미리 다음 이미지를 로드하고 준비
+        loadImageToView(nextImageView, imageList[currentImageIndex])
+        nextImageView.visibility = View.VISIBLE
+        
+        // 애니메이션 설정
         val slideOutAnimation = if (isNext) {
             AnimationUtils.loadAnimation(this, R.anim.slide_out_left)
         } else {
             AnimationUtils.loadAnimation(this, R.anim.slide_out_right)
         }
         
-        // 이미지가 나타나는 애니메이션
         val slideInAnimation = if (isNext) {
             AnimationUtils.loadAnimation(this, R.anim.slide_in_right)
         } else {
             AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
         }
         
+        // 현재 이미지 슬라이드 아웃
+        currentImageView.startAnimation(slideOutAnimation)
+        // 새 이미지 슬라이드 인
+        nextImageView.startAnimation(slideInAnimation)
+        
+        // 애니메이션 종료 후 처리
         slideOutAnimation.setAnimationListener(object : AnimationEndListener() {
             override fun onAnimationEnd(p0: android.view.animation.Animation?) {
-                // 이미지가 사라진 후 새 이미지 로드
-                binding.ivImage.visibility = View.INVISIBLE
-                loadCurrentImage()
-                
-                // 새 이미지에 슬라이드 인 애니메이션 적용
-                binding.ivImage.startAnimation(slideInAnimation)
-                binding.ivImage.visibility = View.VISIBLE
+                // 이전 이미지뷰는 숨김
+                currentImageView.visibility = View.INVISIBLE
             }
         })
         
-        // 현재 이미지에 슬라이드 아웃 애니메이션 적용
-        binding.ivImage.startAnimation(slideOutAnimation)
+        // 현재 보이는 이미지뷰 스위칭
+        currentVisibleImageView = if (currentVisibleImageView == 1) 2 else 1
     }
     
     // 애니메이션 리스너를 간단히 구현하기 위한 추상 클래스
