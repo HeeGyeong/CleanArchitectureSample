@@ -53,6 +53,9 @@
             
         <activity android:name=".view.example.image.ImageViewActivity"
             android:exported="false"/>
+            
+        <activity android:name=".view.example.blur.BlurSampleActivity"
+            android:exported="false"/>
 
         <activity android:name=".view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor"/>
