@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 
+    최상위 LinearLayout:
+    - clipChildren="false": 자식 뷰가 부모의 경계를 넘어서 그려질 수 있도록 함
+    - clipToPadding="false": 패딩 영역에도 자식 뷰를 그릴 수 있도록 함
+    -->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:orientation="vertical">
@@ -13,50 +19,97 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="상단 콘텐츠" />
+            android:text="상단 콘텐츠"
+            android:textColor="@color/white" />
 
+        <!-- 콘텐츠를 감싸는 FrameLayout -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="12dp">
 
-            <com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout
-                android:id="@+id/draggableLayout"
+            <!--
+            외부 카드 컨테이너:
+            - cardCornerRadius="30dp": 카드의 모서리를 30dp 반지름으로 둥글게 처리
+            - cardElevation="0dp": 카드의 그림자 효과를 제거
+            -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFFFFF">
+                app:cardBackgroundColor="#B4B4B4"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/wrapperContainer"
+                <!-- 
+                드래그 가능한 레이아웃:
+                - clipChildren="false": 자식 뷰가 부모의 경계를 넘어서 그려질 수 있도록 함
+                - clipToPadding="false": 패딩 영역에도 자식 뷰를 그릴 수 있도록 함
+                -->
+                <com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout
+                    android:id="@+id/draggableLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#B4B4B4">
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/handle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:background="#000000"
-                        android:clickable="false"
-                        android:gravity="center"
-                        android:text="Drag Handle"
-                        android:textColor="#FFFFFF"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    <!-- 내부 콘텐츠를 세로로 배치하는 LinearLayout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/handle"
-                        tools:itemCount="50" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout>
+                        <!-- 드래그 핸들 -->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/handle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Drag Handle"
+                            android:textColor="@color/black" />
+
+                        <!-- 
+                        콘텐츠 영역:
+                        - cardElevation="0dp": 카드의 그림자 효과를 제거
+                        -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/bright_grey"
+                            app:cardElevation="0dp">
+
+                            <!-- 
+                            중첩 스크롤 뷰:
+                            - fillViewport="true": 내용이 적어도 뷰포트 전체 높이를 채우도록 함
+                            - overScrollMode="never": 스크롤이 끝에 도달했을 때 오버스크롤 효과를 비활성화
+                            -->
+                            <androidx.core.widget.NestedScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fillViewport="true"
+                                android:overScrollMode="never">
+
+                                <!-- 
+                                리사이클러뷰:
+                                - clipToPadding="false": 패딩 영역에도 내용을 그릴 수 있도록 함
+                                - overScrollMode="never": 스크롤이 끝에 도달했을 때 오버스크롤 효과를 비활성화
+                                - layoutManager: 리사이클러뷰 아이템을 수직으로 배치
+                                -->
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clipToPadding="false"
+                                    android:overScrollMode="never"
+                                    android:paddingBottom="50dp"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:itemCount="50" />
+                            </androidx.core.widget.NestedScrollView>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout>
+            </com.google.android.material.card.MaterialCardView>
         </FrameLayout>
     </LinearLayout>
 </layout>
