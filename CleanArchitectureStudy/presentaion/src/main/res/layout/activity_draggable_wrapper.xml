@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 
-    최상위 LinearLayout:
-    - clipChildren="false": 자식 뷰가 부모의 경계를 넘어서 그려질 수 있도록 함
-    - clipToPadding="false": 패딩 영역에도 자식 뷰를 그릴 수 있도록 함
+     최상위 컨테이너: 세로 방향으로 요소들을 배치
+     clipChildren/clipToPadding false 설정으로 자식 뷰가 부모 영역을 벗어나 그려질 수 있음
     -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black"
@@ -15,23 +15,23 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <!-- 예시 상단 콘텐츠 -->
-        <TextView
+        <!-- 상단 타이틀 영역 -->
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="상단 콘텐츠"
             android:textColor="@color/white" />
 
-        <!-- 콘텐츠를 감싸는 FrameLayout -->
+        <!-- 
+        메인 콘텐츠 영역을 감싸는 컨테이너
+        -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="12dp">
 
-            <!--
-            외부 카드 컨테이너:
-            - cardCornerRadius="30dp": 카드의 모서리를 30dp 반지름으로 둥글게 처리
-            - cardElevation="0dp": 카드의 그림자 효과를 제거
+            <!-- 
+            외부 카드 컨테이너
             -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -41,9 +41,8 @@
                 app:cardElevation="0dp">
 
                 <!-- 
-                드래그 가능한 레이아웃:
-                - clipChildren="false": 자식 뷰가 부모의 경계를 넘어서 그려질 수 있도록 함
-                - clipToPadding="false": 패딩 영역에도 자식 뷰를 그릴 수 있도록 함
+                드래그 가능한 프레임 레이아웃:
+                사용자 상호작용을 통해 드래그 가능한 컨테이너
                 -->
                 <com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout
                     android:id="@+id/draggableLayout"
@@ -52,26 +51,27 @@
                     android:clipChildren="false"
                     android:clipToPadding="false">
 
-                    <!-- 내부 콘텐츠를 세로로 배치하는 LinearLayout -->
+                    <!-- 내부 콘텐츠를 세로 방향으로 배치 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <!-- 드래그 핸들 -->
+                        <!-- 
+                        드래그 핸들: 
+                        사용자가 이 영역을 통해 전체 컨테이너를 드래그할 수 있음
+                        -->
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/handle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/white"
-                            android:clickable="false"
                             android:gravity="center"
                             android:text="Drag Handle"
                             android:textColor="@color/black" />
 
                         <!-- 
-                        콘텐츠 영역:
-                        - cardElevation="0dp": 카드의 그림자 효과를 제거
+                        내부 콘텐츠 영역
                         -->
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
@@ -80,32 +80,20 @@
                             app:cardElevation="0dp">
 
                             <!-- 
-                            중첩 스크롤 뷰:
-                            - fillViewport="true": 내용이 적어도 뷰포트 전체 높이를 채우도록 함
-                            - overScrollMode="never": 스크롤이 끝에 도달했을 때 오버스크롤 효과를 비활성화
+                            리스트 콘텐츠:
+                            스크롤 가능한 아이템 목록 표시
+                            overScrollMode="never"로 끝에서 튕김 효과 제거
                             -->
-                            <androidx.core.widget.NestedScrollView
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:fillViewport="true"
-                                android:overScrollMode="never">
+                                android:clipToPadding="false"
+                                android:overScrollMode="never"
+                                android:paddingBottom="50dp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="50" />
 
-                                <!-- 
-                                리사이클러뷰:
-                                - clipToPadding="false": 패딩 영역에도 내용을 그릴 수 있도록 함
-                                - overScrollMode="never": 스크롤이 끝에 도달했을 때 오버스크롤 효과를 비활성화
-                                - layoutManager: 리사이클러뷰 아이템을 수직으로 배치
-                                -->
-                                <androidx.recyclerview.widget.RecyclerView
-                                    android:id="@+id/recyclerView"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:clipToPadding="false"
-                                    android:overScrollMode="never"
-                                    android:paddingBottom="50dp"
-                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                                    tools:itemCount="50" />
-                            </androidx.core.widget.NestedScrollView>
                         </com.google.android.material.card.MaterialCardView>
                     </LinearLayout>
                 </com.example.cleanarchitecturestudy.view.example.recycler.DraggableFrameLayout>
