@@ -81,7 +81,9 @@ RecyclerView Drag & Drop에 대한 설명은 [블로그](https://heegs.tistory.c
 
 이 프로젝트는 Clean Architecture를 이해하고 적용하기 위한 샘플 코드입니다. 기본적인 구조, API 통신, 의존성 주입(DI) 등의 사용 방법을 안내하기 위해 만들어졌습니다.
 
-# Cursor IDE LLM 모델 효율성 테스트 (안드로이드)
+# 25.05. 이하 내용은 테스트 중입니다. 참고용으로만 확인해주세요
+
+# Cursor IDE LLM 모델 효율성 테스트
 
 이 프로젝트는 Cursor IDE에서 사용 가능한 다양한 LLM 모델들의 안드로이드 코드 생성 성능을 비교 테스트하기 위한 도구입니다.
 
