@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.view.example.blur.BlurSampleActivity
 import com.example.cleanarchitecturestudy.view.example.compose.ComposeActivity
+import com.example.cleanarchitecturestudy.view.example.drag.DragExampleActivity
 import com.example.cleanarchitecturestudy.view.example.image.ImageViewActivity
 import com.example.cleanarchitecturestudy.view.example.recycler.DraggableWrapperActivity
 import com.example.cleanarchitecturestudy.view.qr.QrCodeActivity
@@ -55,6 +56,10 @@ class MainActivity : AppCompatActivity() {
             
             R.id.blur_btn -> {
                 startActivity(Intent(this, BlurSampleActivity::class.java))
+            }
+            
+            R.id.drag_btn -> {
+                startActivity(Intent(this, DragExampleActivity::class.java))
             }
 
             else -> {

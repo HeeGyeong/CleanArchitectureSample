@@ -21,4 +21,11 @@
     <string name="login_login_text">로그인</string>
     <string name="error_msg">에러</string>
     <string name="local_db_msg">네트워크가 불안정하여 로컬DB 에서 불러옵니다</string>
+    
+    <!-- Drag Example -->
+    <string name="disable_paging">페이징 비활성화</string>
+    <string name="enable_paging">페이징 활성화</string>
+    <string name="drag_example_title">드래그 예제</string>
+    <string name="item_title_format">아이템 %d</string>
+    <string name="item_description_format">아이템 %d에 대한 설명입니다. 여기에는 아이템의 상세 내용이 표시됩니다.</string>
 </resources>

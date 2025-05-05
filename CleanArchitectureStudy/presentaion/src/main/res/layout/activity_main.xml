@@ -102,13 +102,26 @@
         app:layout_constraintStart_toEndOf="@id/image_btn"
         app:layout_constraintTop_toBottomOf="@id/compose_btn" />
 
+    <Button
+        android:id="@+id/drag_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="btnClick"
+        android:text="드래그 예제"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_btn" />
+
     <TextView
         android:id="@+id/sample_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
         android:text="@string/androidx_startup"
-        app:layout_constraintTop_toBottomOf="@id/recycler_btn" />
+        app:layout_constraintTop_toBottomOf="@id/drag_btn" />
 
     <TextView
         android:id="@+id/sample_text2"

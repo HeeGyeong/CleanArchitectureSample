@@ -100,6 +100,9 @@ dependencies {
     //glide
     implementation(libs.glide)
     kapt libs.glideCompiler
+    
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:3.2.1"
 
     // other library
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"

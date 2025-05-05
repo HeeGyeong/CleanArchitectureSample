@@ -57,6 +57,9 @@
         <activity android:name=".view.example.blur.BlurSampleActivity"
             android:exported="false"/>
 
+        <activity android:name=".view.example.drag.DragExampleActivity"
+            android:exported="false"/>
+
         <activity android:name=".view.qr.QrCodeActivity"
             android:screenOrientation="fullSensor"/>
 
