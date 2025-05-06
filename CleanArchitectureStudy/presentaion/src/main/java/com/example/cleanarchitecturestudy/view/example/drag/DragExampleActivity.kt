@@ -1,9 +1,11 @@
 package com.example.cleanarchitecturestudy.view.example.drag
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.Observer
 import com.example.cleanarchitecturestudy.R
 import com.example.cleanarchitecturestudy.databinding.ActivityDragExampleBinding
 import kotlinx.coroutines.flow.collectLatest
@@ -43,5 +45,15 @@ class DragExampleActivity : AppCompatActivity() {
                 adapter.submitData(pagingData)
             }
         }
+        
+        // 페이징 상태 변경 관찰
+        viewModel.isPagingEnabled.observe(this, Observer { isEnabled ->
+            val message = if (isEnabled) {
+                "페이징이 활성화되었습니다. 스크롤하면 새 아이템을 로드합니다."
+            } else {
+                "페이징이 비활성화되었습니다. 현재 로드된 아이템만 표시됩니다."
+            }
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        })
     }
 } 

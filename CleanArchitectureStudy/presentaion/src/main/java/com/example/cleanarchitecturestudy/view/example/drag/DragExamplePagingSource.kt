@@ -12,6 +12,9 @@ class DragExamplePagingSource : PagingSource<Int, DragExampleItem>() {
 
     // 페이징 활성화 여부
     var isPagingEnabled = true
+    
+    // 마지막으로 로드된 페이지 번호 (페이징 비활성화 시 이 페이지까지만 로드)
+    private var lastLoadedPage = STARTING_KEY
 
     companion object {
         private const val STARTING_KEY = 1
@@ -25,8 +28,8 @@ class DragExamplePagingSource : PagingSource<Int, DragExampleItem>() {
         val page = params.key ?: STARTING_KEY
         val startItemId = (page - 1) * PAGE_SIZE + 1
 
-        // 페이징이 비활성화된 경우, 더 이상 로드하지 않음
-        if (!isPagingEnabled && page > STARTING_KEY) {
+        // 페이징이 비활성화된 경우, 마지막으로 로드된 페이지까지만 로드
+        if (!isPagingEnabled && page > lastLoadedPage) {
             return LoadResult.Page(
                 data = emptyList(),
                 prevKey = if (page == STARTING_KEY) null else page - 1,
@@ -45,6 +48,11 @@ class DragExamplePagingSource : PagingSource<Int, DragExampleItem>() {
                 title = "아이템 $id",
                 description = "아이템 $id 에 대한 설명입니다. 여기에는 아이템의 상세 내용이 표시됩니다."
             )
+        }
+
+        // 페이지가 성공적으로 로드되면 마지막 로드된 페이지 업데이트
+        if (page > lastLoadedPage) {
+            lastLoadedPage = page
         }
 
         // 다음 페이지 키 계산
