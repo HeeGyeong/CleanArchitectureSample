@@ -7,9 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cleanarchitecturestudy.databinding.ItemDragExampleBinding
 
-/**
- * 드래그 예제의 페이징 어댑터
- */
 class DragExampleAdapter : PagingDataAdapter<DragExampleItem, DragExampleAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     companion object {

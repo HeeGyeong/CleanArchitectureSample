@@ -9,11 +9,7 @@ import kotlinx.coroutines.delay
  * 총 200개의 아이템을 페이지당 20개씩 로드
  */
 class DragExamplePagingSource : PagingSource<Int, DragExampleItem>() {
-
-    // 페이징 활성화 여부
     var isPagingEnabled = true
-    
-    // 마지막으로 로드된 페이지 번호 (페이징 비활성화 시 이 페이지까지만 로드)
     private var lastLoadedPage = STARTING_KEY
 
     companion object {

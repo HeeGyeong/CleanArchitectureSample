@@ -13,8 +13,11 @@ import kotlinx.coroutines.launch
 
 /**
  * 드래그 예제 액티비티
- * - RecyclerView와 Paging3 라이브러리를 사용하여 스크롤 시 추가 아이템 로드
+ * - Paging3 라이브러리를 사용하여 스크롤 시 추가 아이템 로드
  * - 버튼을 통해 추가 페이징 활성화/비활성화 가능
+ *
+ * 페이징 활성화/비활성화 변경 시 refresh를 사용하지 않고 동작하게 하려 했으나,
+ * refresh를 하지 않으면 정상 동작하지 않는다는 것을 확인할 수 있는 예제.
  */
 class DragExampleActivity : AppCompatActivity() {
 
@@ -24,29 +27,19 @@ class DragExampleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 데이터 바인딩 초기화
         binding = ActivityDragExampleBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        // 툴바 설정
         supportActionBar?.title = getString(R.string.drag_example_title)
         
-        // 뷰모델 바인딩
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-
-        // 리사이클러뷰 설정
         binding.recyclerView.adapter = adapter
-
-        // 페이징 데이터 구독
         lifecycleScope.launch {
             viewModel.pagingDataFlow.collectLatest { pagingData ->
                 adapter.submitData(pagingData)
             }
         }
         
-        // 페이징 상태 변경 관찰
         viewModel.isPagingEnabled.observe(this, Observer { isEnabled ->
             val message = if (isEnabled) {
                 "페이징이 활성화되었습니다. 스크롤하면 새 아이템을 로드합니다."

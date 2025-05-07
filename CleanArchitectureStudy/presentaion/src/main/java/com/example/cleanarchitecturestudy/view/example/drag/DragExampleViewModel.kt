@@ -18,8 +18,6 @@ import kotlinx.coroutines.launch
  * 드래그 예제 화면의 ViewModel
  */
 class DragExampleViewModel : ViewModel() {
-
-    // 페이징 소스 인스턴스 - 동일한 인스턴스를 계속 사용하여 로딩된 페이지 정보 유지
     private val pagingSource = DragExamplePagingSource()
     
     // Pager 설정
@@ -32,14 +30,11 @@ class DragExampleViewModel : ViewModel() {
         pagingSourceFactory = { pagingSource }
     )
 
-    // 페이징 활성화 여부
     private val _isPagingEnabled = MutableLiveData(true)
     val isPagingEnabled: LiveData<Boolean> = _isPagingEnabled
 
-    // 페이징 상태 갱신 트리거
     private val _refreshTrigger = MutableStateFlow(0)
 
-    // 페이징 데이터 Flow
     val pagingDataFlow: Flow<PagingData<DragExampleItem>> = _refreshTrigger
         .flatMapLatest {
             pager.flow
@@ -63,7 +58,7 @@ class DragExampleViewModel : ViewModel() {
      */
     private fun refreshPagingSource() {
         viewModelScope.launch {
-            _refreshTrigger.value = _refreshTrigger.value + 1
+            _refreshTrigger.value += 1
         }
     }
 } 
