@@ -42,41 +42,7 @@ class ComposeActivity :
                     .fillMaxWidth()
                     .wrapContentHeight()
             ) {
-                ComposeTextComponent("Hello Compose")
-
-                Row {
-                    ComposeTextComponent("Hello Compose")
-
-                    Spacer(modifier = Modifier.width(10.dp))
-
-                    ComposeTextComponent("Hello Compose")
-                }
-
-                Divider(
-                    color = Color.Black,
-                    thickness = 1.dp,
-                    modifier = Modifier.padding(vertical = 8.dp)
-                )
-
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = 300.dp)
-                        .background(color = Color.Yellow)
-                ) {
-                    items(100) {
-                        ComposeTextComponent("Hello Compose")
-                    }
-                }
-
-                Divider(
-                    color = Color.Black,
-                    thickness = 4.dp,
-                    modifier = Modifier.padding(vertical = 8.dp)
-                )
-
-                // AndroidView를 사용하여 XML 레이아웃 통합
-                XmlInComposeExample()
+                MainComponent()
             }
         }
     }
