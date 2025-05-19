@@ -1,0 +1,46 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 클린 아키텍처 가이드라인
+
+이 프로젝트는 클린 아키텍처 원칙을 따르며 다음과 같은 계층 구조를 가진다:
+
+## 의존성 규칙
+- 모든 의존성은 **안쪽으로만** 향해야 한다 (Presentation → Domain ← Data)
+- Domain 모듈은 어떤 외부 모듈에도 의존해서는 안 된다
+- Data 모듈은 Domain 모듈에만 의존해야 한다
+- Presentation 모듈은 Domain 모듈에만 의존해야 한다
+
+## 계층별 역할
+1. **Presentation Layer** ([presentaion/src/main/java/com/example/cleanarchitecturestudy/](mdc:presentaion/src/main/java/com/example/cleanarchitecturestudy))
+   - UI 컴포넌트, 뷰모델, 액티비티, 프래그먼트 관리
+   - DI 모듈 정의 (Dagger/Hilt)
+   - UI 상태, 이벤트 처리
+   - 유저 인터랙션 관리
+   - Domain 계층의 UseCase 호출
+
+2. **Domain Layer** ([domain/src/main/java/com/example/domain/](mdc:domain/src/main/java/com/example/domain))
+   - 비즈니스 로직 캡슐화 (UseCase)
+   - 엔티티(모델) 정의
+   - 리포지토리 인터페이스 정의
+   - 비즈니스 규칙 및 정책
+
+3. **Data Layer** ([data/src/main/java/com/example/data/](mdc:data/src/main/java/com/example/data))
+   - 리포지토리 구현체
+   - 데이터 소스 관리 (원격/로컬)
+   - API 서비스 및 DB 액세스
+   - 데이터 매핑 (API/DB 모델 → 도메인 모델)
+
+## 주요 패턴
+- **Repository Pattern**: Domain에서 인터페이스 정의, Data에서 구현
+- **UseCase Pattern**: 각 비즈니스 기능은 단일 책임 원칙을 따르는 UseCase로 구현
+- **Mapper Pattern**: 데이터 모델과 도메인 모델 간 변환을 담당
+- **Dependency Injection**: 모든 의존성은 DI를 통해 주입
+
+## 지켜야 할 원칙
+1. Domain 모듈은 순수 Kotlin/Java만 사용 (Android SDK 의존성 없음)
+2. 각 계층은 자신의 모델을 가져야 함 (DTO, Entity, UI 모델)
+3. 모든 비동기 처리는 UseCase 내부에서 처리되어야 함
+4. UI 로직은 ViewModel에서, 비즈니스 로직은 UseCase에서 처리

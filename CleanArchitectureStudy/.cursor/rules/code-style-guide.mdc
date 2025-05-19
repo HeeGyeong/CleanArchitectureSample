@@ -1,0 +1,45 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 코드 스타일 가이드
+
+이 프로젝트에서는 다음 코딩 스타일과 패턴을 준수해야 한다:
+
+## 명명 규칙
+- **클래스**: PascalCase (예: `UserRepository`, `LoginViewModel`)
+- **함수**: camelCase (예: `getUserData()`, `saveUserPreferences()`)
+- **상수**: UPPER_SNAKE_CASE (예: `MAX_RETRY_COUNT`, `API_BASE_URL`)
+- **변수**: camelCase (예: `userData`, `loginResult`)
+- **파일명**: 클래스 이름과 동일하게 PascalCase (예: `UserRepository.kt`)
+- **레이아웃 XML**: snake_case (예: `activity_main.xml`, `fragment_user_profile.xml`)
+
+## 코드 구조
+- 한 파일당 하나의 최상위 클래스/인터페이스만 정의
+- 코드 블록 사이에 빈 줄을 추가하여 가독성 향상
+- 하나의 함수는 단일 책임을 가지도록 구현
+- 함수 길이는 최대 30라인을 넘지 않도록 구성
+
+## Kotlin 특화 규칙
+- 가능한 `val`을 사용하고, 필요한 경우에만 `var` 사용
+- 확장 함수를 활용하여 기존 클래스 기능 확장
+- 코루틴 사용 시 적절한 디스패처 지정 (`IO`, `Main`, `Default`)
+- 널 안전성을 위해 적절한 연산자 사용 (`?.`, `?:`, `!!`)
+- 람다와 고차 함수 적절히 활용
+
+## 아키텍처 관련
+- **ViewModel**: [presentaion/src/main/java/com/example/cleanarchitecturestudy/view/](mdc:presentaion/src/main/java/com/example/cleanarchitecturestudy/view) 디렉토리 내 기능별로 구성
+- **UseCase**: [domain/src/main/java/com/example/domain/usecase/](mdc:domain/src/main/java/com/example/domain/usecase) 내에 기능별로 단일 책임 원칙을 따라 구현
+- **Repository**: 인터페이스는 [domain/src/main/java/com/example/domain/repository/](mdc:domain/src/main/java/com/example/domain/repository), 구현체는 [data/src/main/java/com/example/data/repository/](mdc:data/src/main/java/com/example/data/repository)에 위치
+
+## 주석 가이드라인
+- 복잡한 비즈니스 로직에 주석 추가
+- 공개 API에 KDoc 형식 주석 사용
+- 일시적인 해결책(workaround)에는 이유와 향후 개선 방향을 주석으로 설명
+- 주석은 '무엇'이 아닌 '왜'에 집중
+
+## 테스트 코드
+- 모든 비즈니스 로직과 유스케이스는 단위 테스트 작성
+- 테스트 함수명은 `givenWhenThen` 패턴 권장
+- 모킹은 필요한 경우에만 최소한으로 사용

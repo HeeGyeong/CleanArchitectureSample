@@ -1,0 +1,48 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 모듈 경계 및 통신 가이드
+
+이 프로젝트에서 모듈 간 경계와 통신은 다음 규칙을 따라야 한다:
+
+## 모듈 간 의존성 흐름
+```
+Presentation → Domain ← Data
+```
+
+## 모듈 간 통신 규칙
+
+### Presentation → Domain
+- Presentation은 Domain의 UseCase만 직접 호출 가능
+- Domain 모델을 UI에서 직접 사용하거나 수정하지 않고 UI 전용 모델로 변환해서 사용
+- 비동기 처리는 코루틴 Flow 또는 suspend 함수 사용
+- 복잡한 상태 관리는 ViewModel 내부에서 처리
+
+### Domain
+- Domain은 어떤 외부 모듈(Presentation, Data)도 의존하지 않음
+- 모든 외부 데이터 접근은 Repository 인터페이스를 통해서만 수행
+- UseCase는 단일 책임 원칙을 따르며 재사용 가능하게 설계
+- Domain 모델은 비즈니스 규칙과 로직을 포함
+
+### Data → Domain
+- Data 모듈은 Domain에 정의된 Repository 인터페이스를 구현
+- 외부 데이터(API, DB)는 항상 Domain 모델로 변환되어 전달
+- 에러 처리는 Domain에서 정의한 방식을 따름
+- 캐싱 전략은 Data 모듈 내부에서 처리
+
+## 주요 교차점 파일
+- Domain 리포지토리 인터페이스: [domain/src/main/java/com/example/domain/repository/](mdc:domain/src/main/java/com/example/domain/repository)
+- Domain 모델: [domain/src/main/java/com/example/domain/model/](mdc:domain/src/main/java/com/example/domain/model)
+- Data 리포지토리 구현체: [data/src/main/java/com/example/data/repository/](mdc:data/src/main/java/com/example/data/repository)
+- Presentation의 ViewModel: [presentaion/src/main/java/com/example/cleanarchitecturestudy/view/](mdc:presentaion/src/main/java/com/example/cleanarchitecturestudy/view)
+
+## 모듈 간 데이터 변환
+- Data → Domain: [data/src/main/java/com/example/data/mapper/](mdc:data/src/main/java/com/example/data/mapper)
+- Domain → Presentation: ViewModel에서 UI 모델로 변환
+
+## 의존성 주입
+- DI 설정은 [presentaion/src/main/java/com/example/cleanarchitecturestudy/di/](mdc:presentaion/src/main/java/com/example/cleanarchitecturestudy/di) 내에서 구성
+- 각 모듈은 자신의 컴포넌트를 제공하는 모듈 클래스 정의
+- 테스트 가능성을 위해 인터페이스를 통한 의존성 주입 권장
