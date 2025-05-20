@@ -3,26 +3,39 @@ package com.example.domain.usecase.movie
 import com.example.domain.model.Movie
 import com.example.domain.repository.MovieRepository
 import io.reactivex.Flowable
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 /**
- * Local DB 에 있는 Movie Data 를 가져오기 위한 함수
- * Repository 를 통해 선언 된 함수를 사용한다.
- * getMovieUseCase 와 동일한 동작을 하고 있지만, VM 에서 OffLine 일 때만 호출되기 때문에 Local 로 naming
+ * Local 데이터를 가져오는 UseCase
  *
- * @param repository Movie data 를 컨트롤 하는 Repository
+ * 네트워크 등이 연결이 되어 있지 않을 때 Local에 저장 된 데이터를 가져와 뿌려주는 역할.
+ *
+ * @param repository Local 데이터에 접근할 수 있는 Repository
  */
 class GetLocalMoviesUseCase @Inject constructor(private val repository: MovieRepository) {
-    fun execute(
-        query: String,
-    ): Flowable<List<Movie>> = repository.getSearchMovies(query)
-
     /**
-     * invoke 를 사용하게 되면, 호출 부에서 해당 메소드 이름을 호출하지 않고, class 이름만으로 호출이 가능하다.
-     * 해당 프로젝트에서 사용된 useCase 의 경우 내부에서 많은 일을 하는 것이 아닌 repository 내부의 함수를 호출하는 역할만 하기 때문에
-     * invoke 를 사용하여 호출 하는 것도 좋은 방법이라 생각한다.
+     * Flow를 사용하여 로컬 영화 데이터 가져오기
      */
-    operator fun invoke(
-        query: String,
-    ): Flowable<List<Movie>> = repository.getSearchMovies(query)
+    fun getFlowLocalMovies(query: String): Flow<List<Movie>> = flow {
+        // 레포지토리에 Flow API가 있다면 그것을 사용
+        // repository.getLocalSearchMoviesFlow(query)
+        
+        // 임시 구현 (repository에 Flow API가 없다면)
+        try {
+            val localMovies = repository.getLocalSearchMovies(query).blockingFirst()
+            emit(localMovies)
+        } catch (e: Exception) {
+            emit(emptyList())
+        }
+    }
+    
+    /**
+     * RxJava 버전 API - 레거시 지원용
+     */
+    @Deprecated("RxJava API - Use getFlowLocalMovies instead")
+    operator fun invoke(query: String): Flowable<List<Movie>> {
+        return repository.getLocalSearchMovies(query)
+    }
 }

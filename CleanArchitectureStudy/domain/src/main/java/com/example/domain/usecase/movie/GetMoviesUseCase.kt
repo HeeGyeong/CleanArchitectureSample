@@ -13,11 +13,18 @@ import javax.inject.Inject
  * @param repository Movie data 를 컨트롤 하는 Repository
  */
 class GetMoviesUseCase @Inject constructor(private val repository: MovieRepository) {
-    operator fun invoke(
-        query: String,
-    ): Flowable<List<Movie>> = repository.getSearchMovies(query)
-
+    /**
+     * Kotlin Flow를 사용하여 영화 데이터 가져오기 (권장)
+     */
     fun getFlowData(
         query: String,
     ): Flow<List<Movie>> = repository.getSearchMoviesFlow(query)
+    
+    /**
+     * RxJava를 사용하여 영화 데이터 가져오기 (레거시 지원)
+     */
+    @Deprecated("RxJava API - Use getFlowData instead", ReplaceWith("getFlowData(query)"))
+    operator fun invoke(
+        query: String,
+    ): Flowable<List<Movie>> = repository.getSearchMovies(query)
 }
